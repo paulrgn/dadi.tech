@@ -4,7 +4,8 @@ body {
 }
 
 .container {
-	padding: 0 5%;
+	padding-left: 5%;
+	padding-right: 5%;
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 960px;
@@ -18,22 +19,11 @@ header {
 footer {
 	margin: 100px auto;
 }
-main {
-	position: relative;
-	&:before {
-		position: absolute;
-		bottom: 100%;
-		left: 0; right: 0;
-		transform: skewY(-3deg);
-		content: ' ';
-		background: #F9F9F9;
-		height: 100px;
-		display: block;
-	}
-}
 
 .top {
 	padding: 50px 0 70px;
+	position: relative;
+	overflow: hidden;
 
 	&--dark {
 		background: #21262D url(/assets/img/bg.png) fixed;
@@ -54,6 +44,17 @@ main {
 		.btn--fill {
 			color: #fff;
 		}
+	}
+	
+	&:before {
+		position: absolute;
+		bottom: -50px;
+		left: 0; right: 0;
+		transform: skewY(-3deg);
+		content: ' ';
+		background: #F9F9F9;
+		height: 100px;
+		display: block;
 	}
 	
 	.grid {
