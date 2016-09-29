@@ -31,7 +31,8 @@
 </div>
 </div>
 
-<main class="container marg__top">
+<main>
+<div class="container">
   <p class="hdr larger">
     DADI is a ground up reimagination of web tech, built on a breakthrough thought:<br><br>
     <span class="txt--red">It's all just data.</span>
@@ -48,6 +49,7 @@
 
 
   </div>
+</div>
 </main>
 
 {>"partials/footer" /}

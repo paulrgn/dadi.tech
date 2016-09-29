@@ -4,19 +4,39 @@ body {
 }
 
 .container {
-	padding: 40px 5%;
+	padding: 0 5%;
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 960px;
+	position: relative;
+	z-index: 1;
 }
 
 header {
 	margin-bottom: 65px;
 }
+footer {
+	margin: 100px auto;
+}
+main {
+	position: relative;
+	&:before {
+		position: absolute;
+		bottom: 100%;
+		left: 0; right: 0;
+		transform: skewY(-3deg);
+		content: ' ';
+		background: #F9F9F9;
+		height: 100px;
+		display: block;
+	}
+}
 
 .top {
+	padding: 50px 0 70px;
+
 	&--dark {
-		background: #21262D url(/assets/img/bg.png);
+		background: #21262D url(/assets/img/bg.png) fixed;
 		background-size: 50% auto;
 		color: #fff;
 
@@ -36,15 +56,6 @@ header {
 		}
 	}
 	
-	margin: 0 -300px;
-	padding: 100px 0 20px 0;
-	margin-top: -100px;
-	
-	transform: rotate(-3deg);
-
-	.container {
-		transform: rotate(3deg);
-	}
 	.grid {
 		position: relative;
 	}

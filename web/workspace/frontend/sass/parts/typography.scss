@@ -64,7 +64,7 @@ p.pfull					{ width: auto; }
 h1,.larger 	{ @include rem(font-size,30px); @include rem(line-height,36px); }
 h2,.large 	{ @include rem(font-size,26px); @include rem(line-height,32px); }
 h3,.medium 	{ @include rem(font-size,22px); @include rem(line-height,28px); }
-h4,.normal	{ @include rem(font-size,19px); @include rem(line-height,24px); }
+h4,.normal	{ @include rem(font-size,19px); @include rem(line-height,27px); }
 h5,.small 	{ @include rem(font-size,15px); @include rem(line-height,20px); }
 
 @media #{$break-small} {
