@@ -38,10 +38,10 @@
 
   <div class="grid">
   <div class="col w-1-2">
-    <p class="normal">The DADI platform enables the unification of disparate technologies by treating all content types in the same way, closing the gap between WCM/ECM, CRM and DMP, and making the implementation of cutting edge machine learning and big data theory simple.</p>
+    <p class="normal">The <strong>DADI</strong> platform enables the unification of disparate technologies by treating all content types in the same way, closing the gap between <em>WCM/ECM</em>, <em>CRM</em> and <em>DMP</em>, and making the implementation of cutting edge machine learning and big data theory simple.</p>
   </div>
   <div class="col w-1-2">
-    <p class="normal">With DADI, businesses of all sizes can provide data driven experience to their customers: unique and personalised interactions that drive higher engagement and increase conversion, all at a price point significantly below that of legacy platforms.</p>
+    <p class="normal">With <strong>DADI</strong>, businesses of all sizes can provide data driven experience to their customers: unique and personalised interactions that drive higher engagement and increase conversion, all at a price point significantly below that of legacy platforms.</p>
   </div>
   
 
