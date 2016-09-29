@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  <meta charset="utf-8">  
+  <meta name="author" content="dadi.co">  
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Welcome</title>
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+
+	<body>
+
+	  <header class="c-header c-header--acollapsed">
+  <div class="c-header__inner-wrapper u-cols">
+    <div class="u-col u-col--1-1 u-col--2-3@medium">
+      <a href="/">
+        <img class="c-header__logo" src="/public/assets/img/dadi.png" alt="DADI">
+      </a>
+
+      <h2 class="c-header__title">Developer support</h2>
+      <p class="c-header__subtitle">Tutorials and documentation</p>    
+    </div>
+
+    <div class="c-header__top u-col u-col--1-1 u-col--1-3@medium">
+      <ul class="c-header__links">
+        <li class="c-header__link">
+          <a href="http://twitter.com/dadi">@DADI</a>
+        </li>
+        <li class="c-header__link">
+          <a href="mailto:dev@dadi.tech">dev@dadi.tech</a>
+        </li>
+      </ul>
+
+      
+    </div>    
+
+    
+      <div class="u-col u-col--1-1">
+        <div class="c-combo">
+  <label class="c-combo__item c-combo__item--expand c-text-field-container">
+    <span class="c-text-field__icon fa fa-search"></span>
+    <input class="c-text-field" type="text" placeholder="Search our help centre…" />
+  </label>
+  <button class="c-combo__item c-button c-button--blue" type="submit">Search</button>
+</div>
+      </div>
+    
+  </div>
+</header>
+
+	  <h2 id="delivery-recipes">Delivery recipes</h2>
+
+<p>A Delivery Recipe is a predefined set of image manipulation parameters stored in a JSON file. that are applied</p>
+
+<p>Let’s use the image from our magazine example.<br />
+<code class="highlighter-rouge">https://cdn.example.com/thumbnail/images/man-walking-on-beach.jpg</code></p>
+
+<p><code class="highlighter-rouge">https://cdn.example.com/images/man-walking-on-beach.jpg?width=100&amp;height=100&amp;resizeStyle=entropy</code></p>
+
+<p><img src="assets/thumbnail-100x100.jpeg" alt="Thumbnail image, 100 × 100 px, 9kB" title="Image credit: Danielle MacInnes (https://unsplash.com/@dsmacinnes)" /></p>
+
+<p>Recipes are defined in JSON files held in the <code class="highlighter-rouge">/workspace/recipes</code> folder.</p>
+
+<p><strong>Example recipe</strong></p>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"recipe"</span><span class="p">:</span><span class="w"> </span><span class="s2">"thumbnail"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"settings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jpg"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"quality"</span><span class="p">:</span><span class="w"> </span><span class="s2">"80"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"width"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"height"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"resizeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"entropy"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<h2 id="using-a-recipe">Using a recipe</h2>
+
+<p>Making use of a recipe is simple: call your image via the recipe name defined in the recipe JSON.</p>
+
+<p>For example:</p>
+
+<p><code class="highlighter-rouge">http://youdomain.com/example-recipe-name/image-filename.png</code></p>
+
+
+	  <footer class="c-footer">
+  <div class="u-cols u-wrapper">
+    <div class="u-col u-col--1-2 u-col--1-4@medium u-padding">
+      <h3 class="c-footer__title">Client engagement</h3>
+      <p class="epsilon"><a href="mailto:makesomething@dadi.tech">makesomething@dadi.tech</a><br>
+      +44 (0) 20 7205 2902</p>
+    </div>
+    <div class="u-col u-col--1-2 u-col--1-4@medium u-padding">
+      <h3 class="c-footer__title">Media enquiries</h3>
+      <p class="epsilon"><a href="mailto:press@dadi.tech">press@dadi.tech</a><br>
+      +44 (0) 20 7205 2901</p>
+    </div>
+    <div class="u-col u-col--1-2 u-col--1-4@medium u-padding">
+      <h3 class="c-footer__title">Careers</h3>
+      <p class="epsilon"><a href="mailto:joinus@dadi.tech">joinus@dadi.tech</a><br>
+      +44 (0) 20 7205 2903</p>
+    </div>
+    <div class="u-col u-col--1-2 u-col--1-4@medium u-padding">
+      <h3 class="c-footer__title">Everything else</h3>
+      <p class="epsilon"><a href="mailto:hi@dadi.tech">hi@dadi.tech</a><br>
+      +44 (0) 20 7205 2900<br>
+      <a href="http://twitter.com/dadi">@dadi</a></p>
+    </div>
+  </div>
+
+  <div class="u-wrapper u-padding">
+    <img src="/public/assets/img/dadi-full.png" height="24">
+  </div>
+</footer>
+
+	</body>
+</html>

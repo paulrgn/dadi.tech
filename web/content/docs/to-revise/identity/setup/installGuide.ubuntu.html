@@ -1,0 +1,95 @@
+<h2 id="overview">Overview</h2>
+
+<p>This document provides a simple step by step guide to installation on Ubuntu <a href="http://releases.ubuntu.com/14.04.1/">14.04.1 LTS</a>.</p>
+
+<p>This guide assumes a single server holding both the database and the API.</p>
+
+<h2 id="installing-dadi-api">Installing DADI API</h2>
+
+<h3 id="nodejs-latest">Node.js latest</h3>
+
+<ol>
+  <li><code class="highlighter-rouge">sudo apt-get -y update</code></li>
+  <li><code class="highlighter-rouge">sudo apt-get -y upgrade</code></li>
+  <li><code class="highlighter-rouge">sudo apt-get -y install python-software-properties</code></li>
+  <li><code class="highlighter-rouge">sudo add-apt-repository ppa:chris-lea/node.js</code></li>
+  <li><code class="highlighter-rouge">sudo apt-get -y update</code></li>
+  <li><code class="highlighter-rouge">sudo apt-get -y install nodejs</code></li>
+</ol>
+
+<h3 id="mongodb">MongoDB</h3>
+
+<ol>
+  <li><code class="highlighter-rouge">sudo apt-get -y install mongodb</code></li>
+</ol>
+
+<p>For the tests to run you will need stand alone <code class="highlighter-rouge">mongod</code>s running at localhost:27017 and localhost:27018. To do this you need to define a new mongod on 27108:</p>
+
+<ol>
+  <li><code class="highlighter-rouge">sudo mkdir -p data/db1 data/log1</code></li>
+  <li><code class="highlighter-rouge">sudo mongod --dbpath ~/data/db1 --logpath ~/data/log1/log --port 27018 --fork</code></li>
+</ol>
+
+<h3 id="dadi-api">DADI API</h3>
+
+<p>Install GCC to provide the latest build of the c++ bson extension (not required, but improves performance):</p>
+
+<p><code class="highlighter-rouge">sudo apt-get install gcc make build-essential</code></p>
+
+<p>Install Git and pull down the latest stable build of DADI API:</p>
+
+<ol>
+  <li><code class="highlighter-rouge">sudo apt-get install git</code></li>
+  <li><code class="highlighter-rouge">sudo git clone https://github.com/dadi/api.git</code></li>
+  <li><code class="highlighter-rouge">cd api/</code></li>
+</ol>
+
+<p>Install DADI API:</p>
+
+<p><em>Note:</em> The application log and cache directories are created at startup using settings in the main configuration file <code class="highlighter-rouge">config.json</code>.</p>
+
+<p><code class="highlighter-rouge">[sudo] cp config-sample.json config.json</code><br />
+<code class="highlighter-rouge">[sudo] npm install</code></p>
+
+<p>Perform tests:</p>
+
+<p><code class="highlighter-rouge">[sudo] npm test</code></p>
+
+<p>In order to get up and running you will also need to create a client document in the db. To automate this do:</p>
+
+<p><code class="highlighter-rouge">node utils/create-client.js</code></p>
+
+<p>Start the API:</p>
+
+<p><code class="highlighter-rouge">[sudo] npm start</code></p>
+
+<p>We can test that our credentials are valid by trying:</p>
+
+<p><code class="highlighter-rouge">curl -v -X POST -H "Cache-Control: no-cache" -H "content-type: application/json" -d "{ \"clientId\": \"testClient\", \"secret\": \"superSecret\"}" http://127.0.0.1:3000/token</code></p>
+
+<p>You should receive a 200 response containing an access token similar to the following</p>
+
+<p><code class="highlighter-rouge"><span class="p">{</span><span class="nt">"accessToken"</span><span class="p">:</span><span class="s2">"ccb96c94-2ddf-446b-8482-436c9423ae54"</span><span class="p">,</span><span class="nt">"tokenType"</span><span class="p">:</span><span class="s2">"Bearer"</span><span class="p">,</span><span class="nt">"expiresIn"</span><span class="p">:</span><span class="mi">2592000</span><span class="p">}</span></code></p>
+
+<h3 id="forever">Forever</h3>
+
+<p>To run the API server in the background, install <a href="https://github.com/nodejitsu/forever">Forever</a> and <a href="https://github.com/zapty/forever-service">Forever-service</a>:</p>
+
+<p><code class="highlighter-rouge">[sudo] npm install forever -g</code></p>
+
+<p><code class="highlighter-rouge">[sudo] npm install -g forever-service</code></p>
+
+<p>Install as a service and ensure it loads on boot:</p>
+
+<p><code class="highlighter-rouge">[sudo] forever-service install -s main.js -e NODE_ENV=production api --start</code></p>
+
+<p><em>Note the environment variable - <code class="highlighter-rouge">NODE_ENV=production</code> - must be set to target the required config version.</em></p>
+
+<p>You can then interact with the service using the following command:</p>
+
+<ul>
+  <li>Start: <code class="highlighter-rouge">[sudo] start api</code></li>
+  <li>Stop: <code class="highlighter-rouge">[sudo] stop api</code></li>
+  <li>Status: <code class="highlighter-rouge">[sudo] status api</code></li>
+  <li>Restart <code class="highlighter-rouge">[sudo] restart api</code></li>
+</ul>

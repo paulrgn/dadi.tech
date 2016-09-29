@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  <meta charset="utf-8">  
+  <meta name="author" content="dadi.co">  
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Welcome</title>
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+
+	<body>
+
+	  <header class="c-header c-header--acollapsed">
+  <div class="c-header__inner-wrapper u-cols">
+    <div class="u-col u-col--1-1 u-col--2-3@medium">
+      <a href="/">
+        <img class="c-header__logo" src="/public/assets/img/dadi.png" alt="DADI">
+      </a>
+
+      <h2 class="c-header__title">Developer support</h2>
+      <p class="c-header__subtitle">Tutorials and documentation</p>    
+    </div>
+
+    <div class="c-header__top u-col u-col--1-1 u-col--1-3@medium">
+      <ul class="c-header__links">
+        <li class="c-header__link">
+          <a href="http://twitter.com/dadi">@DADI</a>
+        </li>
+        <li class="c-header__link">
+          <a href="mailto:dev@dadi.tech">dev@dadi.tech</a>
+        </li>
+      </ul>
+
+      
+    </div>    
+
+    
+      <div class="u-col u-col--1-1">
+        <div class="c-combo">
+  <label class="c-combo__item c-combo__item--expand c-text-field-container">
+    <span class="c-text-field__icon fa fa-search"></span>
+    <input class="c-text-field" type="text" placeholder="Search our help centre…" />
+  </label>
+  <button class="c-combo__item c-button c-button--blue" type="submit">Search</button>
+</div>
+      </div>
+    
+  </div>
+</header>
+
+	  <h2 id="logging">Logging</h2>
+
+<ul>
+  <li><a href="#basic-logging">Basic Logging</a></li>
+  <li><a href="#default-configuration">Default Configuration</a></li>
+  <li><a href="#configuration-properties">Configuration Properties</a></li>
+  <li><a href="#request-logging">Request Logging</a></li>
+  <li>Log Rotation</li>
+  <li><a href="#viewing-the-logs">Viewing the logs</a></li>
+</ul>
+
+<h3 id="basic-logging">Basic Logging</h3>
+
+<p>DADI Web starts with a default configuration for logging which enables both error/event logging and HTTP request logging.</p>
+
+<p>To disable logging, simply add a <code class="highlighter-rouge">logging</code> section to your configuration file and set <code class="highlighter-rouge">enabled</code> to <code class="highlighter-rouge">false</code>. To change the name and location of your log files,  change the <code class="highlighter-rouge">path</code>, <code class="highlighter-rouge">filename</code> and <code class="highlighter-rouge">extension</code> properties.</p>
+
+<p>DADI Web checks for the existence of the configured log path at startup, and creates it if necessary.</p>
+
+<h5 id="default-configuration">Default Configuration</h5>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>"logging": {
+  "enabled": true,
+  "level": "info",
+  "path": "./log",
+  "filename": "web",
+  "extension": "log",
+  "accessLog": {
+    "enabled": true,
+    "kinesisStream": ""
+  },
+  "sentry": {
+    dsn: ""
+  }
+}
+</code></pre>
+</div>
+
+<h3 id="configuration-properties">Configuration Properties</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Property</th>
+      <th style="text-align: left">Description</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Default</th>
+      <th style="text-align: left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">enabled</td>
+      <td style="text-align: left">If true, logging is enabled</td>
+      <td style="text-align: left">Boolean</td>
+      <td style="text-align: left">true</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">level</td>
+      <td style="text-align: left">Sets the logging level</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">“info”</td>
+      <td style="text-align: left">“warn”</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">path</td>
+      <td style="text-align: left">The path relative to the root of the application where log files should be stored</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">”./log”</td>
+      <td style="text-align: left">“/var/log/web”</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">filename</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">“web”</td>
+      <td style="text-align: left">“your-application-name”</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">extension</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">“log”</td>
+      <td style="text-align: left">“txt”</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><strong>accessLog</strong></td>
+      <td style="text-align: left"><strong>Allows configuration of HTTP request logging</strong></td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">accessLog.enabled</td>
+      <td style="text-align: left">If true, HTTP requests are logged to a separate file. The filename used will be a combination of <code class="highlighter-rouge">logging.filename</code> + access + <code class="highlighter-rouge">logging.extension</code>. For example, <code class="highlighter-rouge">web.access.log</code></td>
+      <td style="text-align: left">Boolean</td>
+      <td style="text-align: left">true</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">accessLog.kinesisStream</td>
+      <td style="text-align: left">The name of an AWS Kinesis stream to write to log records to</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">Empty, therefore disabled</td>
+      <td style="text-align: left">“webAppLogStream”</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><strong>sentry</strong></td>
+      <td style="text-align: left"><strong>Allows sending events to a Sentry server</strong></td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">sentry.dsn</td>
+      <td style="text-align: left">A DSN key as provided by your Sentry integration</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">“https://693ef18da3184cffa82144fde2979cbc:a0651b0286784761a62ef8e8fc128722@app.getsentry.com/59524”</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="using-the-logger-in-your-own-modules">Using the logger in your own modules</h3>
+
+<p>DADI Web exposes it’s log module so you can use it within your own modules or events. Use the following code to get a reference to the log, then call one of the log methods to send data to the log file. Available log methods are <code class="highlighter-rouge">debug</code>, <code class="highlighter-rouge">info</code>, <code class="highlighter-rouge">warn</code>, <code class="highlighter-rouge">error</code>, <code class="highlighter-rouge">trace</code>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var Logger = require('dadi-api').Log;
+var log = Logger.get();
+
+log.info('Something worth logging');
+log.error(new Error('Something bad happened'));
+</code></pre>
+</div>
+
+<h4 id="adding-a-module-identifier-to-log-records">Adding a module identifier to log records</h4>
+
+<p>To make it easier to identify log records from your own modules or events, pass a <code class="highlighter-rouge">module</code> property into the log call:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var Logger = require('dadi-api').Log;
+var log = Logger.get();
+
+log.info({ module: 'your module' }, 'Something worth logging');
+</code></pre>
+</div>
+
+<p>Log records created using the above child logger will include a property containing the specified module name:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="nt">"name"</span><span class="p">:</span><span class="s2">"web"</span><span class="p">,</span><span class="nt">"hostname"</span><span class="p">:</span><span class="s2">"localhost"</span><span class="p">,</span><span class="nt">"pid"</span><span class="p">:</span><span class="mi">12010</span><span class="p">,</span><span class="nt">"module"</span><span class="p">:</span><span class="s2">"your module"</span><span class="p">,</span><span class="nt">"level"</span><span class="p">:</span><span class="mi">30</span><span class="p">,</span><span class="nt">"msg"</span><span class="p">:</span><span class="s2">"Something worth logging"</span><span class="p">,</span><span class="nt">"time"</span><span class="p">:</span><span class="s2">"2015-12-17T08:57:56.678Z"</span><span class="p">,</span><span class="nt">"v"</span><span class="p">:</span><span class="mi">0</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<h3 id="request-logging">Request Logging</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>"logging": {
+  "enabled": true,
+  "level": "info",
+  "path": "./log",
+  "filename": "web",
+  "extension": "log",
+  "accessLog": {
+    "enabled": true,
+    "fileRotationPeriod": "1d",
+    "fileRetentionCount": 7,
+    "kinesisStream": ""
+  }
+}
+</code></pre>
+</div>
+
+<p>The request log contains a stream of JSON records. Each record contains a <code class="highlighter-rouge">msg</code> property containing details about the HTTP request, formatted using the nginx server log format.</p>
+
+<h4 id="the-raw-log-record">The raw log record</h4>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="nt">"name"</span><span class="p">:</span><span class="s2">"web_access"</span><span class="p">,</span><span class="nt">"hostname"</span><span class="p">:</span><span class="s2">"localhost"</span><span class="p">,</span><span class="nt">"pid"</span><span class="p">:</span><span class="mi">14157</span><span class="p">,</span><span class="nt">"level"</span><span class="p">:</span><span class="mi">30</span><span class="p">,</span><span class="nt">"msg"</span><span class="p">:</span><span class="s2">"127.0.0.1 - 2015-12-17T19:02:08+08:00 GET /movies/ HTTP/1.1 200 17529 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36"</span><span class="p">,</span><span class="nt">"time"</span><span class="p">:</span><span class="s2">"2015-12-17T11:02:08.676Z"</span><span class="p">,</span><span class="nt">"v"</span><span class="p">:</span><span class="mi">0</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<h4 id="the-actual-log-record-in-nginx-format">The actual log record, in nginx format</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>127.0.0.1 - 2015-12-17T19:02:08+08:00 GET /movies/ HTTP/1.1 200 17529 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36
+</code></pre>
+</div>
+
+<p>This record consists of the following fields:<br />
+<code class="highlighter-rouge">remote address</code> - <code class="highlighter-rouge">time</code> <code class="highlighter-rouge">request</code> <code class="highlighter-rouge">status_code</code> <code class="highlighter-rouge">bytes_sent</code> <code class="highlighter-rouge">http_referer (optional)</code> <code class="highlighter-rouge">http_user_agent</code></p>
+
+<p>For example:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">remote address</code>: 127.0.0.1</li>
+  <li><code class="highlighter-rouge">time</code>: 2015-12-17T19:02:08+08:00</li>
+  <li><code class="highlighter-rouge">request</code>: GET /movies/ HTTP/1.1</li>
+  <li><code class="highlighter-rouge">status_code</code>: 200</li>
+  <li><code class="highlighter-rouge">bytes_sent</code>: 17529</li>
+  <li><code class="highlighter-rouge">http_referer (optional)</code>:</li>
+  <li><code class="highlighter-rouge">http_user_agent</code>: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36</li>
+</ul>
+
+<h3 id="log-rotation">Log Rotation</h3>
+
+<p>[TODO]</p>
+
+<h3 id="viewing-the-logs">Viewing the logs</h3>
+
+<p>DADI Web uses <a href="https://github.com/trentm/node-bunyan">Bunyan</a> to log errors and events. The Bunyan log output is a stream of JSON objects. A CLI tool is provided for pretty-printing Bunyan logs and for filtering.</p>
+
+<h4 id="install-the-cli">Install the CLI</h4>
+
+<p>To make reading the application logs easier install the Bunyan CLI tool globally:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ npm install -g bunyan
+</code></pre>
+</div>
+
+<h4 id="example-pass-the-log-contents-to-the-cli-tool">Example: pass the log contents to the CLI tool</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ tail log/web.log | bunyan
+</code></pre>
+</div>
+<div class="highlighter-rouge"><pre class="highlight"><code>[2015-10-27T09:14:01.856Z]  INFO: web/67025 on localhost: 5 rewrites/redirects loaded. (module=router)
+[2015-10-27T09:14:03.380Z]  INFO: web/67025 on localhost: Generating new access token for "/home" (module=auth)
+[2015-10-27T09:14:04.510Z]  INFO: web/67025 on localhost: Token received. (module=auth)
+[2015-10-27T09:14:04.517Z]  INFO: web/67025 on localhost: Generating new access token for datasource movies (module=auth/bearer)
+[2015-10-27T09:14:04.623Z]  INFO: web/67025 on localhost: https://127.0.0.1:3000/1.0/app/movies?count=3&amp;page=1&amp;filter={"state":"published"}&amp;fields={}&amp;sort={} (module=helper)
+[2015-10-27T09:14:04.643Z]  INFO: web/67025 on localhost: GET /home 200 65ms (module=router)
+[2015-10-27T09:16:46.331Z]  INFO: web/67025 on localhost: Server stopped, process exiting. (module=server)
+</code></pre>
+</div>
+
+<h4 id="example-filter-logs-by-module">Example: filter logs by module</h4>
+
+<p>In the next two examples, a valid Javascript condition can be specified. Here, <code class="highlighter-rouge">this</code> refers to the log record as JSON.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ tail -n30 log/web.log | bunyan -c 'this.module=="router"'
+</code></pre>
+</div>
+<div class="highlighter-rouge"><pre class="highlight"><code>[2015-10-27T09:14:01.413Z]  INFO: web/67025 on localhost: Added route constraint function 'nextIfPaginationRequest' for '/movies/reviews/' (module=router)
+[2015-10-27T09:14:01.856Z]  INFO: web/67025 on localhost: Rewrite module loaded. (module=router)
+[2015-10-27T09:14:01.856Z]  INFO: web/67025 on localhost: 5 rewrites/redirects loaded. (module=router)
+[2015-10-27T09:14:04.643Z]  INFO: web/67025 on localhost: GET /home 200 65ms (module=router)
+</code></pre>
+</div>
+
+<h4 id="example-filter-logs-by-any-other-valid-javascript-condition">Example: filter logs by any other valid Javascript condition</h4>
+
+<p>In this example we also pass a formatting option to the command to view shorter output. See the full range of options available <a href="https://github.com/trentm/node-bunyan">here</a></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ tail log/web.log | bunyan -c 'this.msg.indexOf("GET") &gt; -1' -o short
+</code></pre>
+</div>
+<div class="highlighter-rouge"><pre class="highlight"><code>09:11:57.618Z  INFO web: GET /home 200 460ms (module=router)
+09:13:18.325Z  INFO web: GET /home 200 2ms (module=router)
+</code></pre>
+</div>
+
+<h4 id="example-filter-logs-by-level">Example: filter logs by level</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ tail log/web.log | bunyan -l warn
+</code></pre>
+</div>
+<div class="highlighter-rouge"><pre class="highlight"><code>[2015-10-25T13:54:25.429Z]  WARN: web/58045 on localhost.local: log.stage() is deprecated and will be removed in a future release. Use log.debug(), log.info(), log.warn(), log.error(), log.trace() instead.
+</code></pre>
+</div>
+
+<h3 id="sentry-error-reporting">Sentry Error Reporting</h3>
+
+<p>DADI Web contains functionality to integrate your application with <a href="https://getsentry.com/welcome/">Sentry</a>, a real-time crash reporting solution.</p>
+
+<p>Whether you already have an account with the cloud-hosted version of Sentry, or are hosting your own server, it is easy to start sending data from your DADI Web application.</p>
+
+<p>Simply locate or create your project’s Sentry DSN under Settings &gt; Client Keys. Copy the DSN to your configuration file so it looks similar to the following (some properties omitted for brevity):</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>"logging": {
+  "sentry": {
+    "dsn": "https://693ef18da3184cffa82144fde2979cbc:a0651b0286784761a62ef8e8fc128722@app.getsentry.com/59524"
+  }
+}
+</code></pre>
+</div>
+
+
+	  <footer class="c-footer">
+  <div class="u-cols u-wrapper">
+    <div class="u-col u-col--1-2 u-col--1-4@medium u-padding">
+      <h3 class="c-footer__title">Client engagement</h3>
+      <p class="epsilon"><a href="mailto:makesomething@dadi.tech">makesomething@dadi.tech</a><br>
+      +44 (0) 20 7205 2902</p>
+    </div>
+    <div class="u-col u-col--1-2 u-col--1-4@medium u-padding">
+      <h3 class="c-footer__title">Media enquiries</h3>
+      <p class="epsilon"><a href="mailto:press@dadi.tech">press@dadi.tech</a><br>
+      +44 (0) 20 7205 2901</p>
+    </div>
+    <div class="u-col u-col--1-2 u-col--1-4@medium u-padding">
+      <h3 class="c-footer__title">Careers</h3>
+      <p class="epsilon"><a href="mailto:joinus@dadi.tech">joinus@dadi.tech</a><br>
+      +44 (0) 20 7205 2903</p>
+    </div>
+    <div class="u-col u-col--1-2 u-col--1-4@medium u-padding">
+      <h3 class="c-footer__title">Everything else</h3>
+      <p class="epsilon"><a href="mailto:hi@dadi.tech">hi@dadi.tech</a><br>
+      +44 (0) 20 7205 2900<br>
+      <a href="http://twitter.com/dadi">@dadi</a></p>
+    </div>
+  </div>
+
+  <div class="u-wrapper u-padding">
+    <img src="/public/assets/img/dadi-full.png" height="24">
+  </div>
+</footer>
+
+	</body>
+</html>

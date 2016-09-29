@@ -1,0 +1,45 @@
+<h2 id="results">Results</h2>
+
+<p>To see the results of our benchmarks see the <a href="https://github.com/dadi/identity/blob/docs/docs/performance.md">performance</a> document.</p>
+
+<h2 id="run-them-yourself">Run them yourself</h2>
+
+<p>We’ve provieded a benchmark script to measure the performance of generating UUIDs.</p>
+
+<p>To prepare and run the benchmark, issue:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>node benchmark/benchmark.js
+</code></pre>
+</div>
+
+<p>You’ll see an output like this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Starting benchmark process
+nodeuuid.v4() - using node.js crypto RNG: 235072 UUIDs/second
+nodeuuid.v4() - using Math.random() RNG: 229885 UUIDs/second
+nodeuuid.v4('binary'): 183891 UUIDs/second
+nodeuuid.v4('binary', buffer): 180375 UUIDs/second
+140byte.es_v4: 220264 UUIDs/second
+</code></pre>
+</div>
+
+<ul>
+  <li>The <code class="highlighter-rouge">uuid()</code> entries are for Nikhil Marathe’s <a href="https://bitbucket.org/nikhilm/uuidjs">uuid module</a> which is a wrapper around the native libuuid library</li>
+  <li>The <code class="highlighter-rouge">uuidjs()</code> entries are for Patrick Negri’s <a href="https://github.com/pnegri/uuid-js">uuid-js module</a> which is a pure javascript implementation based on <a href="https://github.com/LiosK/UUID.js">UUID.js</a> by LiosK</li>
+</ul>
+
+<p>If you want to get more reliable results you can run the benchmark multiple times and write the output into a log file:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ [sudo] for i in {0..9}; do node benchmark/benchmark.js &gt;&gt; benchmark/bench_0.4.12.log; done;
+</code></pre>
+</div>
+
+<p>If you’re interested in how performance varies between different node versions, you can issue the above command multiple times.</p>
+
+<p>You can then use the shell script <code class="highlighter-rouge">bench.sh</code> provided in the benchmark directory to calculate the averages over all benchmark runs and draw a nice plot:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ [sudo] (cd benchmark/ &amp;&amp; ./bench.sh)
+</code></pre>
+</div>
+
+<p>This assumes you have <a href="http://www.gnuplot.info/">gnuplot</a> and <a href="http://www.imagemagick.org/">ImageMagick</a> installed. You’ll find a nice <code class="highlighter-rouge">bench.png</code> graph in the <code class="highlighter-rouge">benchmark/</code> directory on completion.</p>

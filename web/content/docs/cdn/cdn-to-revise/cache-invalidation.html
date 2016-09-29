@@ -1,0 +1,48 @@
+<p>DADI CDN’s cache, both local and Redis, can be invalidated on an individual image or file path basis using the invalidation API.</p>
+
+<h2 id="authorisation">Authorisation</h2>
+
+<p>The API requires authentication (two-legged OAuth). Authenticaiton credentuals in the form of the <code class="highlighter-rouge">clientId</code> and <code class="highlighter-rouge">secret</code> can be set in the config.json file.</p>
+
+<p>You can get a bearer token as follows:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>POST /token HTTP/1.1
+Host: localhost:3000
+content-type: application/json
+Cache-Control: no-cache
+
+{ "clientId": "testClient", "secret": "superSecret" }
+</code></pre>
+</div>
+
+<p>Once you have the token, each request to the api should include a header similar to the one below (of course use your specific token):</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Authorization: Bearer 171c8c12-6e9b-47a8-be29-0524070b0c65
+</code></pre>
+</div>
+
+<h2 id="examples">Examples</h2>
+
+<h3 id="section">1.</h3>
+
+<p>POST http://{url}/api</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"invalidate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"some-image-name.jpg"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>Invalidate the image <code class="highlighter-rouge">some-image-name.jpg</code>, causing it to be renegerated at the point of next request.</p>
+
+<h3 id="section-1">2.</h3>
+
+<p>POST http://{url}/api</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"invalidate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/some-path/to/images"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>Invalidates all images fount within the directory <code class="highlighter-rouge">/some-path/to/images</code>, causing them to be renegerated at the point of next request.</p>

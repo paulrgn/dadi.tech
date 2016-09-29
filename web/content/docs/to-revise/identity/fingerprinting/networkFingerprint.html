@@ -1,0 +1,21 @@
+<p>The network performance fingerprint is generated within the applicaiton itself using IP&gt;network detection provided by <a href="https://www.maxmind.com">MaxMind</a>.</p>
+
+<h2 id="fingerprint-example">Fingerprint example</h2>
+
+<p>The network performance fingerprint is created using <a href="https://en.wikipedia.org/wiki/MurmurHash">MurmurHash3</a>.</p>
+
+<p>Output:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>-438796388
+</code></pre>
+</div>
+
+<h2 id="database-persistence">Database persistence</h2>
+
+<p>DADI Identity does nothing with the network performance data returned other than generate a fingerprint. As this fingerprint is used for confidence scoring when calculating UUID matches over time, the database itself must not change. It is therefore kept consistent in the Identity repository.</p>
+
+<p>Any updates to the dataset will have the effect of invalidating all historical UUIDs within your implementation, so handle with care.</p>
+
+<h2 id="future-revisions">Future revisions</h2>
+
+<p>An internally generated throughput fingerprint is planned and will either replace, or be used in addition to, this fingerprint.</p>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  <meta charset="utf-8">  
+  <meta name="author" content="dadi.co">  
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Welcome</title>
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+
+	<body>
+
+	  <header class="c-header c-header--acollapsed">
+  <div class="c-header__inner-wrapper u-cols">
+    <div class="u-col u-col--1-1 u-col--2-3@medium">
+      <a href="/">
+        <img class="c-header__logo" src="/public/assets/img/dadi.png" alt="DADI">
+      </a>
+
+      <h2 class="c-header__title">Developer support</h2>
+      <p class="c-header__subtitle">Tutorials and documentation</p>    
+    </div>
+
+    <div class="c-header__top u-col u-col--1-1 u-col--1-3@medium">
+      <ul class="c-header__links">
+        <li class="c-header__link">
+          <a href="http://twitter.com/dadi">@DADI</a>
+        </li>
+        <li class="c-header__link">
+          <a href="mailto:dev@dadi.tech">dev@dadi.tech</a>
+        </li>
+      </ul>
+
+      
+    </div>    
+
+    
+      <div class="u-col u-col--1-1">
+        <div class="c-combo">
+  <label class="c-combo__item c-combo__item--expand c-text-field-container">
+    <span class="c-text-field__icon fa fa-search"></span>
+    <input class="c-text-field" type="text" placeholder="Search our help centre…" />
+  </label>
+  <button class="c-combo__item c-button c-button--blue" type="submit">Search</button>
+</div>
+      </div>
+    
+  </div>
+</header>
+
+	  <h2 id="caching">Caching</h2>
+
+<h3 id="overview">Overview</h3>
+
+<ul>
+  <li><a href="#configuration">Configuration</a></li>
+  <li><a href="#page-caching">Page Caching</a></li>
+  <li><a href="#datasource-caching">Datasource Caching</a></li>
+  <li><a href="#cache-invalidation">Cache Invalidation</a></li>
+</ul>
+
+<h3 id="configuration">Configuration</h3>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="s2">"caching"</span><span class="err">:</span> <span class="p">{</span>
+  <span class="s2">"ttl"</span><span class="err">:</span> <span class="mi">300</span><span class="p">,</span>
+  <span class="s2">"directory"</span><span class="err">:</span> <span class="p">{</span>
+    <span class="s2">"enabled"</span><span class="err">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s2">"path"</span><span class="err">:</span> <span class="s2">"./cache/web/"</span><span class="p">,</span>
+    <span class="s2">"extension"</span><span class="err">:</span> <span class="s2">"html"</span>
+  <span class="p">},</span>
+  <span class="s2">"redis"</span><span class="err">:</span> <span class="p">{</span>
+    <span class="s2">"enabled"</span><span class="err">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="s2">"host"</span><span class="err">:</span> <span class="s2">"localhost"</span><span class="p">,</span>
+    <span class="s2">"port"</span><span class="err">:</span> <span class="mi">6379</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Property</th>
+      <th style="text-align: left">Description</th>
+      <th style="text-align: left">Default value</th>
+      <th style="text-align: left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">ttl</td>
+      <td style="text-align: left">The time, in seconds, after which cached data is considered stale</td>
+      <td style="text-align: left">300</td>
+      <td style="text-align: left">86400</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">directory</td>
+      <td style="text-align: left">Configuration block for caching using a local filesystem directory</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">directory.enabled</td>
+      <td style="text-align: left">If true, cache files will be stored on disk using the settings below. Either directory or redis caching must be enabled for caching to work.</td>
+      <td style="text-align: left">true</td>
+      <td style="text-align: left">true</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">directory.path</td>
+      <td style="text-align: left">The directory to use for storing cache files, relative to the root of the application</td>
+      <td style="text-align: left">”./cache/web”</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">directory.extension</td>
+      <td style="text-align: left">The file extension to use for cache files</td>
+      <td style="text-align: left">“html”</td>
+      <td style="text-align: left">“txt”</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">redis</td>
+      <td style="text-align: left">Configuration block for caching using a Redis caching service</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">redis.enabled</td>
+      <td style="text-align: left">If true, cache files will be stored in the Redis cache store using the settings below. Either directory or redis caching must be enabled for caching to work.</td>
+      <td style="text-align: left">false</td>
+      <td style="text-align: left">true</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">redis.host</td>
+      <td style="text-align: left">The host for the Redis caching service</td>
+      <td style="text-align: left">””</td>
+      <td style="text-align: left">“localhost”</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">redis.port</td>
+      <td style="text-align: left">The port for the Redis caching service</td>
+      <td style="text-align: left">6379</td>
+      <td style="text-align: left">6379</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="page-caching">Page Caching</h3>
+
+<p>Controls the caching of rendered HTML output. To enable page caching, ensure that the main configuration file has either <code class="highlighter-rouge">directory</code> or <code class="highlighter-rouge">redis</code> caching enabled, and the below <code class="highlighter-rouge">cache</code> setting is set for the page in question.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="s2">"settings"</span><span class="err">:</span> <span class="p">{</span>
+  <span class="s2">"cache"</span><span class="err">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h3 id="datasource-caching">Datasource Caching</h3>
+
+<p>Data received from the API via datasources can be cached by adding a <code class="highlighter-rouge">caching</code> block to the datasource specification file.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="s2">"caching"</span><span class="err">:</span> <span class="p">{</span>
+  <span class="s2">"enabled"</span><span class="err">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="s2">"ttl"</span><span class="err">:</span> <span class="mi">300</span><span class="p">,</span>
+  <span class="s2">"directory"</span><span class="err">:</span> <span class="s2">"./cache/web/"</span><span class="p">,</span>
+  <span class="s2">"extension"</span><span class="err">:</span> <span class="s2">"json"</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Property</th>
+      <th style="text-align: left">Description</th>
+      <th style="text-align: left">Default value</th>
+      <th style="text-align: left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">enabled</td>
+      <td style="text-align: left">If true, datasource responses will be cached. The main configuration must have either directory or redis caching enabled for datasource caching to work</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">true</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ttl</td>
+      <td style="text-align: left">The time, in seconds, after which cached data is considered stale</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">300</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">directory</td>
+      <td style="text-align: left">(optional) The directory to use for storing datasource cache files, relative to the root of the application</td>
+      <td style="text-align: left">”./cache/web”</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">extension</td>
+      <td style="text-align: left">(optional) The file extension to use for datasource cache files</td>
+      <td style="text-align: left">“json”</td>
+      <td style="text-align: left">“txt”</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Note:</strong> If <code class="highlighter-rouge">directory</code> or <code class="highlighter-rouge">extension</code> are not specified, values from the main configuration file will be used instead.</p>
+
+<h3 id="cache-invalidation">Cache Invalidation</h3>
+
+<p>DADI Web supports two types of cache invalidation: by specific path or the entire cache.</p>
+
+<p>In both cases the request must be a POST and the body must have the following properties:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">path</code>: either “<code class="highlighter-rouge">*</code>” to invalidate everything, or a path matching a route within the application, for example <code class="highlighter-rouge">/books/young-adult</code></li>
+  <li><code class="highlighter-rouge">clientId</code>: must match the <code class="highlighter-rouge">auth.clientId</code> in the application’s config file</li>
+  <li><code class="highlighter-rouge">secret</code>: must match the <code class="highlighter-rouge">auth.secret</code> in the application’s config file</li>
+</ul>
+
+<h4 id="specific-path-invalidation">Specific Path Invalidation</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>POST /api/flush HTTP/1.1
+Host: www.example.com
+Content-Type: application/json
+
+{"path": "/books", "clientId": "testClient", "secret": "superSecret"}
+</code></pre>
+</div>
+
+<h4 id="entire-cache-invalidation">Entire Cache Invalidation</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>POST /api/flush HTTP/1.1
+Host: www.example.com
+Content-Type: application/json
+
+{"path": "*", "clientId": "testClient", "secret": "superSecret"}
+</code></pre>
+</div>
+
+
+	  <footer class="c-footer">
+  <div class="u-cols u-wrapper">
+    <div class="u-col u-col--1-2 u-col--1-4@medium u-padding">
+      <h3 class="c-footer__title">Client engagement</h3>
+      <p class="epsilon"><a href="mailto:makesomething@dadi.tech">makesomething@dadi.tech</a><br>
+      +44 (0) 20 7205 2902</p>
+    </div>
+    <div class="u-col u-col--1-2 u-col--1-4@medium u-padding">
+      <h3 class="c-footer__title">Media enquiries</h3>
+      <p class="epsilon"><a href="mailto:press@dadi.tech">press@dadi.tech</a><br>
+      +44 (0) 20 7205 2901</p>
+    </div>
+    <div class="u-col u-col--1-2 u-col--1-4@medium u-padding">
+      <h3 class="c-footer__title">Careers</h3>
+      <p class="epsilon"><a href="mailto:joinus@dadi.tech">joinus@dadi.tech</a><br>
+      +44 (0) 20 7205 2903</p>
+    </div>
+    <div class="u-col u-col--1-2 u-col--1-4@medium u-padding">
+      <h3 class="c-footer__title">Everything else</h3>
+      <p class="epsilon"><a href="mailto:hi@dadi.tech">hi@dadi.tech</a><br>
+      +44 (0) 20 7205 2900<br>
+      <a href="http://twitter.com/dadi">@dadi</a></p>
+    </div>
+  </div>
+
+  <div class="u-wrapper u-padding">
+    <img src="/public/assets/img/dadi-full.png" height="24">
+  </div>
+</footer>
+
+	</body>
+</html>

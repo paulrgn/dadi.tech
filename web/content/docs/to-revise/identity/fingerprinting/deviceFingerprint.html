@@ -1,0 +1,210 @@
+<p>The device-level fingerprint is generated from a broad array of available data wihtin a browser context and through the use of a drop-in library for mobile apps.</p>
+
+<p>DADI Identity fingerprints at browser level currently have a uniqueness of 87.44%. Fingerprints at app level have a uniqueness of 100%.</p>
+
+<h2 id="browser-based">Browser based</h2>
+
+<h2 id="fingerprint-example">Fingerprint example</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>dfe3327991a9e4521980986a02cb3071
+</code></pre>
+</div>
+
+<h3 id="usage">Usage</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>new deviceId().get(function(result, components){
+  console.log(result); // A hash, representing your device fingerprint
+  console.log(components); // an array of FP components
+});
+</code></pre>
+</div>
+
+<h4 id="you-can-pass-an-object-with-options-all-of-which-are-optional">You can pass an object with options (all of which are optional):</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var options = { excludeUserAgent: true, excludeLanguage: true };
+new Fingerprint2(options).get(function(result){
+  console.log(result);
+});
+</code></pre>
+</div>
+
+<h4 id="options">Options</h4>
+
+<p>JS font enumeration can be used by to return a list of available fonts, but performance as been found to be slow in many cases, especially on sites making heavy use of JavaScript. For this reason font dectection is disabled in the standard package.</p>
+
+<p>To enable JS enumeration, simple remove:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>excludeJsFonts: true
+</code></pre>
+</div>
+
+<p>…within the main dadi.js file and then reminify it before pushing to live.</p>
+
+<p>Full option list:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>swfContainerId</td>
+      <td>Specifies the dom element ID to be used for swf embedding. <code class="highlighter-rouge">dadiSwf</code> by default</td>
+    </tr>
+    <tr>
+      <td>excludeUserAgent</td>
+      <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent">User agent</a> should not take part in FP calculation</td>
+    </tr>
+    <tr>
+      <td>excludeLanguage</td>
+      <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage/language">Browser language</a></td>
+    </tr>
+    <tr>
+      <td>excludeColorDepth</td>
+      <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/colorDepth">Colour depth</a></td>
+    </tr>
+    <tr>
+      <td>excludeScreenResolution</td>
+      <td>Screen resolution</td>
+    </tr>
+    <tr>
+      <td>excludeTimezoneOffset</td>
+      <td>User time zone</td>
+    </tr>
+    <tr>
+      <td>excludeSessionStorage</td>
+      <td>User browser support of session storage</td>
+    </tr>
+    <tr>
+      <td>excludeIndexedDB</td>
+      <td>User browser support of IndexedDB</td>
+    </tr>
+    <tr>
+      <td>excludeAddBehavior</td>
+      <td>IE specific ‘AddBehavior’ method detection</td>
+    </tr>
+    <tr>
+      <td>excludeOpenDatabase</td>
+      <td>User browser support of OpenDatabase</td>
+    </tr>
+    <tr>
+      <td>excludeCpuClass</td>
+      <td>Detection of CPU class</td>
+    </tr>
+    <tr>
+      <td>excludePlatform</td>
+      <td>Detection of OS platform</td>
+    </tr>
+    <tr>
+      <td>excludeDoNotTrack</td>
+      <td>is DoNotTrack set</td>
+    </tr>
+    <tr>
+      <td>excludeCanvas</td>
+      <td>Skip canvas fingerprinting entirely (you will most likely not need to set this to true)</td>
+    </tr>
+    <tr>
+      <td>excludeWebGL</td>
+      <td>Skip WebGL fingerprinting</td>
+    </tr>
+    <tr>
+      <td>excludeAdBlock</td>
+      <td>Skip AdBlock detection</td>
+    </tr>
+    <tr>
+      <td>excludeHasLiedLanguages</td>
+      <td>Skip check if user is trying to hide his browser language</td>
+    </tr>
+    <tr>
+      <td>excludeHasLiedResolution</td>
+      <td>Skip check if user is trying to hide his screen resolution</td>
+    </tr>
+    <tr>
+      <td>excludeHasLiedOs</td>
+      <td>Skip check if user is trying to hide his OS info</td>
+    </tr>
+    <tr>
+      <td>excludeHasLiedBrowser</td>
+      <td>Skip check if user is trying to hide his browser information</td>
+    </tr>
+    <tr>
+      <td>excludeJsFonts</td>
+      <td>Skip font detection with CSS “side channel” (disabled by default)</td>
+    </tr>
+    <tr>
+      <td>excludePlugins</td>
+      <td>Skip plugin enumeration/detection</td>
+    </tr>
+    <tr>
+      <td>excludeTouchSupport</td>
+      <td>Skip touch screen specific info fingerprinting</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>Note: <code class="highlighter-rouge">detectScreenOrientation</code> option is <code class="highlighter-rouge">true</code> by default to ensure consistent fingerprints when users rotate their mobile<br />
+devices</em></p>
+
+<p><em>Note: all fingerprinting sources are enabled by default, i.e. you don’t need to explicitly configure the library to include them</em></p>
+
+<p>Example usage:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>new deviceId().get(function(result, components){
+  // this will use all available fingerprinting sources
+  console.log(result);
+  // components is an array of all fingerprinting components used
+  console.log(components);
+});
+</code></pre>
+</div>
+
+<h4 id="list-of-fingerprinting-sources">List of fingerprinting sources</h4>
+
+<ol>
+  <li>UserAgent</li>
+  <li>Language</li>
+  <li>Color Depth</li>
+  <li>Screen Resolution</li>
+  <li>Timezone</li>
+  <li>Has session storage or not</li>
+  <li>Has local storage or not</li>
+  <li>Has indexed DB</li>
+  <li>Has IE specific ‘AddBehavior’</li>
+  <li>Has open DB</li>
+  <li>CPU class</li>
+  <li>Platform</li>
+  <li>DoNotTrack or not</li>
+  <li>Full list of installed fonts (maintaining their order, which increases the entropy), implemented with Flash.</li>
+  <li>A list of installed fonts, detected with JS/CSS (side-channel technique) - can detect up to 500 installed fonts without flash</li>
+  <li>Canvas fingerprinting</li>
+  <li>WebGL fingerprinting</li>
+  <li>Plugins (IE included)</li>
+  <li>Is AdBlock installed or not</li>
+  <li>Has the user tampered with its languages <sup><a href="https://github.com/Valve/fingerprintjs2/wiki/Browser-tampering">1</a></sup></li>
+  <li>Has the user tampered with its screen resolution <sup><a href="https://github.com/Valve/fingerprintjs2/wiki/Browser-tampering">1</a></sup></li>
+  <li>Has the user tampered with its OS <sup><a href="https://github.com/Valve/fingerprintjs2/wiki/Browser-tampering">1</a></sup></li>
+  <li>Has the user tampered with its browser <sup><a href="https://github.com/Valve/fingerprintjs2/wiki/Browser-tampering">1</a></sup></li>
+  <li>Touch screen detection and capabilities</li>
+</ol>
+
+<p>By default, JS font detection will only detect up to 65 installed fonts. If you want to improve the font detection,<br />
+you can pass <code class="highlighter-rouge">extendedFontList: true</code> option. This will increase the number of detectable fonts to ~500.</p>
+
+<h3 id="performance">Performance</h3>
+
+<p>In testing the default FP process takes about 80-100ms. If you enable JS enurmeration for fonts and use the <code class="highlighter-rouge">extendedFontList</code> option this time will increase up to 200-600ms.</p>
+
+<p>This option can incur even more overhead on mobile Firefox browsers, which is much slower in font detection, so use it with caution.</p>
+
+<p>-</p>
+
+<h2 id="app-based">App based</h2>
+
+<h3 id="ios">iOS</h3>
+
+<h3 id="android">Android</h3>
+
+<h3 id="windows-phone">Windows phone</h3>

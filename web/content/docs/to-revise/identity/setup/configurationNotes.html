@@ -1,0 +1,8 @@
+<p>The <code class="highlighter-rouge">server.host</code> config is passed to node’s <code class="highlighter-rouge">server.listen</code> function<br />
+http://nodejs.org/api/http.html#http_server_listen_port_hostname_backlog_callback</p>
+
+<p>You should be able to set it to your IP as well, but depending on your hosting, that may be tricky. For example, on AWS you would have to use your private IP instead of your public IP (or use <code class="highlighter-rouge">0.0.0.0</code>).</p>
+
+<p>The proper name should always resolve correctly. Alternately, you can set it to null, to accept connections on any IPv4 address.</p>
+
+<p>Full information relating to the setting in <code class="highlighter-rouge">config.json</code> can be found <a href="https://github.com/dadi/identity/blob/master/docs/configuration.md">here</a>.</p>

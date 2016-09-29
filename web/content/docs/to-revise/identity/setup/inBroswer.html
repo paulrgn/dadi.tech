@@ -1,0 +1,73 @@
+<p>UUIDs are issued in browser through the use of first-party client-side JavaScript (dadi.min.js). The first party JavaScript loads in additional components from DADI Identity, including a one-time password (OTP) for aithentication back to the <code class="highlighter-rouge">touch</code> endpoint (used for maintaining the <code class="highlighter-rouge">count</code> metric within the UUID record.</p>
+
+<p>The client-side JavaScript:</p>
+
+<ol>
+  <li>Generates a device fingerprint</li>
+  <li>Checks for an existing UUID in the browser’s cookie and local stores</li>
+  <li>Requests a UUID from DADI Identity when an existing UUID is not found</li>
+  <li>Sends a request to the <code class="highlighter-rouge">touch</code> endpoint to increment the UUID records count metric</li>
+</ol>
+
+<h2 id="dadiminjs">dadi.min.js</h2>
+
+<p><code class="highlighter-rouge">dadi.min.js</code> must be served under the domain of the product/website as first party JavaScript.</p>
+
+<p>You can access the minified JavaScript <a href="https://github.com/dadi/identity/blob/client-js/min/dadi.min.js">here</a>. The unpacked JavaScript can be fond <a href="https://github.com/dadi/identity/blob/client-js/dadi.js">here</a>.</p>
+
+<p>Minification is handled with Closure Compiler.</p>
+
+<h2 id="loading-the-javascript">Loading the JavaScript</h2>
+
+<p><code class="highlighter-rouge">dadi.min.js</code> is loading using a <a href="https://github.com/dadi/identity/blob/client-js/loader.html">simple loader</a> that should be embedded before the closign <code class="highlighter-rouge">body</code> tag on every page of the product/website.</p>
+
+<h3 id="loader-javascript">Loader JavaScript</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;!-- Start DADI+ --&gt;
+&lt;script type="text/javascript"&gt;
+  var _dq = _dq || [];
+  (function() {
+
+    // Path to dadi.min.js
+    _dq.push(['_location', 'min/dadi.min.js']);
+
+    // Do not edit below this line
+    var dadi = document.createElement('script'); dadi.type = 'text/javascript'; dadi.async = true;
+    dadi.src = ('file:' == document.location.protocol ? _dq[0][1] :
+    ('https:' == document.location.protocol ? 'https://' : 'http://') + document.location.host + '/' + _dq[0][1]);
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(dadi, s);
+  })();
+&lt;/script&gt;
+&lt;!-- End DADI+ --&gt;
+</code></pre>
+</div>
+
+<p>Make sure that <code class="highlighter-rouge">_dq.push(['_location', 'min/dadi.min.js']);</code> contains the location of the <code class="highlighter-rouge">dadi.min.js</code> on your server.</p>
+
+<h2 id="additional-javascript-components">Additional JavaScript components</h2>
+
+<p><code class="highlighter-rouge">dadi.min.js</code> laods in additional components for the handling of device-level fingerprinting and local storage. These are loaded from DADI Identity directly:</p>
+
+<p><code class="highlighter-rouge">/{VERSION}/components/{SET}</code></p>
+
+<p>Components are delviered minified. Minification is handled with Closure Compiler.</p>
+
+<h3 id="fingerprinting">Fingerprinting</h3>
+
+<p>Called from <code class="highlighter-rouge">/{VERSION}/components/_set1</code>. For example: <a href="https://id.dadi.tech/v1/components/_set1">https://id.dadi.tech/v1/components/_set1</a></p>
+
+<p>The source for <code class="highlighter-rouge">_set1</code> can be found <a href="https://github.com/dadi/identity/blob/master/src/_set1.js">here</a></p>
+
+<h3 id="local-storage">Local storage</h3>
+
+<p>Called from <code class="highlighter-rouge">/{VERSION}/components/_set2</code>. For example: <a href="https://id.dadi.tech/v1/components/_set2">https://id.dadi.tech/v1/components/_set1</a></p>
+
+<p>The source for <code class="highlighter-rouge">_set2</code> can be found <a href="https://github.com/dadi/identity/blob/master/src/_set2.js">here</a></p>
+
+<h2 id="debug-mode">Debug mode</h2>
+
+<p><code class="highlighter-rouge">dadi.js</code> includes a debug option which when set to <code class="highlighter-rouge">true</code> will output state information via the browsers console.</p>
+
+<h2 id="performance">Performance</h2>
+
+<p>DADI Identity typically loads and returns a UUID within 0.250ms.</p>

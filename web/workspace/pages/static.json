@@ -1,0 +1,10 @@
+{
+  "page": {
+    "key": "static"
+  },
+  "routes": [
+    {
+      "path": "/:staticPage/"
+    }
+  ]
+}

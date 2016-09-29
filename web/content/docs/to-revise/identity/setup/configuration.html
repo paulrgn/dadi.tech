@@ -1,0 +1,662 @@
+<h2 id="overview">Overview</h2>
+
+<p>Configuration files control the behaviour of your API. While DADI API starts with default values for many configuration settings, it is essential that you understand how each setting affects your application.</p>
+
+<p>To most important configuration blocks for starting your API are <a href="#server">server</a>, <a href="#database">database</a> and <a href="#auth">authentication</a>.</p>
+
+<h3 id="configuration-files">Configuration Files</h3>
+
+<p>Configuration settings are defined in JSON files within a <code class="highlighter-rouge">/config</code> directory at the root of your application. DADI API has provision for multiple configuration files, one for each environment that your API is expected to run under: <code class="highlighter-rouge">development</code>, <code class="highlighter-rouge">qa</code> and <code class="highlighter-rouge">production</code>.</p>
+
+<p>The naming convention for configuration files follows the format <code class="highlighter-rouge">config.&lt;environment&gt;.json</code></p>
+
+<p>For example:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>config.development.json
+config.qa.json
+config.production.json
+</code></pre>
+</div>
+
+<h3 id="application-anatomy">Application Anatomy</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>my-api/
+  config/            # contains environment-specific 
+                     # configuration properties
+    config.development.json
+    config.qa.json
+    config.production.json
+
+  main.js            # the entry point of the app
+
+  package.json
+
+  workspace/
+    collections/     # collection schema files
+    endpoints/       # custom Javascript endpoints
+
+</code></pre>
+</div>
+
+<h3 id="loading-an-environment-configuration-file">Loading an environment configuration file</h3>
+
+<p>DADI API loads the <code class="highlighter-rouge">development</code> configuration by default. Loading an enviroment-specific configuration can be done in one of two ways:</p>
+
+<h4 id="environment-variable">1. Environment Variable</h4>
+
+<p>Set an environment variable called <code class="highlighter-rouge">NODE_ENV</code> with the value of the environment you wish to run your application under.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>export NODE_ENV=production
+</code></pre>
+</div>
+
+<h4 id="command-line-argument">2. Command Line Argument</h4>
+
+<p>Pass an argument to Node when starting your application with the value of the environment you wish to run your application under.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>node main.js --node-env=production
+</code></pre>
+</div>
+
+<h3 id="example-configuration-file">Example configuration file</h3>
+
+<p>An example file containing all of the available configuration options can be found in <code class="highlighter-rouge">/config/config.development.json.sample</code>.</p>
+
+<h2 id="configuration-options">Configuration Options</h2>
+
+<h3 id="app">app</h3>
+
+<p>Specifies application-specific settings, such as <code class="highlighter-rouge">name</code>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>"app": {
+  "name": "My API"
+}
+</code></pre>
+</div>
+
+<h3 id="server">server</h3>
+
+<p>The <code class="highlighter-rouge">server.host</code> config is passed to node’s <code class="highlighter-rouge">server.listen</code> function<br />
+http://nodejs.org/api/http.html#http_server_listen_port_hostname_backlog_callback</p>
+
+<p>You should be able to set it to your IP as well, but depending on your hosting, that may be tricky. For example, on AWS you would have to use your private IP instead of your public IP (or use <code class="highlighter-rouge">0.0.0.0</code>).</p>
+
+<p>The proper name should always resolve correctly. Alternately, you can set it to null, to accept connections on any IPv4 address.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>"server": {
+  "host": '0.0.0.0',
+  "port": 80
+}
+</code></pre>
+</div>
+
+<h3 id="database">database</h3>
+
+<p>Specifies the MongoDB database(s) to connect to.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>"database": {
+  "hosts": [
+      {
+        "host": "127.0.0.1",
+        "port": 27017
+      }
+    ],
+  "database": "myApi",
+  "username": "apiUser",
+  "password": "apiPassword",
+  "ssl": false,
+  "replicaSet": false,
+  "enableCollectionDatabases": false
+}
+</code></pre>
+</div>
+
+<p><strong>database.hosts</strong>: must contain an array of hosts each with <code class="highlighter-rouge">host</code> and <code class="highlighter-rouge">port</code>.</p>
+
+<ul>
+  <li>Hosts may be specified using an IP address or hostname.</li>
+  <li>If only using a single MongoDB instance this array needs only one host.</li>
+</ul>
+
+<p>Multiple hosts are required for a replica set or sharded setup and may look similar to the following example using <a href="https://mongolab.com">MongoLab</a> databases:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>"database": {
+  "hosts": [
+      {
+        "host": "ds012345-z1.mongolab.com",
+        "port": 12345
+      },
+      {
+        "host": "ds012345-z2.mongolab.com",
+        "port": 12345
+      },
+      {
+        "host": "ds012345-z3.mongolab.com",
+        "port": 12345
+      }
+    ],
+  "database": "myApi",
+  "username": "apiUser",
+  "password": "apiPassword",
+  "ssl": false,
+  "replicaSet": "rs0001"
+}
+</code></pre>
+</div>
+
+<p>This configuration will produce the following MongoDB connection string:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>mongodb://apiUser:apiPassword@ds012345-z1.mongolab.com:12345,ds012345-z2.mongolab.com:12345,ds012345-z3.mongolab.com:12345/myApi?replSet=rs0001
+</code></pre>
+</div>
+
+<p>The Node.JS MongoDB driver handles communication with the database servers to determine the primary instance.</p>
+
+<h3 id="collection-specific-databases">Collection-specific Databases</h3>
+
+<p>The <code class="highlighter-rouge">enableCollectionDatabases</code> setting determines whether the API will store collection data in separate databases as defined by the collection URLs.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/1.0/library/books
+</code></pre>
+</div>
+
+<p>The URL format contains three segments:</p>
+
+<ul>
+  <li>API version: “1.0”</li>
+  <li>Database: “library”</li>
+  <li>Collection: “books”</li>
+</ul>
+
+<p>If <code class="highlighter-rouge">enableCollectionDatabases: true</code> the API will store the <code class="highlighter-rouge">books</code> data in the <code class="highlighter-rouge">library</code> database, regardless of the <code class="highlighter-rouge">database</code> setting in the configuration file.</p>
+
+<p>Otherwise, if <code class="highlighter-rouge">enableCollectionDatabases: false</code> the API will store the <code class="highlighter-rouge">books</code> data (and all other collection data) in the database specified in the configuration file’s <code class="highlighter-rouge">database</code> setting.</p>
+
+<h4 id="configuration-properties">Configuration Properties</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Property</th>
+      <th style="text-align: left">Description</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Default</th>
+      <th style="text-align: left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">hosts</td>
+      <td style="text-align: left">An array of database hosts to connect to</td>
+      <td style="text-align: left">Array</td>
+      <td style="text-align: left">[ { host: “127.0.0.1”, port: 27017 } ] }</td>
+      <td style="text-align: left">””</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">database</td>
+      <td style="text-align: left">The database in which to store collection data</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">””</td>
+      <td style="text-align: left">“myApi”</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">username</td>
+      <td style="text-align: left">The username used to connect to the database</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">””</td>
+      <td style="text-align: left">“apiUser”</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">password</td>
+      <td style="text-align: left">The password used to connect to the database</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">””</td>
+      <td style="text-align: left">“apiPassword”</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ssl</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Boolean</td>
+      <td style="text-align: left">false</td>
+      <td style="text-align: left">true</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">replicaSet</td>
+      <td style="text-align: left">If false, the API will not attempt to connect to a replica set. If a string value, the API will use this value in the connection string to connect to a replica set</td>
+      <td style="text-align: left">Boolean/String</td>
+      <td style="text-align: left">false</td>
+      <td style="text-align: left">“s0001”</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">enableCollectionDatabases</td>
+      <td style="text-align: left">If true, the API allows splitting collection data into separate databases</td>
+      <td style="text-align: left">Boolean</td>
+      <td style="text-align: left">false</td>
+      <td style="text-align: left">true</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="auth">auth</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>"auth": {
+  "tokenUrl": "/token",
+  "tokenTtl": 1800,
+  "clientCollection": "clientStore",
+  "tokenCollection": "tokenStore",
+  "database": {
+    "hosts": [
+      {
+        "host": "127.0.0.1",
+        "port": 27017
+      }
+    ],
+    "database": "myApi",
+    "username": "apiUser",
+    "password": "apiPassword"
+  }
+}
+</code></pre>
+</div>
+
+<h4 id="configuration-properties-1">Configuration Properties</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Property</th>
+      <th style="text-align: left">Description</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Default</th>
+      <th style="text-align: left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">tokenUrl</td>
+      <td style="text-align: left">The path that access token POST requests should be sent to</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">“/token”</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">tokenTtl</td>
+      <td style="text-align: left">The time, in seconds, after which an access token is revoked</td>
+      <td style="text-align: left">Number</td>
+      <td style="text-align: left">1800</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">clientCollection</td>
+      <td style="text-align: left">The database collection that will contain client records</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">“clientStore”</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">tokenCollection</td>
+      <td style="text-align: left">The database collection that will contain access tokens generated for authorised clients</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">“tokenStore”</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>database</strong></td>
+      <td style="text-align: left"><strong>Specifies the authentication database settings</strong></td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">database.hosts</td>
+      <td style="text-align: left">An array of database hosts to connect to for authorisation</td>
+      <td style="text-align: left">Array</td>
+      <td style="text-align: left">[ { host: “127.0.0.1”, port: 27017 } ] }</td>
+      <td style="text-align: left">””</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">database.database</td>
+      <td style="text-align: left">The database to use for authorisation</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">””</td>
+      <td style="text-align: left">“myApi”</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">database.username</td>
+      <td style="text-align: left">The username used to connect to the authorisation database</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">””</td>
+      <td style="text-align: left">“apiUser”</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">database.password</td>
+      <td style="text-align: left">The password used to connect to the authorisation database</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">””</td>
+      <td style="text-align: left">“apiPassword”</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="caching">caching</h3>
+
+<p>Enabling caching in your API allows previously requested and cached data to be returned early in the request cycle, decreasing the number of requests sent to the database.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>"caching": {
+  "enabled": true,
+  "ttl": 300,
+  "directory": "./cache/api/",
+  "extension": "json"
+}
+</code></pre>
+</div>
+
+<h4 id="collection-caching-settings">Collection Caching Settings</h4>
+
+<p>While caching can be enabled in the configuration file, whether or not caching is enabled for a particular collection also depends on the <code class="highlighter-rouge">cache</code> setting in that collection’s schema file. For example:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"fields"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"field1"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"String"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"settings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"cache"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<h4 id="configuration-properties-2">Configuration Properties</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Property</th>
+      <th style="text-align: left">Description</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Default</th>
+      <th style="text-align: left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">enabled</td>
+      <td style="text-align: left">If true, caching is enabled</td>
+      <td style="text-align: left">Boolean</td>
+      <td style="text-align: left">true</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ttl</td>
+      <td style="text-align: left">The time, in seconds, after which cached data is considered stale</td>
+      <td style="text-align: left">Number</td>
+      <td style="text-align: left">300</td>
+      <td style="text-align: left">1800</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">directory</td>
+      <td style="text-align: left">The path relative to the root of the application where cache files should be stored</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">”./cache/api”</td>
+      <td style="text-align: left">“/tmp/api/cache”</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">extension</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">“json”</td>
+      <td style="text-align: left">“txt”</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="logging">logging</h3>
+
+<p>Logging is enabled by default with the below settings.</p>
+
+<ul>
+  <li>The specified path will be created at startup if it doesn’t exist.</li>
+  <li>The actual log filename will contain a reference to the environment that is loaded. For example, running the application in <code class="highlighter-rouge">development</code> mode with the default configuration will produce a log file at <code class="highlighter-rouge">./log/api.development.log</code></li>
+</ul>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>"logging": {
+  "enabled": true,
+  "path": "./log",
+  "filename": "api",
+  "extension": "log",
+  "accessLog": {
+    "enabled": true,
+    "fileRotationPeriod": "1d",
+    "fileRetentionCount": 7,
+    "kinesisStream": ""
+  }
+}
+</code></pre>
+</div>
+
+<h4 id="configuration-properties-3">Configuration Properties</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Property</th>
+      <th style="text-align: left">Description</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Default</th>
+      <th style="text-align: left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">enabled</td>
+      <td style="text-align: left">If true, logging is enabled</td>
+      <td style="text-align: left">Boolean</td>
+      <td style="text-align: left">true</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">path</td>
+      <td style="text-align: left">The path relative to the root of the application where log files should be stored</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">”./log”</td>
+      <td style="text-align: left">“/var/log/api”</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">filename</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">“api”</td>
+      <td style="text-align: left">“your-application-name”</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">extension</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">“log”</td>
+      <td style="text-align: left">“txt”</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><strong>accessLog</strong></td>
+      <td style="text-align: left"><strong>Allows configuration of HTTP request logging</strong></td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">accessLog.enabled</td>
+      <td style="text-align: left">If true, HTTP requests are logged to a separate file. The filename used will be a combination of <code class="highlighter-rouge">logging.filename</code> + access + <code class="highlighter-rouge">logging.extension</code>. For example, <code class="highlighter-rouge">api.access.log</code></td>
+      <td style="text-align: left">Boolean</td>
+      <td style="text-align: left">true</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">accessLog.fileRotationPeriod</td>
+      <td style="text-align: left">The period at which to rotate the access log file. This is a string of the format ‘$number$scope’ where ‘$scope’ is one of ‘ms’ (milliseconds), ‘h’ (hours), ‘d’ (days), ‘w’ (weeks), ‘m’ (months), ‘y’ (years).</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">“1d”</td>
+      <td style="text-align: left">“1w”, “2w”. In addition, the following names can be used “hourly”, “daily”, “weekly”, “monthly”, “yearly”.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">accessLog.fileRetentionCount</td>
+      <td style="text-align: left">The number of rotated log files to keep</td>
+      <td style="text-align: left">Number</td>
+      <td style="text-align: left">7</td>
+      <td style="text-align: left">14</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">accessLog.kinesisStream</td>
+      <td style="text-align: left">The name of an AWS Kinesis stream to write to log records to</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">Empty, therefore disabled</td>
+      <td style="text-align: left">“apiLogStream”</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="aws">aws</h3>
+<p>Amazon Web Service client key</p>
+
+<h3 id="paths">paths</h3>
+
+<p>Specifies the location of collection schema files and custom endpoints, relative to the application route. The default configuration is shown below, these values will be used if no <code class="highlighter-rouge">paths</code> configuration is provided.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>"paths": {
+  "collections": '/workspace/collections',
+  "endpoints": '/workspace/endpoints'
+}
+</code></pre>
+</div>
+
+<h3 id="feedback">feedback</h3>
+
+<p>Specifies whether the API should return content when deleting records from a collection.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>"feedback": false
+</code></pre>
+</div>
+
+<p>Given a successful DELETE request, the <code class="highlighter-rouge">feedback</code> setting determines the response to be returned:</p>
+
+<ul>
+  <li>If false, <code class="highlighter-rouge">204 No Content</code> HTTP status.</li>
+  <li>If true, <code class="highlighter-rouge">200 OK</code> and a response body such as the following:</li>
+</ul>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="err">status:</span><span class="w"> </span><span class="err">'success',</span><span class="w">
+  </span><span class="err">message:</span><span class="w"> </span><span class="err">'Document</span><span class="w"> </span><span class="err">deleted</span><span class="w"> </span><span class="err">successfully'</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<h3 id="apidoc">apidoc</h3>
+
+<p>This configuration section controls the behaviour of the DADI API Documentation module, if installed.</p>
+
+<p>Install the package:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npm install dadi-apidoc --save
+</code></pre>
+</div>
+
+<p>Add a configuration section to your configuration file(s):</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>"apidoc": {
+  "title": "API Documentation",
+  "description": "This is the Content API for a RESTful API in JSON built on DADI API.",
+  "markdown": false,
+  "path": "/docs",
+  "generateCodeSnippets": true
+}
+</code></pre>
+</div>
+
+<h4 id="configuration-properties-4">Configuration Properties</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Property</th>
+      <th style="text-align: left">Description</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Default</th>
+      <th style="text-align: left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">title</td>
+      <td style="text-align: left">The title to display for the API documentation</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">“API Documentation”</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">description</td>
+      <td style="text-align: left">A markdown formatted description of the API documentation</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">“This is the Content API for a RESTful API in JSON built on DADI API.”</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">markdown</td>
+      <td style="text-align: left">If true, documentation is rendered as raw Markdown</td>
+      <td style="text-align: left">Boolean</td>
+      <td style="text-align: left">false</td>
+      <td style="text-align: left">true</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">path</td>
+      <td style="text-align: left">The location in which to save an API blueprint file in Markdown format</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">“/docs”</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">generateCodeSnippets</td>
+      <td style="text-align: left">If true, code examples are generated from the documentation</td>
+      <td style="text-align: left">Boolean</td>
+      <td style="text-align: left">false</td>
+      <td style="text-align: left">true</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">themeVariables</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">“default”</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">themeTemplate</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">“default”</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">themeStyle</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">“default”</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">themeCondenseNav</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Boolean</td>
+      <td style="text-align: left">true</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">themeFullWidth</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Boolean</td>
+      <td style="text-align: left">false</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,84 @@
+<p>The focus of UUID generation in DADI Identity is the simple, fast generation of cryptographically strong - random # generation <code class="highlighter-rouge">crypto.randomBytes(n)</code> - <a href="http://www.ietf.org/rfc/rfc4122.txt">RFC 4122</a> identifiers.</p>
+
+<p>We use <a href="https://github.com/broofa/node-uuid">node-uuid</a> (<code class="highlighter-rouge">uuid.v4 ()</code>) of the generation of RFC 4122 identifiers.</p>
+
+<h1 id="usage">Usage</h1>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>// Generate a v4 (random) id
+uuid.v4() // -&gt; '143a5fb2-445d-482d-a674-34caa7e7e67e'
+</code></pre>
+</div>
+
+<h1 id="api">API</h1>
+
+<h2 id="uuidv4options--buffer--offset">uuid.v4([<code class="highlighter-rouge">options</code> [, <code class="highlighter-rouge">buffer</code> [, <code class="highlighter-rouge">offset</code>]]])</h2>
+
+<p>Generate and return a RFC4122 v4 UUID.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">options</code> - (Object) Optional uuid state to apply. Properties may include:
+    <ul>
+      <li><code class="highlighter-rouge">random</code> - (Number[16]) Array of 16 numbers (0-255) to use in place of randomly generated values</li>
+      <li><code class="highlighter-rouge">rng</code> - (Function) Random # generator to use.  Set to one of the built-in generators - <code class="highlighter-rouge">uuid.mathRNG</code> (all platforms), <code class="highlighter-rouge">uuid.nodeRNG</code> (node.js only), <code class="highlighter-rouge">uuid.whatwgRNG</code> (WebKit only) - or a custom function that returns an array[16] of byte values.</li>
+    </ul>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td><code class="highlighter-rouge">buffer</code> - (Array</td>
+          <td>Buffer) Array or buffer where UUID bytes are to be written.</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li><code class="highlighter-rouge">offset</code> - (Number) Starting index in <code class="highlighter-rouge">buffer</code> at which to begin writing.</li>
+</ul>
+
+<p>Returns <code class="highlighter-rouge">buffer</code>, if specified, otherwise the string form of the UUID</p>
+
+<p>Example: Generate string UUID with fully-specified options</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>uuid.v4({
+  random: [
+    0x10, 0x91, 0x56, 0xbe, 0xc4, 0xfb, 0xc1, 0xea,
+    0x71, 0xb4, 0xef, 0xe1, 0x67, 0x1c, 0x58, 0x36
+  ]
+})
+// -&gt; "109156be-c4fb-41ea-b1b4-efe1671c5836"
+</code></pre>
+</div>
+
+<p>Example: Generate two IDs in a single buffer</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var buffer = new Buffer
+uuid.v4(null, buffer, 0)
+uuid.v4(null, buffer, 16)
+</code></pre>
+</div>
+
+<h2 id="uuidparseid-buffer-offset--uuidunparsebuffer-offset">uuid.parse(id[, buffer[, offset]]) / uuid.unparse(buffer[, offset])</h2>
+
+<p>Parse and unparse UUIDs:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">id</code> - (String) UUID(-like) string</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td><code class="highlighter-rouge">buffer</code> - (Array</td>
+          <td>Buffer) Array or buffer where UUID bytes are to be written. Default: A new Array or Buffer is used</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li><code class="highlighter-rouge">offset</code> - (Number) Starting index in <code class="highlighter-rouge">buffer</code> at which to begin writing. Default: 0</li>
+</ul>
+
+<p>Example parsing and unparsing a UUID string</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var bytes = uuid.parse('797ff043-11eb-11e1-80d6-510998755d10') // -&gt; &lt;Buffer 79 7f f0 43 11 eb 11 e1 80 d6 51 09 98 75 5d 10&gt;
+var string = uuid.unparse(bytes) // -&gt; '797ff043-11eb-11e1-80d6-510998755d10'
+</code></pre>
+</div>

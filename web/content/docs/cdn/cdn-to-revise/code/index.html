@@ -1,0 +1,38 @@
+<h1 id="working-with-javascript-and-css">Working with JavaScript and CSS</h1>
+
+<p>After images, the second largest object of the average product screen is JavaScript and CSS. Minifying these assets alongside appropriately sized images ensures that your content reaches your audience in the fastest possible time.</p>
+
+<p>Minification refers to the process of removing unnecessary or redundant data without affecting how the resource is processed by the browser - e.g. code comments and formatting, removing unused code, using shorter variable and function names, and so on.</p>
+
+<h2 id="request-structure">Request structure</h2>
+
+<p><code class="highlighter-rouge">http{s}://{domain}/{input-format}/{minify}/{srcData}</code></p>
+
+<h2 id="resource-manipulation-options">Resource manipulation options</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parameter</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">input-format</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">The input format. Can be ‘js’ or ‘css’</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">minify</td>
+      <td style="text-align: left">Boolean</td>
+      <td style="text-align: left">Default: 0. Minifys content for delivery</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">srcData</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">Buffer with JavaScript or CSS data (including filepath)</td>
+    </tr>
+  </tbody>
+</table>
