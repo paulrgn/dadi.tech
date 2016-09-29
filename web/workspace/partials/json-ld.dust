@@ -1,0 +1,22 @@
+{@select key=placement}
+  {@eq value="organisation"}
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "Looksgreat",
+      "url": "",
+      "logo": "",
+      "sameAs" : [""],
+      "contactPoint": [
+        "@type": "ContactPoint",
+        "contactType": "",
+        "telephone": "",
+        "email": ""
+      ]
+    }
+    </script>
+
+  {/eq}
+{/select}

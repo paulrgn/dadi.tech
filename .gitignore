@@ -2,3 +2,5 @@
 node_modules
 log
 cache
+web/workspace/public/assets/css/*
+web/workspace/frontend/src/*

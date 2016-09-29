@@ -1,0 +1,36 @@
+<title>{+title}DADI{/title}{?title} / DADI{/title}</title>
+<link rel="stylesheet" type="text/css" href="/assets/css/main.min.css">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+
+<meta name="copyright" content="{@formatDate unix=global.timestamp format="YYYY"/}">
+<meta property="og:site_name" content="Looksgreat">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{global.protocol}://{host}{pathname}">
+
+<link rel="canonical" href="{global.protocol}://{host}{pathname}">
+
+<meta property="og:title" content="">
+<meta name="description" content="">
+<meta name="og:description" content="">
+
+<meta property="og:image" content="">
+
+<meta name="author" content="">
+
+<meta property="article:published_time" content="">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="">
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="">
+<meta name="twitter:creator" content="">
+
+<meta name="dcterms.publisher" content="">
+<meta name="geo.placename" content="London, UK">
+<meta name="dc.language" content="en">
+<meta name="geo.country" content="gb">
+
+{>"partials/json-ld" placement="organisation"/}
+
+<script type="text/javascript">window.DADI = window.DADI || {};</script>
