@@ -1,12 +1,74 @@
-<footer class="small container container--narrow txt--mid-grey alignc">
-  <ul class="list--inline">
-    <li class="fwb">© DADI+ Ltd. {@formatDate unix=global.timestamp format="YYYY"/}</li>
-    <li><a href="/about/">About us</a></li>
-    <li><a href="/contact/">Contact us</a></li>
-    <li><a href="/terms/">Terms &amp; Conditions</a></li>
-    <li><a href="/privacy/">Privacy policy</a></li>
-  </ul>
-</footer>
+<div class="bg--light-grey bdr__top bdr--bdr-grey pad--x2">
+  <footer class="small container">
+    <div class="bdr__bottom bdr--bdr-grey marg__bottom--x2 pad__bottom">
+      <div class="grid">
+        <div class="col w-1-2">
+        <p class="normal"><strong>The Feed</strong> is a collection of the best data science news, resources and inspiration from around the web, curated by us.</p>
+        </div>
+        <div class="col w-1-2 alignc normal pad__top">
+        <form action="..." method="post" class="marg__top">
+          <input type="hidden" name="formname" value="demo">
+          <input type="text" name="email" class="email text" placeholder="Your email address"><button class="btn btn--blue" type="submit">Subscribe</button>
+        </form>
+        </div>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="col w-1-3">
+        <ul class="list--line normal txt--blue">
+          <li><a href="#">Success stories</a></li>
+          <li><a href="#">Insight</a></li>
+          <li><a href="#">On demand</a></li>
+          <li><a href="#">Our team</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+      <div class="col w-1-3">
+        <p class="normal hdr">Platform</p>
+        <ul class="list--line">
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Concepts</a></li>
+          <li><a href="#">API</a></li>
+          <li><a href="#">Web</a></li>
+          <li><a href="#">Publish</a></li>
+          <li><a href="#">CDN</a></li>
+          <li><a href="#">Track</a></li>
+          <li><a href="#">Visualise</a></li>
+          <li><a href="#">People</a></li>
+          <li><a href="#">Predict</a></li>
+          <li><a href="#">Data</a></li>
+          <li><a href="#">Tools &amp; Components</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="#">Roadmap</a></li>
+          <li><a href="#">Licencing</a></li>
+        </ul>
+      </div>
+      <div class="col w-1-3">
+        <p class="normal hdr">Solutions</p>
+        <ul class="list--line">
+          <li><a href="#">Data strategy</a></li>
+          <li><a href="#">Publishing</a></li>
+          <li><a href="#">Content classification</a></li>
+          <li><a href="#">Product development</a></li>
+          <li><a href="#">CRM</a></li>
+          <li><a href="#">Analytics</a></li>
+          <li><a href="#">Content personalisation</a></li>
+          <li><a href="#">Commerce</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="marg__top--x2 pad__top--x2">
+      <img src="/assets/img/d.svg" class="marg__right--x2 alignv" width="45">
+      <ul class="list--inline inline-block">
+        <li class="fwb">DADI+ Ltd. 2016</li>
+        <li><a href="https://twitter.com/dadi">Twitter</a></li>
+        <li><a href="https://github.com/dadi">Github</a></li>
+      </ul>
+    </div>
+  </footer>
+</div>
 
 {! Google Analytics - lg id is UA-57277187-1
 <script>

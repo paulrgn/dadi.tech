@@ -61,7 +61,7 @@ p.pfull					{ width: auto; }
 .mega 		{ @include rem(font-size,50px); @include rem(line-height,50px); }
 .kilo 		{ @include rem(font-size,40px); @include rem(line-height,45px); }
 
-h1,.larger 	{ @include rem(font-size,30px); @include rem(line-height,36px); }
+h1,.larger 	{ @include rem(font-size,32px); @include rem(line-height,36px); }
 h2,.large 	{ @include rem(font-size,26px); @include rem(line-height,32px); }
 h3,.medium 	{ @include rem(font-size,22px); @include rem(line-height,28px); }
 h4,.normal	{ @include rem(font-size,19px); @include rem(line-height,27px); }

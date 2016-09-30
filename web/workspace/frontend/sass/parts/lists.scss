@@ -1,3 +1,23 @@
+.list--line {
+	list-style: none;
+
+	li {
+		border-bottom: 1px solid #eee;
+
+		&:last-of-type {
+			border-bottom: none;
+		}
+	}
+	a {
+		display: block;
+		padding: 5px 0;
+	}
+}
+
+.list--quotes {
+	list-style: none;
+}
+
 // ***************************
 // List with links
 
