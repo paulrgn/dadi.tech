@@ -9,21 +9,19 @@
   },
   "dependencies": {
     "@dadi/web": "git+https://github.com/dadi/web.git",
+    "cheerio": "^0.20.0",
     "domready": "^1.0.8",
-    "env-test": "^1.0.0",
     "jquery": "^3.1.1",
-    "mocha": "^3.0.2",
     "moment": "^2.15.1",
     "normalize.css": "^4.2.0",
-    "require-globify": "^1.4.1",
-    "supertest": "^2.0.0"
+    "require-globify": "^1.4.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.0",
     "chai": "^3.5.0",
-    "cheerio": "^0.20.0",
     "cssnano": "^3.7.5",
     "cucumber": "^1.2.2",
+    "env-test": "^1.0.0",
     "grunt": "^1.0.1",
     "grunt-browserify": "^5.0.0",
     "grunt-contrib-clean": "^1.0.0",
@@ -35,6 +33,7 @@
     "grunt-postcss": "^0.8.0",
     "grunt-sass": "^1.2.1",
     "grunt-sass-import": "^0.2.2",
+    "mocha": "^3.0.2",
     "nightmare": "^2.6.1",
     "postcss-import": "^8.1.2",
     "should": "^11.1.0",
@@ -42,8 +41,8 @@
     "time-grunt": "^1.4.0"
   },
   "engines": {
-    "node": ">=4.4.0",
-    "npm": ">3.0.0"
+    "node": ">=4.6.0",
+    "npm": ">3.10.8"
   },
   "author": "",
   "license": "ISC"
