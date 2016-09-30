@@ -1,28 +1,41 @@
+var cheerio = require('cheerio')
+var dust = require('dustjs-linkedin')
 var fs = require('fs')
 var path = require('path')
+var Readable = require('stream').Readable
 var url = require('url')
 
 var Middleware = function (app) {
   app.use('/technology/docs/*', function (req, res, next) {
     var root = path.join(__dirname, '/../../content/docs')
-
     var parsed = url.parse(req.url, true)
-
-    console.log(root)
-
-    // if (req.url.match(/\/$/) || parsed.pathname.match(/\.html$/)) {
-    //   // we only deal with the static assets here
-    //   return next()
-    // } else {
     var pathname = parsed.pathname.replace('/technology/docs', '')
-
-    if (pathname.match(/\/$/)) {
-      pathname = pathname.substring(0, pathname.length - 1) + '.html'
-    }
-
     var requestPath = path.resolve(path.join(root, pathname))
+
     return sendFile(requestPath)
-    //}
+
+    function injectHeaderFooter(path) {
+      var file = fs.readFile(path, "utf-8", (err, data) => {
+        if (err) return next() // 404
+
+        var $docPage = cheerio.load(data)
+
+        dust.render('partials/header', {}, (err, result) => {
+          var $header = cheerio.load(result)
+          $docPage('head').html($header('head').html())
+
+          dust.render('partials/footer', {}, (err, result) => {
+            var $footer = cheerio.load(result)
+            $docPage('footer').html($footer('footer').html())
+
+            var stream = new Readable()
+            stream.push($docPage.html())
+            stream.push(null)
+            return stream.pipe(res)
+          })
+        })
+      })
+    }
 
     function sendFile (filePath) {
       var i = 0
@@ -32,8 +45,9 @@ var Middleware = function (app) {
 
       fs.stat(filePath, function onstat (err, stat) {
         if (err && err.code === 'ENOENT' && !path.extname(filePath) && filePath[filePath.length - 1] !== path.sep) {
-          // not found, check extensions
-          // return next(err)
+          // path not found, add an extension to it and continue
+          filePath += '.html'
+          err = null
         }
 
         if (err) {
@@ -41,17 +55,17 @@ var Middleware = function (app) {
           return next()
         }
 
-        if (stat.isDirectory()) {
-          res.writeHead(301, {
-            Location: req.url + '/'
-          })
-          return res.end()
+        if (stat && stat.isDirectory()) {
+          filePath += '/index.html'
         }
 
-        console.log('docs:sendFile ' + filePath)
-
-        var stream = fs.createReadStream(filePath)
-        return stream.pipe(res)
+        if (/.+\.html/.exec(filePath)) {
+          injectHeaderFooter(filePath)
+        } else {
+          console.log('docs:sendFile ' + filePath)
+          var stream = fs.createReadStream(filePath)
+          return stream.pipe(res)
+        }
       })
     }
   })
