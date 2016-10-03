@@ -105,7 +105,7 @@
     <p class="pad__top txt--grey hdr normal">And many more…</p>
   </div>
 
-  <div class="bg--light-grey">
+  <div class="bg--light-grey bdr__top bdr__bottom bdr--bdr-grey">
     <div class="container pad--x2">
       <p class="hdr larger txt--blue">Heavy lifting, when you need it</p>
       <p class="normal">Our solutions team can help you grow your business by optimising your data strategies and improving the way that you engage with your customers across all channels.</p>
