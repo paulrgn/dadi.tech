@@ -18,12 +18,12 @@ body {
 		padding-bottom: 40px;
 
 		&:first-of-type() {
-			border-top: none;
+			border-top: 0;
 		}
 	}
 	&--pad {
 		padding-top: 40px;
-		padding-bottom: 60px;
+		padding-bottom: 40px;
 	}
 }
 

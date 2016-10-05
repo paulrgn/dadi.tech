@@ -10,7 +10,7 @@
 
 <main>
 
-  <div class="container container--divider ">
+  <div class="container container--pad">
     <div class="grid">
       <div class="col w-1-2">
         <h1 class="hdr kilo txt--blue no-marg-i">The technology of the web, reinvented.</h1>

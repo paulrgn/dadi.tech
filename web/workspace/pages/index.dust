@@ -30,7 +30,7 @@
 
 <main>
 
-  <div class="container container--divider">
+  <div class="container container--pad">
     <div class="grid">
       <div class="col w-1-2">
       Placeholder: 1-many vs 1-1
