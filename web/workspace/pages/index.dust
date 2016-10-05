@@ -1,6 +1,5 @@
 {>"partials/header" /}
 
-
 {<title}Welcome{/title}
 
 <div class="top top--dark">
@@ -9,7 +8,7 @@
 
     <div class="grid">
       <div class="col w-2-3 marg__bottom">
-        <p class="hdr kilo no-marg-i"><span class="txt--blue">Target individuals.</span><br/> Not statistics.</p>
+        <p class="hdr kilo no-marg-i"><span class="txt--blue">Target individuals.</span><br/> Not segments.</p>
         <p class="normal">When you use a website or application powered by <strong>DADI</strong>, it adapts to create a better experience just for you. We call this a <strong>Data Driven Experience</strong>.</p>
         <p class="normal pad__top"><a href="/solutions/" class="btn btn--blue">Learn how</a></p>
       </div>
