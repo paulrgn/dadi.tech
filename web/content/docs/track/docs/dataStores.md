@@ -1,4 +1,0 @@
-# DADI Track
-
-## Data stores
-
