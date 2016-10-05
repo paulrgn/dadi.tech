@@ -36,9 +36,11 @@
         <span class="pad__top block">NPM</span>
       </a></div>
       <div class="col w-1-4"><a href="https://docs.dadi.tech/">
+        <img src="/assets/img/d.svg" height="45" class="alignv">
         <span class="pad__top block">Docs</span>
       </a></div>
       <div class="col w-1-4"><a href="/on-demand/">
+        <img src="/assets/img/logo-ondemand.png" height="45" class="alignv">
         <span class="pad__top block">On demand</span>
       </a></div>
     </div>
