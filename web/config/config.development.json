@@ -34,6 +34,7 @@
   "rewrites": {
     "forceTrailingSlash": true
   },
+  "allowJsonView": true,
   "virtualDirectories": [
     { "path": "content/docs", "index": "index.html", "forceTrailingSlash": false }
   ]
