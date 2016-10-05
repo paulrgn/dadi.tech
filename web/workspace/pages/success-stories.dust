@@ -1,0 +1,19 @@
+{>"partials/header" /}
+
+{<title}Welcome{/title}
+
+<div class="top top--dark">
+  <div class="container"> 
+    {>"partials/navigation" /}
+  </div>
+</div>
+
+<main>
+
+  <div class="container container--divider">
+    <h1 class="hdr kilo no-marg-i">Success stories…</h1>
+  </div>
+
+</main>
+
+{>"partials/footer" /}

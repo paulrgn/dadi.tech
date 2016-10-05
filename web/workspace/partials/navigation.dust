@@ -4,12 +4,12 @@
     <a href="#" class="alignv btn btn--fill btn--red" style="margin:5px 0 0 20px;">On demand</a>
   </div>
 
-  <p><a href="/"><img src="/assets/img/dadi-light.svg" width="150" alt="DADI"></a></p>
+  <p><a href="/"><img src="/assets/img/dadi-{^light}light{:else}colour{/light}.svg" width="150" alt="DADI"></a></p>
   
   <ul class="normal nav">
-    <li><a href="/platform/">Platform</a></li>
-    <li><a href="/solutions/">Solutions</a></li>
-    <li><a href="/successes/">Success stories</a></li>
-    <li><a href="/insights/">Insights</a></li>
+    <li><a href="/platform/" {@eq key=page.key value="platform"}class="active"{/eq}>Platform</a></li>
+    <li><a href="/solutions/" {@eq key=page.key value="solutions"}class="active"{/eq}>Solutions</a></li>
+    <li><a href="/successes/" {@eq key=page.key value="successes"}class="active"{/eq}>Success stories</a></li>
+    <li><a href="/insight/" {@eq key=page.key value="insight"}class="active"{/eq}>Insight</a></li>
   </ul>
 </header>

@@ -1,0 +1,19 @@
+{
+  "page": {
+  	"key": "successes"
+  },
+  "routes": [
+    {
+    	"path": "/successes/"
+    },
+    {
+      "path": "/successes/:section?",
+      "params": [
+        {
+          "param": "section",
+          "in": ["concepts"]
+        }
+      ]
+    }
+  ]
+}	
