@@ -1,7 +1,11 @@
 <div class="bg--light-grey bdr__top bdr__bottom bdr--bdr-grey">
   <div class="container pad--x2">
+    {?module-title}
+    <p class="hdr larger txt--blue">{module-title}</p>
+    {:else}
     <p class="hdr larger txt--blue">Heavy lifting, when you need it</p>
     <p class="normal">Our solutions team can help you grow your business by optimising your data strategies and improving the way that you engage with your customers across all channels.</p>
+    {/module-title}
 
     <ul class="list--quotes normal cf grid pad__top">
       <li class="col w-1-3 bs-w-1-2 marg__bottom--x2"><a href="/solutions/data-strategy/">

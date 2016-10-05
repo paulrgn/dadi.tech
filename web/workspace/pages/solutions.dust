@@ -10,9 +10,45 @@
 
 <main>
 
-  <div class="container container--divider">
-    <h1 class="hdr kilo no-marg-i">Solutions…</h1>
+  <div class="container alignc pad__bottom--x2">
+    <p class="alignauto hdr kilo">Let us help you make <span class="txt--blue">Data Driven Experiences</span> a reality</p>
+    <p class="alignauto normal">Our solutions team can help you grow your businesses by optimising your data strategies and improving the way that you engage with your customers across all channels.</p>
   </div>
+
+  <div class="container container--divider">
+    <p class="hdr larger">We help our clients benefit from becoming a data-centric business by:</p>
+  
+    <ul class="pad__top grid normal list--no-style">
+      <li class="col marg__bottom alignv w-1-4">Ensuring a <strong>consistent view</strong> of data across the business</li>
+      <li class="col marg__bottom alignv w-1-4">Providing a <strong>single customer view</strong> cross-channel</li>
+      <li class="col marg__bottom alignv w-1-4">Enabling personalised <strong>real-time</strong> experiences for individuals</li>
+      <li class="col marg__bottom alignv w-1-4">Making existing content <strong>work harder</strong> and <strong>perform better</strong></li>
+      <li class="col marg__bottom alignv w-1-4">Optimising content targeting with <strong>Machine Learning</strong></li>
+      <li class="col marg__bottom alignv w-1-4">Enabling a new, more <strong>scientific approach</strong> to business and marketing strategies</li>
+      <li class="col marg__bottom alignv w-1-4">Unlocking <strong>new revenue</strong> streams</li>
+    </ul>
+  </div>
+
+  {>"partials/content-modules/customers" /}
+
+  <div class="container container--divider">
+    <p class="hdr larger">
+      The landscape for the underlying technology of the Web is <span class="txt--red">highly fragmented</span>.
+    </p>
+    <div class="grid">
+      <div class="col w-1-2">
+        <p class="normal">Decade-old CMSs are Sellotaped to legacy CRM systems with <em>Google Analytics</em>, multiple third party eCRM systems and any number of SSO providers, all doing their level best to push data into a “warehouse” sat somewhere in a badly lit basement.</p>
+        <p class="normal">Existing technology is not keeping pace with audience expectations and business realities.</p>
+      </div>
+      <div class="col w-1-2">
+        <p class="normal">Multiple devices are now the norm; social networks have fundamentally altered expectations for engagement; and existing revenue channels are falling away.</p>
+        <p class="normal"><strong>DADI</strong> pulls these threads together to provide a channel-agnostic platform with the power to adapt to the individual in real time.</p>
+      </div>
+    </div>
+  </div>
+  {>"partials/content-modules/heavy-lifting" module-title="Solutions" /}
+
+  <br>
 
 </main>
 
