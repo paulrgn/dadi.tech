@@ -1,0 +1,40 @@
+{
+  "app": {
+    "name": "dadi.co website - Live"
+  },
+  "server": {
+    "host": "0.0.0.0",
+    "port": 80
+  },
+  "api": {
+    "host": "127.0.0.1",
+    "port": 4111,
+    "enabled": false
+  },
+  "auth": {
+    "tokenUrl":"/token",
+    "clientId":"testClient",
+    "secret":"superSecret"
+  },
+  "global" : {
+    "baseUrl": "http://52.209.207.148"
+  },
+  "paths": {
+    "datasources": "./workspace/datasources",
+    "events": "./workspace/events",
+    "media": "./workspace/media",
+    "middleware": "./workspace/middleware",
+    "pages": "./workspace/pages",
+    "partials": "./workspace/partials",
+    "public": "./workspace/public",
+    "routes": "./workspace/routes",
+    "helpers": "./workspace/utils/helpers",
+    "filters": "./workspace/utils/filters"
+  },
+  "rewrites": {
+    "forceTrailingSlash": true
+  },
+  "virtualDirectories": [
+    { "path": "content/docs", "index": "index.html", "forceTrailingSlash": false }
+  ]
+}
