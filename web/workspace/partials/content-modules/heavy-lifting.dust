@@ -4,29 +4,35 @@
     <p class="normal">Our solutions team can help you grow your business by optimising your data strategies and improving the way that you engage with your customers across all channels.</p>
 
     <ul class="list--quotes normal cf grid pad__top">
-      <li class="col w-1-3 bs-w-1-2 marg__bottom--x2" style="padding-top:100px">
+      <li class="col w-1-3 bs-w-1-2 marg__bottom--x2"><a href="/solutions/data-strategy/">
+        <div class="product__logo"><img src="/assets/icons/map.svg" height="70"></div>
         <strong class="block">Data strategy</strong>
-        <a href="/solutions/data-strategy/" class="marg__top btn btn--blue small">Learn more</a>
+        </a>
       </li>
-      <li class="col w-1-3 bs-w-1-2 marg__bottom--x2" style="padding-top:100px">
+      <li class="col w-1-3 bs-w-1-2 marg__bottom--x2"><a href="/solutions/publishing/">
+        <div class="product__logo"><img src="/assets/icons/newspaper.svg" height="70"></div>
         <strong class="block">Publishing</strong>
-        <a href="/solutions/publishing/" class="marg__top btn btn--blue small">Learn more</a>
+        </a>
       </li>
-      <li class="col w-1-3 bs-w-1-2 marg__bottom--x2" style="padding-top:100px">
+      <li class="col w-1-3 bs-w-1-2 marg__bottom--x2"><a href="/solutions/product-development/">
+        <div class="product__logo"><img src="/assets/icons/sync.svg" height="70"></div>
         <strong class="block">Product development</strong>
-        <a href="/solutions/product-development/" class="marg__top btn btn--blue small">Learn more</a>
+        </a>
       </li>
-      <li class="col w-1-3 bs-w-1-2 marg__bottom--x2" style="padding-top:100px">
+      <li class="col w-1-3 bs-w-1-2 marg__bottom--x2"><a href="/solutions/crm/">
+        <div class="product__logo"><img src="/assets/icons/user-new.svg" height="70"></div>
         <strong class="block">CRM</strong>
-        <a href="/solutions/crm/" class="marg__top btn btn--blue small">Learn more</a>
+        </a>
       </li>
-      <li class="col w-1-3 bs-w-1-2 marg__bottom--x2" style="padding-top:100px">
+      <li class="col w-1-3 bs-w-1-2 marg__bottom--x2"><a href="/solutions/analytics/">
+        <div class="product__logo"><img src="/assets/icons/activity.svg" height="70"></div>
         <strong class="block">Analytics</strong>
-        <a href="/solutions/analytics/" class="marg__top btn btn--blue small">Learn more</a>
+        </a>
       </li>
-      <li class="col w-1-3 bs-w-1-2 marg__bottom--x2" style="padding-top:100px">
+      <li class="col w-1-3 bs-w-1-2 marg__bottom--x2">
+        <div class="product__logo"><img src="/assets/icons/coins.svg" height="70"></div>
         <strong class="block">Performance marketing</strong>
-        <a href="/solutions/performance-marketing/" class="marg__top btn btn--blue small">Learn more</a>
+        </a>
       </li>
     </ul>
   </div>
