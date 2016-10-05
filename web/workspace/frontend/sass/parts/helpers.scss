@@ -27,33 +27,6 @@
 .bs-hide { display: none; }
 }
 
-
-.truncate {
-	overflow: hidden;
-	position: relative;
-
-	&:after {
-		background-image: linear-gradient(to left, rgba(#fff, 1) 0%, rgba(#fff, 0) 100%);
-		position: absolute;
-		top: 0; right: 0; bottom: 0;
-		width: 20%;
-		content: ' ';
-	}
-	&:hover {
-		overflow: visible;
-		text-shadow: 1px 1px 0px #fff,-1px -1px 0px #fff;
-		z-index: 10;
-
-		&:after {
-			display: none;
-		}
-	}
-}
-
-.bg--light-grey .truncate:after {
-	background-image: linear-gradient(to left, rgba($light-grey, 1) 0%, rgba($light-grey, 0) 100%);
-}
-
 // ***************************
 // Cursors
 
