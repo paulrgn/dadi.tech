@@ -97,37 +97,43 @@
       <p class="normal">Our solutions team can help you grow your business by optimising your data strategies and improving the way that you engage with your customers across all channels.</p>
 
       <ul class="list--quotes normal cf grid pad__top--x2">
-        <li class="col w-1-2">
-          <p class="hdr normal">Awesome microservices</p>
+        <li class="col w-1-2 pad__bottom--x2">
+          <div class="block"><img src="/assets/icons/white/colors.svg" height="70"></div>
+          <p class="hdr medium">Awesome microservices</p>
           <p class="normal">“The individual components are great on their own, brilliant when put together.”</p>
         </li>
-        <li class="col w-1-2">
-          <p class="hdr normal">RAD for real</p>
+        <li class="col w-1-2 pad__bottom--x2">
+          <div class="block"><img src="/assets/icons/white/calendar.svg" height="70"></div>
+          <p class="hdr medium">RAD for real</p>
           <p class="normal">“Products built with DADI are delivered in days and weeks, not weeks and months.”</p>
         </li>
       </ul>
       <ul class="list--quotes normal cf grid">
-        <li class="col w-1-2">
-          <p class="hdr normal">MVP friendly</p>
+        <li class="col w-1-2 pad__bottom--x2">
+          <div class="block"><img src="/assets/icons/white/time.svg" height="70"></div>
+          <p class="hdr medium">MVP friendly</p>
           <p class="normal">“The DADI stack makes it much easier to work simultaneously on MVP tasks. It's not a factory line process anymore - we're all building and sharing progress as we go.”</p>
         </li>
-        <li class="col w-1-2">
-          <p class="hdr normal">Discrete technology</p>
+        <li class="col w-1-2 pad__bottom--x2">
+          <div class="block"><img src="/assets/icons/white/map.svg" height="70"></div>
+          <p class="hdr medium">Discrete technology</p>
           <p class="normal">“I want a reliable way of storing and delivering data without making assumptions or setting requirements for the rest of my project.”</p>
         </li>
       </ul>
       <ul class="list--quotes normal cf grid">
-        <li class="col w-1-2">
-          <p class="hdr normal">It’s future ready</p>
+        <li class="col w-1-2 pad__bottom--x2">
+          <div class="block"><img src="/assets/icons/white/direction.svg" height="70"></div>
+          <p class="hdr medium">It’s future ready</p>
           <p class="normal">“As an engineer, I need to be able to adapt to new things all the time. If my data management platform isn't capable of adapting with me, it'll slow me down.”</p>
         </li>
-        <li class="col w-1-2">
-          <p class="hdr normal">It’s lightening fast</p>
+        <li class="col w-1-2 pad__bottom--x2">
+          <div class="block"><img src="/assets/icons/white/bolt.svg" height="70"></div>
+          <p class="hdr medium">It’s lightening fast</p>
           <p class="normal">“DADI delivers the performance we need when we need it.”</p>
         </li>
       </ul>
 
-      <div class="pad__top--x2 marg__top pad__bottom"><a href="/platform/" class="btn btn--yellow normal">Learn more about our platform</a></div>
+      <div class="pad__bottom"><a href="/platform/" class="btn btn--yellow normal">Learn more about our platform</a></div>
     </div>
   </div>
 </main>

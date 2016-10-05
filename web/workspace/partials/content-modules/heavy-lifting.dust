@@ -9,32 +9,32 @@
 
     <ul class="list--quotes normal cf grid pad__top">
       <li class="col w-1-3 bs-w-1-2 marg__bottom--x2"><a href="/solutions/data-strategy/">
-        <div class="inline-block alignv marg__right"><img src="/assets/icons/map-white.svg" height="70"></div>
+        <div class="inline-block alignv marg__right"><img src="/assets/icons/white/map.svg" height="70"></div>
         <strong class="inline-block alignv">Data strategy</strong>
         </a>
       </li>
       <li class="col w-1-3 bs-w-1-2 marg__bottom--x2"><a href="/solutions/publishing/">
-        <div class="inline-block alignv marg__right"><img src="/assets/icons/newspaper-white.svg" height="70"></div>
+        <div class="inline-block alignv marg__right"><img src="/assets/icons/white/newspaper.svg" height="70"></div>
         <strong class="inline-block alignv">Publishing</strong>
         </a>
       </li>
       <li class="col w-1-3 bs-w-1-2 marg__bottom--x2"><a href="/solutions/product-development/">
-        <div class="inline-block alignv marg__right"><img src="/assets/icons/sync-white.svg" height="70"></div>
+        <div class="inline-block alignv marg__right"><img src="/assets/icons/white/sync.svg" height="70"></div>
         <strong class="inline-block alignv">Product<br>development</strong>
         </a>
       </li>
       <li class="col w-1-3 bs-w-1-2 marg__bottom--x2"><a href="/solutions/crm/">
-        <div class="inline-block alignv marg__right"><img src="/assets/icons/user-new-white.svg" height="70"></div>
+        <div class="inline-block alignv marg__right"><img src="/assets/icons/white/user-new.svg" height="70"></div>
         <strong class="inline-block alignv">CRM</strong>
         </a>
       </li>
       <li class="col w-1-3 bs-w-1-2 marg__bottom--x2"><a href="/solutions/analytics/">
-        <div class="inline-block alignv marg__right"><img src="/assets/icons/activity-white.svg" height="70"></div>
+        <div class="inline-block alignv marg__right"><img src="/assets/icons/white/activity.svg" height="70"></div>
         <strong class="inline-block alignv">Analytics</strong>
         </a>
       </li>
       <li class="col w-1-3 bs-w-1-2 marg__bottom--x2">
-        <div class="inline-block alignv marg__right"><img src="/assets/icons/coins-white.svg" height="70"></div>
+        <div class="inline-block alignv marg__right"><img src="/assets/icons/white/coins.svg" height="70"></div>
         <strong class="inline-block alignv">Performance<br>marketing</strong>
         </a>
       </li>
