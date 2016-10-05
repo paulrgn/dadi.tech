@@ -1,0 +1,10 @@
+{
+  "page": {
+  	"key": "privacy"
+  },
+  "routes": [
+    {
+    	"path": "/privacy/"
+    }
+  ]
+}	
