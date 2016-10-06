@@ -1,18 +1,16 @@
 <div class="container container--pad">
-  <div class="grid">
-     <div class="col w-2-3 ">
-      <img src="/assets/products/dadi-api-full.png" height="65" alt="DADI API">
-      <p class="hdr larger">A high performance RESTful API layer designed in support of API-first development and the principle of COPE</p>    
-    </div>
-    <div class="col w-1-3 pad__top--half">
-      <ul class="list--line medium" style="color:#0ba6dd">
+  <div class="grid alignc">
+    <img src="/assets/products/dadi-api-full.png" height="65" alt="DADI API">
+    <p class="hdr larger alignauto">A high performance RESTful API layer designed in support of API-first development and the principle of COPE</p>    
+    
+    <div class="pad__top">
+      <ul class="list--inline medium" style="color:#0ba6dd">
         <li><a href="https://githib.com/dadi/api">Github</a></li>
         <li><a href="https://www.npmjs.com/package/@dadi/api">NPM</a></li>
-        <li><a href="https://githib.com/dadi/api">Documentation</a></li>
+        <li><a href="https://docs.dadi.tech/api">Documentation</a></li>
         <li><a href="/on-demand">DADI On-demand</a></li>
       </ul>
     </div>
-   
   </div>
 </div>
 
@@ -32,13 +30,13 @@
         <li>Supports static endpoints</li>
         <li>Includes automatic indexing</li>
         <li>Local and networked caching layer</li>
-        <li>Can be run in a clustered configuration</ li>
-        <li>Search, filter and sort your data with  ease</li>
+        <li>Can be run in a clustered configuration</li>
+        <li>Search, filter and sort your data with ease</li>
         <li>Collection-level access control</li>
         <li>Automatic input validation</li>
-        <li>Support multiple databases connectivity</ li></li>
+        <li>Support multiple databases connectivity</li>
         <li>Automatic database indexing</li>
-        <li>Cache data responses using a shared   Redis </li>layer or the filesystem
+        <li>Cache data responses using a shared   Redis layer or the filesystem</li>
       </ul>
       <a href="#" class="marg__top btn btn--green small">And much more!</a>
     </div>
