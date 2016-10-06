@@ -27,7 +27,7 @@
 
   <div class="container container--divider alignc">
     <div class="grid normal fwb">
-      <div class="col w-1-4"><a href="https://githib.com/dadi/">
+      <div class="col w-1-4"><a href="https://github.com/dadi/">
         <img src="/assets/img/logo-github.png" height="45" class="alignv">
         <span class="pad__top block">Github</span>
       </a></div>

@@ -5,7 +5,7 @@
     
     <div class="pad__top">
       <ul class="list--inline medium" style="color:#27dce0">
-        <li><a href="https://githib.com/dadi/people">Github</a></li>
+        <li><a href="https://github.com/dadi/people">Github</a></li>
         <li><a href="https://www.npmjs.com/package/@dadi/people">NPM</a></li>
         <li><a href="https://docs.dadi.tech/people">Documentation</a></li>
         <li><a href="/on-demand">DADI On-demand</a></li>
