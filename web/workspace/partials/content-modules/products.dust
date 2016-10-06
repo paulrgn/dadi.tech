@@ -1,0 +1,53 @@
+<div class="bg--light-grey bdr__top bdr__bottom bdr--bdr-grey">
+  <div class="container container--divider">
+    <p class="hdr larger">Our products</p>
+   
+    <div class="grid">
+      <div class="col w-1-4">
+        <div class="product__logo"><img src="/assets/products/dadi-api.png" width="55"></div>
+        <strong class="larger block hdr" style="color:#0BA6DD">api</strong>
+        <p class="normal">High performance <em>RESTful</em> API layer designed in support of API-first development and the principle of <em>COPE</em></p>
+      </div>
+      <div class="col w-1-4">
+        <div class="product__logo"><img src="/assets/products/dadi-web.png" width="70"></div>
+        <strong class="larger block hdr" style="color:#FF2812">web</strong>
+        <p class="normal">High performance schema-less templating layer for browser-based product development</p>
+      </div>
+      <div class="col w-1-4">
+      <div class="product__logo"><img src="/assets/products/dadi-publish.png" width="55"></div>
+        <strong class="larger block hdr" style="color:#FFBF0D">publish</strong>
+        <p class="normal">Market leading editorial interfaces for the management of content held within <a href="/platform/api/" class="fwb">DADI API</a> and other data sources</p>
+      </div>
+      <div class="col w-1-4">
+        <div class="product__logo"><img src="/assets/products/dadi-cdn.png" width="55"></div>
+        <strong class="larger block hdr" style="color:#F7287B">cdn</strong>
+        <p class="normal">Real time asset manipulation and delivery application, providing a complete content distribution solution</p>
+      </div>
+      <div class="col w-1-4">
+        <div class="product__logo"><img src="/assets/products/dadi-people.png" width="55"></div>
+        <strong class="larger block hdr" style="color:#27DCE0">people</strong>
+        <p class="normal">Guarantees the fact of an individual, issues and maintains UUIDs for use with known and anonymous users, provides SSO and a complete record management solution</p>
+      </div>
+      <div class="col w-1-4">
+        <div class="product__logo"><img src="/assets/products/dadi-track.png" width="55"></div>
+        <strong class="larger block hdr" style="color:#2DBA7A">track</strong>
+        <p class="normal">Real time individual-level data pipeline and aggregation service, built around the concept of events and actions</p>
+      </div>
+      <div class="col w-1-4">
+        <div class="product__logo"><img src="/assets/products/dadi-visualize.png" width="70"></div>
+        <strong class="larger block hdr" style="color:#EF711D">visualize</strong>
+        <p class="normal">Real time data visualization and dashboarding. Plugs into <a href="/platform/track/" class="fwb">DADI Track</a>, <em>Google Analytics</em> and many other third-party systems</p>
+      </div>
+      <div class="col w-1-4">
+        <div class="product__logo"><img src="/assets/products/dadi-match.png" width="70"></div>
+        <strong class="larger block hdr" style="color:#5CC617">match</strong>
+        <p class="normal">Scalable and straightforward predictive analysis API with machine learning at its heart</p>
+      </div>
+
+      <div class="col w-1-1 alignc marg__top">
+        <strong class="larger block hdr">Tools &amp; Components</strong>
+        <p class="alignauto normal">The core <strong>DADI</strong> apps are supported by a wide range of tools &amp; components that extend and enhance the platform</p>
+      </div>
+    </div>
+  </div>
+</div>

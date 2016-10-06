@@ -60,4 +60,6 @@
   {/none}
 {/select}
 
+{>"partials/content-modules/products" /}
+
 {>"partials/footer" /}
