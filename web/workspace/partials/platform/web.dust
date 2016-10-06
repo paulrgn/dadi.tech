@@ -1,0 +1,39 @@
+<div class="container container--pad">
+  <div class="grid alignc">
+    <img src="/assets/products/dadi-web-full.png" height="65" alt="DADI web">
+    <p class="hdr larger alignauto">High performance schema-less templating layer for browser-based product development</p>    
+    
+    <div class="pad__top">
+      <ul class="list--inline medium" style="color:#e42918">
+        <li><a href="https://githib.com/dadi/web">Github</a></li>
+        <li><a href="https://www.npmjs.com/package/@dadi/web">NPM</a></li>
+        <li><a href="https://docs.dadi.tech/web">Documentation</a></li>
+        <li><a href="/on-demand">DADI On-demand</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container container--divider">
+  <div class="grid">
+    <div class="col w-1-2">
+      <p class="medium fwb">DADI Web makes it easy to build custom enterprise-grade web applications. Easily create static pages or connect to APIs to generate data-driven apps giving you the power to search, paginate, sort and filter your data, on the server or in browser.</p>
+
+      <p class="normal">DADI Web uses LinkedIn's Dust templating language which provides a simple yet powerful template layer for displaying your data.</p>
+    </div>
+    <div class="col w-1-2">
+      <ul class="list--tick normal pad__top">
+        <li>Connect to APIs to generate data-driven pages</li>
+        <li>Search, paginate, sort and filter your data</li>
+        <li>Easily create static pages</li>
+        <li>Nginx-style HTTP access logs</li>
+        <li>Gzip compression</li>
+        <li>Cache data and HTML responses using Redis or the filesystem</li>
+        <li>Cache by mime-type</li>
+        <li>URL rewriting support</li>
+        <li>Database-backed sessions</li>
+      </ul>
+      <a href="#" class="marg__top btn btn--green small">And much more!</a>
+    </div>
+  </div>
+</div>
