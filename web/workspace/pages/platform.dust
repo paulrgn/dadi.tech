@@ -107,7 +107,7 @@
           <p class="normal">Real time data visualization and dashboarding. Plugs into <a href="/platform/track/" class="fwb">DADI Track</a>, <em>Google Analytics</em> and many other third-party systems</p>
         </div>
         <div class="col w-1-4">
-          <div class="product__logo"><img src="/assets/products/dadi-machine.png" width="70"></div>
+          <div class="product__logo"><img src="/assets/products/dadi-match.png" width="70"></div>
           <strong class="larger block hdr" style="color:#5CC617">match</strong>
           <p class="normal">Scalable and straightforward predictive analysis API with machine learning at its heart</p>
         </div>

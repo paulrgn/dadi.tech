@@ -1,0 +1,37 @@
+<div class="container container--pad">
+  <div class="grid alignc">
+    <img src="/assets/products/dadi-match-full.png" height="65" alt="DADI match">
+    <p class="hdr larger alignauto">Simple, actionable predictive analysis and machine learning</p>    
+    
+    <div class="pad__top">
+      <ul class="list--inline medium" style="color:#5cc617">
+        <li><a href="https://githib.com/dadi/match">Github</a></li>
+        <li><a href="https://www.npmjs.com/package/@dadi/match">NPM</a></li>
+        <li><a href="https://docs.dadi.tech/match">Documentation</a></li>
+        <li><a href="/on-demand">DADI On-demand</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container container--divider">
+  <div class="grid">
+    <div class="col w-1-2">
+      <p class="medium fwb">Predict is an API that simplifies customer-based predictions by leverage specific machine learning techniques.</p>
+
+      <p class="normal">Very basically, events go into DADI Predict - our machine learning product - and predictions about future events come out.</p>
+
+      <p class="normal">It uses the concepts of events - familiar to anyone that has used GA - to allow for the simple collection of data points to model against.</p>
+    </div>
+    <div class="col w-1-2">
+      <ul class="list--tick normal pad__top">
+        <li>Real time predictive analysis through machine learning</li>
+        <li>API-based application, enabling simple integration with existing platforms</li>
+        <li>Can be leveraged to give predictions about any given outcome</li>
+        <li>Works for individuals and groups (segments)</li>
+        </li>
+      </ul>
+      <a href="#" class="marg__top btn btn--green small">And much more!</a>
+    </div>
+  </div>
+</div>
