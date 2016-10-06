@@ -15,6 +15,10 @@
     {<title}Web{/title}
     {>"partials/platform/web" /}
   {/eq}
+  {@eq value="cdn"}
+    {<title}CDN{/title}
+    {>"partials/platform/cdn" /}
+  {/eq}
   {@eq value="publish"}
     {<title}Publish{/title}
     {>"partials/platform/publish" /}
