@@ -47,6 +47,10 @@
     {<title}Roadmap{/title}
     {>"partials/platform/roadmap" /}
   {/eq}
+  {@eq value="security"}
+    {<title}Security{/title}
+    {>"partials/platform/security" /}
+  {/eq}
   {@eq value="licensing"}
     {<title}Licensing{/title}
     {>"partials/platform/licensing" /}

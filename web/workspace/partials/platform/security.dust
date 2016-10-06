@@ -1,0 +1,97 @@
+<div class="container container--pad">
+  <div class="grid alignc">
+    <h1 class="no-marg-i kilo txt--red marg__bottom">Secure by default</h1>
+    <p class="hdr larger alignauto">SDesigned from the ground up with security front and center</p>  
+  </div>
+</div>
+
+<div class="container container--divider">
+  <div class="grid">
+    <div class="col w-1-2">
+      <p class="larger hdr txt--red marg__bottom">Secure Access</p>
+
+      <p class="medium">Out of the box, DADI access passwords are encrypted, salted and repeatedly hashed.</p>
+
+      <p class="normal">Industry standard authentication practices are fully supported, including SSL and 2-factor authentication.</p>
+    </div>
+    <div class="col w-1-2">
+      &nbsp;
+    </div>  
+  </div>
+</div>
+
+<div class="container container--divider">
+  <div class="grid">
+    <div class="col w-1-2">
+      &nbsp;
+    </div>
+    <div class="col w-1-2">
+      <p class="larger hdr txt--red marg__bottom">Granular User Access Control</p>
+
+      <p class="medium">DADI provides administrators with complete control over who can see and who can modify every part of a product. DADI operates based on a system of extensible user roles and access permissions.</p>
+
+      <p class="normal">Administrators can create user roles and give them specific, limited permissions. For example, your editorial interfaces might need an author role that can create and update content, but not publish or delete it (permissions reserved for the editor role), while administrative settings are reserved for a separate role entirely. Authenticated users can be assigned any number of roles, and their permissions are cumulative. Menu links and features are automatically hidden from users who do not have appropriate access.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container container--divider">
+  <div class="grid">
+    <div class="col w-1-2">
+      <p class="larger hdr txt--red marg__bottom">Data Encryption</p>
+
+      <p class="medium">In high security applications, DADI can be configured for extremely strong data encryption.</p>
+
+      <p class="normal">When whole-database encryption is not desired, very high granularity is available to protect more specific information: user accounts, specific forms, and even the values of specific fields can be encrypted. The encryption system can be configured to pass the strictest PCI, HIPAA, and state privacy laws, including offsite encryption key management.</p>
+    </div>
+  </div>
+  <div class="col w-1-2">
+      &nbsp;
+    </div>
+</div>
+</div>
+
+<div class="container container--divider">
+  <div class="grid">
+    <div class="col w-1-2">
+      &nbsp;
+    </div>
+    <div class="col w-1-2">
+      <p class="larger hdr txt--red marg__bottom">Preventing XSS, CSRF, and other malicious data entry</p>
+
+      <p class="medium">DADI’s Events layer ensures that data is validated and scrubbed before entry into your data layer. The system tests all given data to ensure that it matches prescribed, expected formats and values.</p>
+
+      <p class="normal">Tokens are injected into front end forms as they are generated, to protect against potential CSRF attacks.</p>
+
+      <p class="normal">The complete separation of concerns within DADI enables every layer within your platform - Your API, templating system, editorial interfaces, tracking tools etc. - to perform and handle security checks appropriate to their concerns independently.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container container--divider">
+  <div class="grid">
+    <div class="col w-1-2">
+      <p class="larger hdr txt--red marg__bottom">Brute Force Detection</p>
+
+      <p class="normal">DADI protects against brute-force password attacks by limiting the number of login attempts from a single IP address and username over a predefined period of time.</p>
+    </div>
+    <div class="col w-1-2">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+<div class="container container--divider">
+  <div class="grid">
+    <div class="col w-1-2">
+      &nbsp;
+    </div>
+    <div class="col w-1-2">
+      <p class="larger hdr txt--red marg__bottom">Mitigating Denial of Service (DoS) Attacks</p>
+
+      <p class="medium">DADI supports comprehensive caching in every layer of your platform. Shared caching support via Redis, local caching and client caching approaches are all available as part of the core application set.</p>
+
+      <p class="normal">This multi-layered cache architecture is extremely resistant to high volumes of traffic, and makes DADI the system of choice for some of the world’s highest-traffic properties.</p>
+    </div>
+  </div>
+</div>
