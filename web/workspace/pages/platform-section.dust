@@ -1,0 +1,55 @@
+{>"partials/header" /}
+
+<div class="top top--dark top--{params.section}">
+  <div class="container"> 
+    {>"partials/navigation" /}
+  </div>
+</div>
+
+{@select key=params.section}
+  {@eq value="api"}
+    {<title}API{/title}
+    {>"partials/platform/api" /}
+  {/eq}
+  {@eq value="web"}
+    {<title}Web{/title}
+    {>"partials/platform/web" /}
+  {/eq}
+  {@eq value="publish"}
+    {<title}Publish{/title}
+    {>"partials/platform/publish" /}
+  {/eq}
+  {@eq value="track"}
+    {<title}Track{/title}
+    {>"partials/platform/track" /}
+  {/eq}
+  {@eq value="visualize"}
+    {<title}Visualize{/title}
+    {>"partials/platform/visualize" /}
+  {/eq}
+  {@eq value="people"}
+    {<title}People{/title}
+    {>"partials/platform/people" /}
+  {/eq}
+  {@eq value="match"}
+    {<title}Match{/title}
+    {>"partials/platform/match" /}
+  {/eq}
+  {@eq value="tools"}
+    {<title}Tools &amp; Components{/title}
+    {>"partials/platform/tools" /}
+  {/eq}
+  {@eq value="roadmap"}
+    {<title}Roadmap{/title}
+    {>"partials/platform/roadmap" /}
+  {/eq}
+  {@eq value="licensing"}
+    {<title}Licensing{/title}
+    {>"partials/platform/licensing" /}
+  {/eq}
+  {@none}
+    404
+  {/none}
+{/select}
+
+{>"partials/footer" /}

@@ -22,6 +22,35 @@
 	list-style: none;
 }
 
+.list--tick {
+	margin-top: -0.3em;
+
+	li {
+		list-style: none;
+		padding: 0.5em 0;
+		border-bottom: 1px solid #e8f0f7;
+		background: url(/assets/img/tick.svg) no-repeat 0 50%;
+		background-size: auto 17px;
+		padding-left: 35px;
+
+		&--noTick {
+			background: none;
+			padding-left: 0;
+		}
+		a {
+			border-bottom: 1px solid #e8f0f7;
+
+			&:hover {
+				border-bottom-color: $green;
+			}
+		}
+
+		&:last-of-type {
+			border-bottom: none;
+		}
+	}
+}
+
 // ***************************
 // List with links
 

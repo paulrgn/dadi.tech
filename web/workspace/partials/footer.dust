@@ -56,14 +56,14 @@
           <li><a href="/platform/publish/">Publish</a></li>
           <li><a href="/platform/cdn/">CDN</a></li>
           <li><a href="/platform/track/">Track</a></li>
-          <li><a href="/platform/visualise/">Visualise</a></li>
+          <li><a href="/platform/visualize/">Visualize</a></li>
           <li><a href="/platform/people/">People</a></li>
-          <li><a href="/platform/predict/">Predict</a></li>
+          <li><a href="/platform/match/">Match</a></li>
           <li><a href="/platform/data/">Data</a></li>
           <li><a href="/platform/tools/">Tools &amp; Components</a></li>
           <li><a href="/platform/security/">Security</a></li>
           <li><a href="/platform/roadmap/">Roadmap</a></li>
-          <li><a href="/platform/icencing/">Licencing</a></li>
+          <li><a href="/platform/licensing/">Licensing</a></li>
         </ul>
       </div>
       <div class="col w-1-3">

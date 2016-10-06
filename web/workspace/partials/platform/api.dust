@@ -1,0 +1,46 @@
+<div class="container container--pad">
+  <div class="grid">
+     <div class="col w-2-3 ">
+      <img src="/assets/products/dadi-api-full.png" height="65" alt="DADI API">
+      <p class="hdr larger">A high performance RESTful API layer designed in support of API-first development and the principle of COPE</p>    
+    </div>
+    <div class="col w-1-3 pad__top--half">
+      <ul class="list--line medium" style="color:#0ba6dd">
+        <li><a href="https://githib.com/dadi/api">Github</a></li>
+        <li><a href="https://www.npmjs.com/package/@dadi/api">NPM</a></li>
+        <li><a href="https://githib.com/dadi/api">Documentation</a></li>
+        <li><a href="/on-demand">DADI On-demand</a></li>
+      </ul>
+    </div>
+   
+  </div>
+</div>
+
+<div class="container container--divider">
+  <div class="grid">
+    <div class="col w-1-2">
+      <p class="medium fwb">You can consider DADI API as the data layer within a platform (including the data model). It is designed to be plugged into a templating layer, a mobile application or to be used with any other data consumer.</p>
+
+      <p class="normal">Calls to a DADI API can contain your business/domain logic (the part of a platform that encodes the real-world business rules that determine how data is created, displayed, stored and changed). It has full support for searching, filtering, limiting, sorting, offsetting, input validation and data aggregation (Map-reduce).</p>
+
+      <p class="normal">DADI API provides a starting point that's further advanced than a framework. It allows you to get a complete data layer up and running in minutes.</p>
+    </div>
+    <div class="col w-1-2">
+      <ul class="list--tick normal pad__top">
+        <li>Built in support for oAuth2</li>
+        <li>Provides native document versioning at collection level</li>
+        <li>Supports static endpoints</li>
+        <li>Includes automatic indexing</li>
+        <li>Local and networked caching layer</li>
+        <li>Can be run in a clustered configuration</ li>
+        <li>Search, filter and sort your data with  ease</li>
+        <li>Collection-level access control</li>
+        <li>Automatic input validation</li>
+        <li>Support multiple databases connectivity</ li></li>
+        <li>Automatic database indexing</li>
+        <li>Cache data responses using a shared   Redis </li>layer or the filesystem
+      </ul>
+      <a href="#" class="marg__top btn btn--green small">And much more!</a>
+    </div>
+  </div>
+</div>

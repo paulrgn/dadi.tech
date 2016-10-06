@@ -4,7 +4,7 @@
   },
   "routes": [
     {
-    	"path": "/platform/"
+      "path": "/platform/:section"
     }
   ]
 }	
