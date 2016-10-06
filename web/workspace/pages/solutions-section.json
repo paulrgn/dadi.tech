@@ -1,0 +1,10 @@
+{
+  "page": {
+  	"key": "solutions"
+  },
+  "routes": [
+    {
+      "path": "/solutions/:section"
+    }
+  ]
+}	

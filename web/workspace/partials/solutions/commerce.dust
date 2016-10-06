@@ -1,0 +1,22 @@
+<div class="container container--pad">
+  <div class="grid alignc">
+    <h1 class="no-marg-i kilo txt--blue marg__bottom">Tailored commercial opportunity</h1>
+    <p class="hdr larger alignauto">Offer your products or services at just the right moment</p>  
+  </div>
+</div>
+
+<div class="container container--divider">
+  <div class="grid">
+    <div class="col w-1-2">
+      <p class="medium fwb">A rich user profile is a powerful tool for optimising conversion in digital product – from knowing the right time to display an advertisement to offering the products users are shopping for.</p>
+
+      <p class="normal">DADI Track and Predict can monitor user actions to put only the most relevant items in front of users. Combined with DADI People, this user data can be used to build out a targeted customer marketing strategy based on enhanced segmentation.</p>
+
+      <p class="normal">Make your money from display advertising? Use DADI technology to take the machine gun fire out of your strategy. Deliver targeted native campaigns that maximise conversion or data-enriched programmatic inventory.</p>
+    </div>
+    <div class="col w-1-2">
+      <p class="medium txt--blue">Contact us to discuss how we can personalise your display advertising or ecommerce business</p>
+      <a href="#" class="btn btn--blue small">Contact us</a>
+    </div>
+  </div>
+</div>
