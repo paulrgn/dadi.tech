@@ -202,10 +202,9 @@ header {
 
 .zoom {
 	transition: all 0.15s ease-in-out;
-	padding-bottom: $margin * 2;
 
 	&:hover {
-		transform: scale(1.03);
+		transform: scale(1.05);
 
 		.btn {
 			background: $dark-grey;
