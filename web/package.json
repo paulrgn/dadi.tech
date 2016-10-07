@@ -12,6 +12,7 @@
     "cheerio": "^0.20.0",
     "domready": "^1.0.8",
     "jquery": "^3.1.1",
+    "marked": "^0.3.6",
     "moment": "^2.15.1",
     "normalize.css": "^4.2.0",
     "require-globify": "^1.4.1"
