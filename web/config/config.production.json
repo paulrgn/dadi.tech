@@ -16,9 +16,6 @@
     "clientId":"testClient",
     "secret":"superSecret"
   },
-  "global" : {
-    "baseUrl": "http://52.209.207.148"
-  },
   "paths": {
     "datasources": "./workspace/datasources",
     "events": "./workspace/events",
