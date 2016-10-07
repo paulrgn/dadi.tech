@@ -5,7 +5,7 @@
     "sort": { "product": -1 },
     "filter": {},
     "requestParams": [{
-      "param": "product", "field": "product"
+      "param": "section", "field": "product"
     }],
     "source": {
       "type": "static",
@@ -13,7 +13,7 @@
         {
           "product": "api",
           "color": "#0BA6DD",
-          "overview": "High performance _RESTful_ API layer designed in support of API-first development and the principle of _COPE_"
+          "overview": "High performance RESTful API layer designed in support of API-first development and the principle of COPE"
         },
         {
           "product": "web",
