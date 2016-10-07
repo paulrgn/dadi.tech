@@ -5,8 +5,8 @@
     
     <div class="pad__top">
       <ul class="list--inline medium" style="color:{color}">
-        {?github}<li><a href="https://github.com/{github}">Github</a></li>{/github}
-        {?npm}<li><a href="https://www.npmjs.com/package/{npm}">NPM</a></li>{/npm}
+        {?github}<li><a href="https://github.com/dadi/{product}">Github</a></li>{/github}
+        {?npm}<li><a href="https://www.npmjs.com/package/@dadi/{product}">NPM</a></li>{/npm}
         <li><a href="https://docs.dadi.tech/api">Documentation</a></li>
         <li><a href="/on-demand">DADI On-demand</a></li>
       </ul>

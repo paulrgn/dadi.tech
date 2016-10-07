@@ -3,7 +3,19 @@
     <p class="hdr larger">Our products</p>
    
     <div class="grid">
-      <div class="col w-1-4 pad__bottom--x2"><a class="block zoom" href="/platform/api/">
+      {#products.results}
+        <div class="col w-1-4 pad__bottom--x2">
+          <a class="block zoom" href="/platform/{product}/">
+            <div class="product__logo"><img src="/assets/products/dadi-{product}.png" width="45"></div>
+            <strong class="larger block hdr" style="color:{color}">{product}</strong>
+            <p class="normal">{@soberMarkdown}{overview}{/soberMarkdown}</p>
+            <span class="btn small">Learn more</span>
+          </a>
+        </div>
+      {/products.results}
+
+
+      {!<div class="col w-1-4 pad__bottom--x2"><a class="block zoom" href="/platform/api/">
         <div class="product__logo"><img src="/assets/products/dadi-api.png" width="45"></div>
         <strong class="larger block hdr" style="color:#0BA6DD">api</strong>
         <p class="normal">High performance <em>RESTful</em> API layer designed in support of API-first development and the principle of <em>COPE</em></p>
@@ -50,7 +62,7 @@
         <strong class="larger block hdr" style="color:#5CC617">match</strong>
         <p class="normal">Scalable and straightforward predictive analysis API with machine learning at its heart</p>
         <span class="btn small">Learn more</span>
-      </a></div>
+      </a></div>!}
 
       <div class="col w-1-1 alignc marg__top"><a class="block zoom" href="/platform/tools/">
         <strong class="larger block hdr">Tools &amp; Components</strong>
