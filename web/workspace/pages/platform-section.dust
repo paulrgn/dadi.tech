@@ -6,7 +6,12 @@
   </div>
 </div>
 
-{@select key=params.section}
+{#products.results}
+  {>"partials/platform/product" /}
+{/products.results}
+
+
+{! {@select key=params.section}
   {@eq value="api"}
     {<title}API{/title}
     {>"partials/platform/api" /}
@@ -58,7 +63,7 @@
   {@none}
     404
   {/none}
-{/select}
+{/select} !}
 
 {>"partials/content-modules/products" /}
 
