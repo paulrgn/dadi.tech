@@ -1,51 +1,7 @@
 {>"partials/header" /}
 
-<div class="top top--dark top--{params.section}">
-  <div class="container"> 
-    {>"partials/navigation" /}
-  </div>
-</div>
-
-{@select key=params.section}
-  {@eq value="data-strategy"}
-    {<title}data-strategy{/title}
-    {>"partials/solutions/data-strategy" /}
-  {/eq}
-  {@eq value="publishing"}
-    {<title}publishing{/title}
-    {>"partials/solutions/publishing" /}
-  {/eq}
-  {@eq value="content-classification"}
-    {<title}content-classification{/title}
-    {>"partials/solutions/content-classification" /}
-  {/eq}
-  {@eq value="product-development"}
-    {<title}product-development{/title}
-    {>"partials/solutions/product-development" /}
-  {/eq}
-  {@eq value="crm"}
-    {<title}crm{/title}
-    {>"partials/solutions/crm" /}
-  {/eq}
-  {@eq value="analytics"}
-    {<title}analytics{/title}
-    {>"partials/solutions/analytics" /}
-  {/eq}
-  {@eq value="analytics"}
-    {<title}analytics{/title}
-    {>"partials/solutions/analytics" /}
-  {/eq}
-  {@eq value="content-personalisation"}
-    {<title}content-personalisation{/title}
-    {>"partials/solutions/content-personalisation" /}
-  {/eq}
-  {@eq value="commerce"}
-    {<title}commerce{/title}
-    {>"partials/solutions/commerce" /}
-  {/eq}
-  {@none}
-    404
-  {/none}
-{/select}
+{#solutions.results}
+  {>"partials/solutions/service" /}
+{/solutions.results}
 
 {>"partials/footer" /}

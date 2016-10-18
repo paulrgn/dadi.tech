@@ -2,140 +2,133 @@
 
 {<title}Welcome{/title}
 
-<div class="top top--dark">
-  <div class="container"> 
-    {>"partials/navigation" /}
+{<top}
+  <div class="grid">
+    <div class="col w-2-3 marg__bottom">
+      <p class="hdr kilo no-marg-i"><span class="txt--blue">Target individuals.</span><br/> Not segments.</p>
+      <p class="normal">When your website or application is powered by <strong>DADI</strong>, it adapts to create a better experience for your audience. We call this a <strong>Data Driven Experience</strong>.</p>
+      <p class="normal pad__top"><a href="/solutions/" class="btn btn--blue">Learn how</a></p>
+    </div>
+    <div class="col w-1-3">
+      <p class="txt--grey hdr">27<sup>th</sup> September</p>
+      <p class="hdr large txt--green">This is the latest news article headline</p>
+      <p class="small">The European languages are members of the same family. Their separate existence is a myth…</p>
+      <p class="small"><a href="/insights/" class="btn btn--green">Read more</a></p>
+    </div>
+    <div class="col w-1-3 col--pull bs-hide">
+      <p class="txt--grey hdr">27<sup>th</sup> September</p>
+      <p class="hdr large txt--green">This is the latest news article headline</p>
+      <p class="small">The European languages are members of the same family. Their separate existence is a myth…</p>
+      <p class="small"><a href="/insights/" class="btn btn--green">Read more</a></p>
+    </div>
+  </div>
+{/top}
 
-    <div class="grid">
-      <div class="col w-2-3 marg__bottom">
-        <p class="hdr kilo no-marg-i"><span class="txt--blue">Target individuals.</span><br/> Not segments.</p>
-        <p class="normal">When your website or application is powered by <strong>DADI</strong>, it adapts to create a better experience for your audience. We call this a <strong>Data Driven Experience</strong>.</p>
-        <p class="normal pad__top"><a href="/solutions/" class="btn btn--blue">Learn how</a></p>
-      </div>
-      <div class="col w-1-3">
-        <p class="txt--grey hdr">27<sup>th</sup> September</p>
-        <p class="hdr large txt--green">This is the latest news article headline</p>
-        <p class="small">The European languages are members of the same family. Their separate existence is a myth…</p>
-        <p class="small"><a href="/insights/" class="btn btn--green">Read more</a></p>
-      </div>
-      <div class="col w-1-3 col--pull bs-hide">
-        <p class="txt--grey hdr">27<sup>th</sup> September</p>
-        <p class="hdr large txt--green">This is the latest news article headline</p>
-        <p class="small">The European languages are members of the same family. Their separate existence is a myth…</p>
-        <p class="small"><a href="/insights/" class="btn btn--green">Read more</a></p>
-      </div>
+<div class="container container--pad">
+  <div class="grid">
+    <div class="col w-1-2">
+    Placeholder: 1-many vs 1-1
+    </div>
+    <div class="col w-1-2">
+      <p class="larger hdr txt--green">Data Driven Experiences</p>
+      <p class="normal">The ability to process and understand user and environmental data in real time in order to provide a customised experience for the individual across multiple touch-points.</p>
     </div>
   </div>
 </div>
 
-<main>
+{>"partials/content-modules/customers" /}
 
-  <div class="container container--pad">
-    <div class="grid">
-      <div class="col w-1-2">
-      Placeholder: 1-many vs 1-1
-      </div>
-      <div class="col w-1-2">
-        <p class="larger hdr txt--green">Data Driven Experiences</p>
-        <p class="normal">The ability to process and understand user and environmental data in real time in order to provide a customised experience for the individual across multiple touch-points.</p>
-      </div>
+<div class="container container--divider">
+  <p class="hdr larger">
+    DADI is a ground up reimagination of web tech, built on a breakthrough thought:<br><br>
+    <span class="txt--blue">It's all just data.</span>
+  </p>
+  <div class="grid">
+    <div class="col w-1-2">
+      <p class="normal">The <strong>DADI</strong> platform enables the unification of disparate technologies by treating all content types in the same way, closing the gap between <em>WCM/ECM</em>, <em>CRM</em> and <em>DMP</em>, and making the implementation of cutting edge machine learning and big data theory simple.</p>
+    </div>
+    <div class="col w-1-2">
+      <p class="normal">With <strong>DADI</strong>, businesses of all sizes can provide data driven experience to their customers: unique and personalised interactions that drive higher engagement and increase conversion, all at a price point significantly below that of legacy platforms.</p>
     </div>
   </div>
 
-  {>"partials/content-modules/customers" /}
+  <ul class="list--inline marg__bottom pad__top">
+    <li><a href="/platform/" class="btn btn--blue normal">Learn how</a></li>
+    <li><a href="/solutions/" class="btn btn--green normal">Solutions</a></li>
+  </ul>
+</div>
 
-  <div class="container container--divider">
-    <p class="hdr larger">
-      DADI is a ground up reimagination of web tech, built on a breakthrough thought:<br><br>
-      <span class="txt--blue">It's all just data.</span>
-    </p>
-    <div class="grid">
-      <div class="col w-1-2">
-        <p class="normal">The <strong>DADI</strong> platform enables the unification of disparate technologies by treating all content types in the same way, closing the gap between <em>WCM/ECM</em>, <em>CRM</em> and <em>DMP</em>, and making the implementation of cutting edge machine learning and big data theory simple.</p>
-      </div>
-      <div class="col w-1-2">
-        <p class="normal">With <strong>DADI</strong>, businesses of all sizes can provide data driven experience to their customers: unique and personalised interactions that drive higher engagement and increase conversion, all at a price point significantly below that of legacy platforms.</p>
-      </div>
-    </div>
+<div class="container container--divider">
+  <p class="hdr larger txt--red">DADI integrates with your existing technology</p>
 
-    <ul class="list--inline marg__bottom pad__top">
-      <li><a href="/platform/" class="btn btn--blue normal">Learn how</a></li>
-      <li><a href="/solutions/" class="btn btn--green normal">Solutions</a></li>
+  <ul class="list--quotes normal cf grid pad__top">
+    <li class="col w-1-3 hdr">Salesforce</li>
+    <li class="col w-1-3 hdr">Sugar CRM</li>
+    <li class="col w-1-3 hdr">Adobe Marketing Cloud</li>
+    <li class="col w-1-3 hdr">Google Analytics</li>
+    <li class="col w-1-3 hdr">Campaign Monitor</li>
+    <li class="col w-1-3 hdr">Mailchimp</li>
+    <li class="col w-1-3 hdr">Krux</li>
+    <li class="col w-1-3 hdr">Alchemetrics</li>
+    <li class="col w-1-3 hdr">Raiail Pro</li>
+  </ul>
+
+  <p class="pad__top txt--grey hdr normal">And many more…</p>
+</div>
+
+{>"partials/content-modules/heavy-lifting" /}
+
+<div class="container pad--x2 alignc">
+  <p class="alignauto kilo hdr">“Moving <a href="http://whatcar.com" class="txt--red">whatcar.com</a> to DADI reduced our infrastructure<br>costs by 62%”</p>
+  <p class="alignauto txt--mid-grey">Product Lead, <strong>Haymarket Consumer Media</strong></p>
+
+  <div class="pad__top--x2 marg__top pad__bottom"><a href="/successes/" class="btn btn--red normal">See all customer stories</a></div>
+</div>
+
+<div class="bg--dark-blue txt--white bdr__top bdr__bottom bdr--bdr-grey">
+  <div class="container pad--x2">
+    <p class="hdr larger txt--yellow">Why developers love working with DADI</p>
+    <p class="normal">Our solutions team can help you grow your business by optimising your data strategies and improving the way that you engage with your customers across all channels.</p>
+
+    <ul class="list--quotes normal cf grid pad__top--x2">
+      <li class="col w-1-2 pad__bottom--x2">
+        <div class="block"><img src="/assets/icons/white/colors.svg" height="70"></div>
+        <p class="hdr medium">Awesome microservices</p>
+        <p class="normal">“The individual components are great on their own, brilliant when put together.”</p>
+      </li>
+      <li class="col w-1-2 pad__bottom--x2">
+        <div class="block"><img src="/assets/icons/white/calendar.svg" height="70"></div>
+        <p class="hdr medium">RAD for real</p>
+        <p class="normal">“Products built with DADI are delivered in days and weeks, not weeks and months.”</p>
+      </li>
     </ul>
-  </div>
-
-  <div class="container container--divider">
-    <p class="hdr larger txt--red">DADI integrates with your existing technology</p>
-
-    <ul class="list--quotes normal cf grid pad__top">
-      <li class="col w-1-3 hdr">Salesforce</li>
-      <li class="col w-1-3 hdr">Sugar CRM</li>
-      <li class="col w-1-3 hdr">Adobe Marketing Cloud</li>
-      <li class="col w-1-3 hdr">Google Analytics</li>
-      <li class="col w-1-3 hdr">Campaign Monitor</li>
-      <li class="col w-1-3 hdr">Mailchimp</li>
-      <li class="col w-1-3 hdr">Krux</li>
-      <li class="col w-1-3 hdr">Alchemetrics</li>
-      <li class="col w-1-3 hdr">Raiail Pro</li>
+    <ul class="list--quotes normal cf grid">
+      <li class="col w-1-2 pad__bottom--x2">
+        <div class="block"><img src="/assets/icons/white/time.svg" height="70"></div>
+        <p class="hdr medium">MVP friendly</p>
+        <p class="normal">“The DADI stack makes it much easier to work simultaneously on MVP tasks. It's not a factory line process anymore - we're all building and sharing progress as we go.”</p>
+      </li>
+      <li class="col w-1-2 pad__bottom--x2">
+        <div class="block"><img src="/assets/icons/white/map.svg" height="70"></div>
+        <p class="hdr medium">Discrete technology</p>
+        <p class="normal">“I want a reliable way of storing and delivering data without making assumptions or setting requirements for the rest of my project.”</p>
+      </li>
+    </ul>
+    <ul class="list--quotes normal cf grid">
+      <li class="col w-1-2 pad__bottom--x2">
+        <div class="block"><img src="/assets/icons/white/direction.svg" height="70"></div>
+        <p class="hdr medium">It’s future ready</p>
+        <p class="normal">“As an engineer, I need to be able to adapt to new things all the time. If my data management platform isn't capable of adapting with me, it'll slow me down.”</p>
+      </li>
+      <li class="col w-1-2 pad__bottom--x2">
+        <div class="block"><img src="/assets/icons/white/bolt.svg" height="70"></div>
+        <p class="hdr medium">It’s lightening fast</p>
+        <p class="normal">“DADI delivers the performance we need when we need it.”</p>
+      </li>
     </ul>
 
-    <p class="pad__top txt--grey hdr normal">And many more…</p>
+    <div class="pad__bottom"><a href="/platform/" class="btn btn--yellow normal">Learn more about our platform</a></div>
   </div>
-
-  {>"partials/content-modules/heavy-lifting" /}
-
-  <div class="container pad--x2 alignc">
-    <p class="alignauto kilo hdr">“Moving <a href="http://whatcar.com" class="txt--red">whatcar.com</a> to DADI reduced our infrastructure<br>costs by 62%”</p>
-    <p class="alignauto txt--mid-grey">Product Lead, <strong>Haymarket Consumer Media</strong></p>
-
-    <div class="pad__top--x2 marg__top pad__bottom"><a href="/successes/" class="btn btn--red normal">See all customer stories</a></div>
-  </div>
-
-  <div class="bg--dark-blue txt--white bdr__top bdr__bottom bdr--bdr-grey">
-    <div class="container pad--x2">
-      <p class="hdr larger txt--yellow">Why developers love working with DADI</p>
-      <p class="normal">Our solutions team can help you grow your business by optimising your data strategies and improving the way that you engage with your customers across all channels.</p>
-
-      <ul class="list--quotes normal cf grid pad__top--x2">
-        <li class="col w-1-2 pad__bottom--x2">
-          <div class="block"><img src="/assets/icons/white/colors.svg" height="70"></div>
-          <p class="hdr medium">Awesome microservices</p>
-          <p class="normal">“The individual components are great on their own, brilliant when put together.”</p>
-        </li>
-        <li class="col w-1-2 pad__bottom--x2">
-          <div class="block"><img src="/assets/icons/white/calendar.svg" height="70"></div>
-          <p class="hdr medium">RAD for real</p>
-          <p class="normal">“Products built with DADI are delivered in days and weeks, not weeks and months.”</p>
-        </li>
-      </ul>
-      <ul class="list--quotes normal cf grid">
-        <li class="col w-1-2 pad__bottom--x2">
-          <div class="block"><img src="/assets/icons/white/time.svg" height="70"></div>
-          <p class="hdr medium">MVP friendly</p>
-          <p class="normal">“The DADI stack makes it much easier to work simultaneously on MVP tasks. It's not a factory line process anymore - we're all building and sharing progress as we go.”</p>
-        </li>
-        <li class="col w-1-2 pad__bottom--x2">
-          <div class="block"><img src="/assets/icons/white/map.svg" height="70"></div>
-          <p class="hdr medium">Discrete technology</p>
-          <p class="normal">“I want a reliable way of storing and delivering data without making assumptions or setting requirements for the rest of my project.”</p>
-        </li>
-      </ul>
-      <ul class="list--quotes normal cf grid">
-        <li class="col w-1-2 pad__bottom--x2">
-          <div class="block"><img src="/assets/icons/white/direction.svg" height="70"></div>
-          <p class="hdr medium">It’s future ready</p>
-          <p class="normal">“As an engineer, I need to be able to adapt to new things all the time. If my data management platform isn't capable of adapting with me, it'll slow me down.”</p>
-        </li>
-        <li class="col w-1-2 pad__bottom--x2">
-          <div class="block"><img src="/assets/icons/white/bolt.svg" height="70"></div>
-          <p class="hdr medium">It’s lightening fast</p>
-          <p class="normal">“DADI delivers the performance we need when we need it.”</p>
-        </li>
-      </ul>
-
-      <div class="pad__bottom"><a href="/platform/" class="btn btn--yellow normal">Learn more about our platform</a></div>
-    </div>
-  </div>
-</main>
+</div>
 
 {>"partials/footer" /}

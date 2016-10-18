@@ -2,40 +2,32 @@
 
 {<title}Contact us{/title}
 
-<div class="top top--dark">
-  <div class="container"> 
-    {>"partials/navigation" /}
-  </div>
-</div>
+<div class="container container--pad">  
+  <h1 class="hdr kilo txt--red no-marg-i">Contact us</h1>
 
-<main>
-  <div class="container container--pad">  
-    <h1 class="hdr kilo txt--red no-marg-i">Contact us</h1>
-  
-    <div class="normal grid marg__top">
-      <div class="col w-1-4">
-        <h3>Client engagement</h3>
-        <p>makesomething@dadi.co<br>
-        +44 (0) 20 7205 2902</p>
-      </div>
-      <div class="col w-1-4">
-        <h3>Media enquiries</h3>
-        <p>press@dadi.co<br>
-        +44 (0) 20 7205 2901</p>
-      </div>   
-      <div class="col w-1-4">
-        <h3>Careers</h3>
-        <p>joinus@dadi.co<br>
-        +44 (0) 20 7205 2903</p>
-      </div>    
-      <div class="col w-1-4">
-        <h3>Everything else</h3>
-        <p>hi@dadi.co<br>
-        +44 (0) 20 7205 2900 <br>
-        <a href="https://twitter.com/dadi">@DADI</a></p>
-      </div>
+  <div class="normal grid marg__top">
+    <div class="col w-1-4">
+      <h3>Client engagement</h3>
+      <p>makesomething@dadi.co<br>
+      +44 (0) 20 7205 2902</p>
+    </div>
+    <div class="col w-1-4">
+      <h3>Media enquiries</h3>
+      <p>press@dadi.co<br>
+      +44 (0) 20 7205 2901</p>
+    </div>   
+    <div class="col w-1-4">
+      <h3>Careers</h3>
+      <p>joinus@dadi.co<br>
+      +44 (0) 20 7205 2903</p>
+    </div>    
+    <div class="col w-1-4">
+      <h3>Everything else</h3>
+      <p>hi@dadi.co<br>
+      +44 (0) 20 7205 2900 <br>
+      <a href="https://twitter.com/dadi">@DADI</a></p>
     </div>
   </div>
-</main>
+</div>
 
 {>"partials/footer" /}

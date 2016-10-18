@@ -2,94 +2,14 @@
 
 {<title}Welcome{/title}
 
-<div class="top top--dark">
-  <div class="container"> 
-    {>"partials/navigation" /}
-  </div>
-</div>
-
-<main>
-
-  <div class="container container--pad">
-    <div class="grid">
-      <div class="col w-1-2">
-        <h1 class="hdr kilo txt--blue no-marg-i">The technology of the web, reinvented.</h1>
-        <p class="medium alignauto"><strong>DADI</strong> is a powerful, API-first development stack for products of all sizes and scale. It enables real-time, personalised experiences driven by machine learning.</p>
-      </div>
-      <div class="col w-1-2">
-        <p class="alignauto larger hdr no-marg-i pad__top--half">“Products built with DADI are delivered in days and weeks, not weeks and months.”</p>
-        <p class="alignauto txt--mid-grey">Chief Technology Officer, <strong>Bauer Media</strong></p>
-
-        <div class="pad__top marg__top pad__bottom"><a href="/successes/" class="btn btn--blue small">See all customer stories</a></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container container--divider alignc">
-    <div class="grid normal fwb">
-      <div class="col w-1-4"><a href="https://github.com/dadi/">
-        <img src="/assets/img/logo-github.png" height="45" class="alignv">
-        <span class="pad__top block">Github</span>
-      </a></div>
-      <div class="col w-1-4"><a href="https://www.npmjs.com/org/dadi/">
-        <img src="/assets/img/logo-npm.png" height="45" class="alignv">
-        <span class="pad__top block">NPM</span>
-      </a></div>
-      <div class="col w-1-4"><a href="https://docs.dadi.tech/">
-        <img src="/assets/img/d.svg" height="45" class="alignv">
-        <span class="pad__top block">Docs</span>
-      </a></div>
-      <div class="col w-1-4"><a href="/on-demand/">
-        <img src="/assets/img/logo-ondemand.png" height="45" class="alignv">
-        <span class="pad__top block">On demand</span>
-      </a></div>
-    </div>
-  </div>
-
-  <div class="container container--divider">
-    <p class="hdr larger">
-      DADI is a modern microservices framework, built specifically in support of the principles of <span class="txt--red">API</span> first and <span class="txt--red">COPE</span>.
-    </p>
-    <div class="grid">
-      <div class="col w-1-2">        
-        <p class="normal"><strong>DADI</strong> is architected to facilitate cross-functional teams organised around discrete capability, in stark contrast to traditional monolithic approaches to system architecture.</p>
-
-        <p class="normal"><strong>DADI</strong> is built on Node.JS and RethinkDB and provides a series of self-contained service layers which can be run independently or as a whole.</p>
-      </div>
-      <div class="col w-1-2">
-        <p class="normal"><strong>DADI</strong> is unique in its approach to data: the entire platform is built to facilitate Data Driven Experiences. It puts the concept of the individual at the heart of the platform, creating real-time, person-level taxonomies of interest, and providing multiple actionable data points to enable the construction of individual-specific experiences.</p>
-      </div>
-    </div>
-
-    <ul class="list--inline marg__bottom pad__top">
-      <li><a href="/platform/concept/" class="btn btn--red normal">Read more</a></li>
-    </ul>
-  </div>
+{?params.section}
+  {#products.results}
+    {>"partials/platform/product" /}
+  {/products.results}
 
   {>"partials/content-modules/products" /}
-
-  <div class="container container--pad marg__bottom">
-    <div class="grid">
-      <div class="col w-1-2">
-        <p class="hdr larger txt--red">Secure by default</p>
-        <p class="normal"><strong>DADI</strong> is a proven, secure platform that stands up to the most critical vulnerabilities to prevent the worst from happening. Organizations rely on <strong>DADI</strong> for mission-critical sites and applications, testing its security against the most stringent standards.</p>
-        <a href="/platform/security/" class="btn btn--red">Find out more</a>
-      </div>
-      <div class="col w-1-2">
-        <p class="hdr larger txt--red">Always moving forward</p>
-        <p class="normal"><strong>DADI</strong> has been in active development since 2014. There are an average of 22 commits every single day, ranging from minor bug fixes to incremental steps towards the creation of major new functionality.</p>
-        <a href="/platform/roadmap/" class="btn btn--red">Our roadmap</a>
-      </div>
-    </div>
-  </div>
-
-  {>"partials/content-modules/heavy-lifting" /}
-
-  <div class="container container--pad alignc">
-    <p class="alignauto hdr larger txt--red">Licensing</p>
-    <p class="alignauto normal"><strong>DADI</strong> is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version ("the AGPL").</p>
-    <a href="/platform/licensing/" class="btn btn--red">More information</a>
-  </div>
-</main>
+{:else}
+  {>"partials/platform/index" /}
+{/params.section}
 
 {>"partials/footer" /}

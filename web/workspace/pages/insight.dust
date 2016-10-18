@@ -2,18 +2,8 @@
 
 {<title}Welcome{/title}
 
-<div class="top top--dark">
-  <div class="container"> 
-    {>"partials/navigation" /}
-  </div>
+<div class="container container--divider">
+<h1 class="hdr kilo no-marg-i">Insights…</h1>
 </div>
-
-<main>
-
-  <div class="container container--divider">
-    <h1 class="hdr kilo no-marg-i">Insights…</h1>
-  </div>
-
-</main>
 
 {>"partials/footer" /}

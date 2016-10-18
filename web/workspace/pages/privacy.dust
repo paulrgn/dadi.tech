@@ -2,103 +2,93 @@
 
 {<title}Welcome{/title}
 
-<div class="top top--dark">
-  <div class="container"> 
-    {>"partials/navigation" /}
-  </div>
+<div class="container container--divider normal">
+  <h1 class="hdr kilo no-marg-i">Privacy information</h1>
+
+  <p>Here's how DADI+ uses data collected from the Internet and other electronic communications networks.</p>
+
+  <p>If you have questions about this policy, or about your personal information, our data controller will help: <a href="mailto:dc@dadi.co">dc@dadi.co</a>.</p>
+
+  <p>We abide by the rules of the <strong>Data Protection Act 1998</strong>.</p>
+
+  <h2 class="txt--red">When we collect data</h2>
+
+  <p>We take down your details when:</p>
+
+  <ul class="list--native">
+  <li>You email us with an enquiry</li>
+  <li>You sign up for our newsletter</li>
+  </ul>
+
+  <p>We gather information about your visit to our site:</p>
+
+  <ul class="list--native">
+  <li>Automatically</li>
+  <li>Using standard web analytics tools</li>
+  </ul>
+
+  <h2 class="txt--red">What we do with it</h2>
+
+  <p>Helpful things. We use data to:</p>
+
+  <ul class="list--native">
+  <li>Provide and personalise our services</li>
+  <li>Offer useful information about these services</li>
+  <li>Answer questions and requests</li>
+  <li>Keep our membership records up-to-date</li>
+  </ul>
+
+  <h2 class="txt--red">What we send you</h2>
+  <p>Only what you asked for when signing up:</p>
+
+  <ul class="list--native">
+  <li>Information</li>
+  <li>Details of products and services likely to be of interest</li>
+  </ul>
+
+  <p>To change what we send you, how we send it (email, post) or to opt out, please contact:</p>
+
+  <p><a href="mailto:dc@dadi.co">dc@dadi.co</a><br>
+  +44 (0) 20 7205 2900<br>
+  Data Controller, DADI+, 7 Marylebone Lane, London W1U 1DF</p>
+
+  <h2 class="txt--red">What we share with others</h2>
+  <p>We don't share data with third parties unless:</p>
+
+  <ul class="list--native">
+  <li>We're obliged to by law: for national security, taxation or criminal investigation</li>
+  <li>You tell us we can</li>
+  </ul>
+
+  <h2 class="txt--red">Other websites</h2>
+  <p>Our site links to other company's websites that aren't covered by this policy.</p>
+
+  <p>They might collect and use data too. Look at their policies to find out how.</p>
+
+  <h2 class="txt--red">Find out what we know about you</h2>
+  <p>This is called a 'subject access request' and it's your right.</p>
+
+  <p>For a copy of the personal data we hold about you, please write to us:</p>
+
+  <p>Data Controller, DADI+, 7 Marylebone Lane, London W1U 1DF.</p>
+
+  <p>We may charge a fee of up to £10.</p>
+  <h2 class="txt--red">What we send abroad</h2>
+  <p>Collecting and processing data using the internet entails sending it between countries.</p>
+
+  <p>It's nothing to worry about, though. The UK's Data Protection Act still applies. Information might be processed outside Europe, for instance, but that information is always secure.</p>
+
+  <p>By communicating with us electronically, you agree to the above.</p>
+
+  <h2 class="txt--red">Cookies</h2>
+  <p>Cookies are bits of information that servers send to browsers to allow data collection.</p>
+
+  <p>You can turn them off in most browsers. Look in the 'preferences' menu. For more detailed instructions – and more on cookies in general – try <a href="http://www.allaboutcookies.org">www.allaboutcookies.org</a>.
+
+  <p>However: turning them off might mean our site (and others) won't work as well.</p>
+
+  <h2 class="txt--red">Amendments</h2>
+  <p>This privacy policy changes from time-to-time. We last updated it in October 2016.</p>
 </div>
-
-<main>
-
-  <div class="container container--divider normal">
-    <h1 class="hdr kilo no-marg-i">Privacy information</h1>
-
-    <p>Here's how DADI+ uses data collected from the Internet and other electronic communications networks.</p>
-
-	<p>If you have questions about this policy, or about your personal information, our data controller will help: <a href="mailto:dc@dadi.co">dc@dadi.co</a>.</p>
-
-	<p>We abide by the rules of the <strong>Data Protection Act 1998</strong>.</p>
-
-	<h2 class="txt--red">When we collect data</h2>
-
-	<p>We take down your details when:</p>
-
-	<ul class="list--native">
-	<li>You email us with an enquiry</li>
-	<li>You sign up for our newsletter</li>
-	</ul>
-
-	<p>We gather information about your visit to our site:</p>
-
-	<ul class="list--native">
-	<li>Automatically</li>
-	<li>Using standard web analytics tools</li>
-	</ul>
-	
-	<h2 class="txt--red">What we do with it</h2>
-
-	<p>Helpful things. We use data to:</p>
-
-	<ul class="list--native">
-	<li>Provide and personalise our services</li>
-	<li>Offer useful information about these services</li>
-	<li>Answer questions and requests</li>
-	<li>Keep our membership records up-to-date</li>
-	</ul>
-	
-	<h2 class="txt--red">What we send you</h2>
-	<p>Only what you asked for when signing up:</p>
-
-	<ul class="list--native">
-	<li>Information</li>
-	<li>Details of products and services likely to be of interest</li>
-	</ul>
-
-	<p>To change what we send you, how we send it (email, post) or to opt out, please contact:</p>
-
-	<p><a href="mailto:dc@dadi.co">dc@dadi.co</a><br>
-	+44 (0) 20 7205 2900<br>
-	Data Controller, DADI+, 7 Marylebone Lane, London W1U 1DF</p>
-	
-	<h2 class="txt--red">What we share with others</h2>
-	<p>We don't share data with third parties unless:</p>
-
-	<ul class="list--native">
-	<li>We're obliged to by law: for national security, taxation or criminal investigation</li>
-	<li>You tell us we can</li>
-	</ul>
-	
-	<h2 class="txt--red">Other websites</h2>
-	<p>Our site links to other company's websites that aren't covered by this policy.</p>
-
-	<p>They might collect and use data too. Look at their policies to find out how.</p>
-	
-	<h2 class="txt--red">Find out what we know about you</h2>
-	<p>This is called a 'subject access request' and it's your right.</p>
-
-	<p>For a copy of the personal data we hold about you, please write to us:</p>
-
-	<p>Data Controller, DADI+, 7 Marylebone Lane, London W1U 1DF.</p>
-
-	<p>We may charge a fee of up to £10.</p>
-	<h2 class="txt--red">What we send abroad</h2>
-	<p>Collecting and processing data using the internet entails sending it between countries.</p>
-
-	<p>It's nothing to worry about, though. The UK's Data Protection Act still applies. Information might be processed outside Europe, for instance, but that information is always secure.</p>
-
-	<p>By communicating with us electronically, you agree to the above.</p>
-	
-	<h2 class="txt--red">Cookies</h2>
-	<p>Cookies are bits of information that servers send to browsers to allow data collection.</p>
-
-	<p>You can turn them off in most browsers. Look in the 'preferences' menu. For more detailed instructions – and more on cookies in general – try <a href="http://www.allaboutcookies.org">www.allaboutcookies.org</a>.
-
-	<p>However: turning them off might mean our site (and others) won't work as well.</p>
-	
-	<h2 class="txt--red">Amendments</h2>
-	<p>This privacy policy changes from time-to-time. We last updated it in October 2016.</p>
-  </div>
-
-</main>
 
 {>"partials/footer" /}

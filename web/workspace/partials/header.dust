@@ -10,3 +10,12 @@
 </head>
 
 <body>
+
+<div class="top top--dark top--{params.section}">
+  <div class="container"> 
+    {>"partials/navigation" /}
+    {+top}{/top}
+  </div>
+</div>
+
+<main>
