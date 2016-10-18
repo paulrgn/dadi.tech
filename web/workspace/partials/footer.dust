@@ -8,11 +8,10 @@
         <p class="normal"><strong>The Feed</strong> provides the latest news and releases from DADI along with a collection of the best industry news, resources and inspiration from around the web, curated by us.</p>
         </div>
         <div class="col w-1-2 normal pad__top">
-        <form action="..." method="post" class="">
-          <p class="no-marg-i pad--half txt--grey">Get <strong>The Feed</strong> in your inbox</p>
-          <input type="hidden" name="formname" value="demo">
-          <input type="text" name="email" class="email text" placeholder="Your email address"><button class="btn btn--blue" type="submit">Subscribe</button>
-        </form>
+          <form action="http://dadi.createsend.com/t/d/s/irhyjh/" method="post">
+            <p class="no-marg-i pad--half txt--grey">Get <strong>The Feed</strong> in your inbox</p>
+            <input type="text" name="cm-irhyjh-irhyjh" class="email text" placeholder="Your email address"><button class="btn btn--blue" type="submit">Subscribe</button>
+          </form>
         </div>
       </div>
       <div class="grid marg__top marg__bottom">
