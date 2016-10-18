@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "NODE_ENV=development node main.js",
+    "start": "npm run build && NODE_ENV=development node main.js",
     "test": "./node_modules/mocha/bin/_mocha test/unit && ./node_modules/cucumber/bin/cucumber.js test/browser/features",
     "prebuild": "mkdir -p workspace/public/assets/css workspace/public/assets/js",
     "build": "npm run build:css && npm run build:js",
