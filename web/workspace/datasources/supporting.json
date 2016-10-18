@@ -1,0 +1,36 @@
+{
+  "datasource": {
+    "key": "supporting",
+    "name": "Supporting content for the DADI site",
+    "sort": { "title": -1 },
+    "filter": {},
+    "requestParams": [{
+      "param": "section", "field": "handle"
+    }],
+    "source": {
+      "type": "static",
+      "data": [
+        {
+          "title": "Privacy information",
+          "handle": "privacy",
+          "body": "Here's how DADI+ uses data collected from the Internet and other electronic communications networks.\n\nIf you have questions about this policy, or about your personal information, our data controller will help: [dc@dadi.co](mailto:dc@dadi.co).\n\nWe abide by the rules of the **Data Protection Act 1998**.\n## When we collect data\nWe take down your details when:\n* You email us with an enquiry\n* You sign up for our newsletter\n\nWe gather information about your visit to our site:\n* Automatically\n* Using standard web analytics tools\n\n## What we do with it\nHelpful things. We use data to:\n\n* Provide and personalise our services\n* Offer useful information about these services\n* Answer questions and requests\n* Keep our membership records up-to-date\n\n## What we send you\nOnly what you asked for when signing up:\n* Information\n* Details of products and services likely to be of interest\n\nTo change what we send you, how we send it (email, post) or to opt out, please contact:\n\n[dc@dadi.co](mailto:dc@dadi.co)\n+44 (0) 20 7205 2900\n\n**Data Controller**,\n DADI+, 7 Marylebone Lane,\nLondon W1U 1DF\n\n## What we share with others\nWe don't share data with third parties unless:\n* We're obliged to by law: for national security, taxation or criminal investigation\n* You tell us we can\n## Other websites\nOur site links to other company's websites that aren't covered by this policy.\n\nThey might collect and use data too. Look at their policies to find out how.\n## Find out what we know about you\nThis is called a 'subject access request' and it's your right.\nFor a copy of the personal data we hold about you, please write to us:\n\n**Data Controller**,\n DADI+, 7 Marylebone Lane,\nLondon W1U 1DF\n\nWe may charge a fee of up to £10.\n## What we send abroad\nCollecting and processing data using the internet entails sending it between countries.\n\nIt's nothing to worry about, though. The UK's Data Protection Act still applies. Information might be processed outside Europe, for instance, but that information is always secure.\n\nBy communicating with us electronically, you agree to the above.\n## Cookies\nCookies are bits of information that servers send to browsers to allow data collection.\n\nYou can turn them off in most browsers. Look in the 'preferences' menu. For more detailed instructions – and more on cookies in general – try [www.allaboutcookies.org](http://www.allaboutcookies.org).\n\nHowever: turning them off might mean our site (and others) won't work as well.\n## Amendments\nThis privacy policy changes from time-to-time. We last updated it in October 2016."
+        },
+        {
+          "title": "Careers",
+          "handle": "careers",
+          "body": "Early on we realised that, to attract the best people, we had to be flexible. We had to look outside of London and trust our people to work however suits them.\n\nWe think it makes DADI+ a pretty special place to work.\n\n## “We don't do 'hack' or 'innovation' days because everyday, engineers get to personally innovate.\n\n## We don't piggy-back off old technology or patch and hack our way to delivering something we aren't proud of.\n\n## We research and experiment with bleeding edge technologies and collaborate to build out the perfect set of platform services.\n\n## We peer review and share vital engineering knowledge, encouraging each other to step up and embrace the most challenging of technical tasks.\n\n## All of those things are awesome.”\n\n# Our principles at work\n\nWork asynchronously. Individual team members more or less works at their own pace, with collaboration and agreement being handled by asynchronous mechanisms\n\nNo 9 to 5. Get the job done on time (and don't upset the client) and you can work the hours you want\n\nWork at your own pace. We handle things like collaboration and sign off through the best tools for the job, all in support of asynchronous working\n\nMinimal meetings. Unless we really need to powwow in person, we keep in touch using cloud-based tools like Slack (much more efficient, believe us)\n\nWork where you want. Yes, be diligent, stick to deadlines and do great work. But where and how you do it is up to you\n\n## DADI+ perks\n\n* A job that works around your life (not the other way round)\n* Work with some of the most talented people in the world\n* No need to commute\n* No need to be tied to a desk\n* Plenty of excuses to meet up with the rest of the team\n* Work on things you'll love\n* Get paid for giving a shit"
+        },
+        {
+          "title": "The Team",
+          "handle": "team",
+          "body": "From hybrid designer/developers to hyper-intelligent data scientists; from heavyweight project managers to heavy-lifting technologists: we only hire senior, talented team players with impressively hefty skill sets.\n\nBut with high standards come hard choices. And in assembling the ideal team for our data-focussed agency, we've learnt a few things:\n\nThe best talent doesn't always live within an hour of central London\n\nThe brightest people aren't necessarily in it for the 9 to 5\n\nInspiration can strike at any time – we need the tools to record and deploy when it does\n\nHence a radical way of [working for DADI](/insight/how-we-work): a flexible attitude and unique approach to recruitment that make us quite the draw for great talent (even if we say so ourselves).\n\n[Fancy joining the team?](/careers/)"
+        },
+        {
+          "title": "Contact",
+          "handle": "contact",
+          "body": "<div class=\"normal grid marg__top\"><div class=\"col w-1-4\"><h3>Client engagement</h3>[makesomething@dadi.co](mailto:makesomething@dadi.co)\n+44 (0) 20 7205 2902</div><div class=\"col w-1-4\"><h3>Media enquiries</h3>[press@dadi.co](mailto:press@dadi.co)\n+44 (0) 20 7205 2901</div><div class=\"col w-1-4\"><h3>Careers</h3>[joinus@dadi.co](mailto:joinus@dadi.co)\n+44 (0) 20 7205 2903</div><div class=\"col w-1-4\"><h3>Everything else</h3>[hello@dadi.tech](mailto:hello@dadi.tech)\n+44 (0) 20 7205 2900\n[@DADI](https://twitter.com/dadi)</div></div>"
+        }
+      ]
+    }
+  }
+}

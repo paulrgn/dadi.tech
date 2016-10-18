@@ -1,0 +1,17 @@
+{
+  "page": {
+    "key": "privacy"
+  },
+  "datasources": [
+    "supporting"
+  ],
+  "requiredDatasources": [
+    "supporting"
+  ],
+  "routes": [
+    {
+      "path": "/:section/",
+      "in": "supporting"
+    }
+  ]
+}   
