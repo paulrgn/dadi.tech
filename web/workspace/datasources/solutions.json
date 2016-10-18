@@ -1,0 +1,65 @@
+{
+  "datasource": {
+    "key": "solutions",
+    "name": "List of DADI solutions offered",
+    "sort": { "solution": -1 },
+    "filter": {},
+    "requestParams": [{
+      "param": "section", "field": "solution"
+    }],
+    "source": {
+      "type": "static",
+      "data": [
+        {
+          "solution": "data-strategy",
+          "title": "Target moments. Not statistics.",
+          "overview": "A typical consumer journey is made up of hundreds of real-time, intent-driven moments - every one a critical opportunity for brands to shape our decisions and preferences",
+          "cta": "Contact us to discuss how we can help you with your data strategy",
+          "description": "## Moment Mapping\n\nThe proliferation of new devices & platforms has created a new battleground for brands; intent-driven moments of decision making and preference shaping that occur throughout the entire consumer journey.\n\nThe most successful brands of the future will be those that have a plan for understanding and meeting consumers’ needs in the moments that matter to them.\n\nOur developed process - Moment Mapping - helps brands understand where they fit within the new market landscape; to establish the relevant key moments and to understand consumer and environmental data. Moment Mapping provides an engagement strategy for the targeting of moments with Data Driven Experiences, optimising marketing and content performance."
+        },
+        {
+          "solution": "publishing",
+          "title": "The next generation of content management",
+          "overview": "Separation of storage and presentation – one content source for suite of digital product",
+          "cta": "Contact us to discuss how we can help you revolutionise your content platform",
+          "description": "Most content management systems have roots in legacy print production processes. For every one page created by an author, one page is displayed to the user – in the very same non-scalable way editorial staff work with InDesign to create layouts for the press.\n\nDADI is different. It abstracts content storage from presentation in support of the [COPE philosophy](/technology/concepts/api-first-and-cope) – the author Creates Once but Publishes Everywhere. In other words, DADI stores raw content for reuse across multiple products, from responsive websites to mobile, tablet and TV apps. This means writers spend more time writing than playing admin to the words and media they create.\n\n## Making sense of content\n\nUtilise our machine learning tools and developed ontologies to automatically and consistently tag your content to facilitate data driven experiences at scale."
+        },
+        {
+          "solution": "product-development",
+          "title": "Data driven development",
+          "overview": "Get your product to market in days and weeks, not weeks and months. And get it right.",
+          "cta": "Contact us to discuss how we can help you get to market quickly and cost effectively",
+          "description": "Focus groups, user testing and audience surveys are one way to ensure a product fit for your audience. But DADI technology places user data at its heart, which means from the minute you get to market you have realtime feedback on product performance.\n\nThis accurate lens on usage frees product development from the hearsay of small sample groups – you can get your MVP in front of your target audience fast and have the confidence to iterate quickly based real data that reaches way beyond _Google Analytics_.\n\nTrying to launch a ‘finished’ product from behind closed doors is dependent on assumption. With DADI you can treat products as if alive – nurture and adjust against a KPI-driven roadmap based on what actually works, rather than gambling on the ‘hit and hope’ big bang release."
+        },
+        {
+          "solution": "crm",
+          "title": "Know your People",
+          "overview": "Talk to each of your users, not all of them.",
+          "cta": "Contact us to discuss how we can help you better understand your customer",
+          "description": "CRM is about more than passive data storage. DADI technology brings new depth to understanding of real time customer behaviour and provides the tools to act upon the detail – so you know the when, how and why of contacting your users.\n\nDADI People powers segmentation in the anonymous and known space – and together with DADI Identity guarantees uniqueness of individuals. This means the first paint goes onto the picture of your users from the moment they first arrive, delivering a richer profile and actionable insight.\n\nWorking in tandem with other DADI platform components, People allows you to define a blended CRM strategy that reaches beyond simple email and push notifications into a world of content personalisation across multiple devices.\n\nDADI People is our customer relationship management tool, providing:\n\n* Real-time feed of customer information\n* Aggregates full set of customer interactions\n* Fully customisable\n* Delivers actionable insight\n* Simple data exports"
+        },
+        {
+          "solution": "analytics",
+          "title": "You already have the data",
+          "overview": "Let DADI help you unlock it’s potential",
+          "cta": "Contact us to discuss how we can help you unlock the potential of your data",
+          "description": "DADI technology releases your products from the grip of myriad third-party plug-ins attempting to shine a light on performance. It draws from a range of data sources to give you fast access to coherent, actionable insight.\n\nDADI Track doesn’t deal with averages, it monitors right down to the individual. This guarantees a single, accurate version of the truth presented in real time – and played back to your team using the customisable interfaces of DADI Visualize.\n\nThis means one dashboard for all your product reporting, which finds the signal in the noise of your data warehouse. It can easily be configured to export highly graphical, digestible reports on product performance, tracked against KPIs and product roadmaps.\n\nDADI Track provides an instant-on Big Data pipeline for your products:\n\nReal-time traffic analysis* Multiple data source aggregation\n* Customisable user interface\n* Human language search\n* Actionable insight"
+        },
+        {
+          "solution": "content-personalisation",
+          "title": "Give them what they want",
+          "overview": "Your users are not the same, so why is their content?",
+          "cta": "Contact us to discuss how you can better target audience with your content",
+          "description": "A homepage is not a magazine cover – it need not look the same to every one of your users. This is in part a hangover from legacy editorial workflow, but also as a result of brittle content management technology that lazily adopts the one-size-fits-all.\n\nDADI Publish, supported by Track and Identity, allows a modern, personalised approach to content distribution. If your user only ever looks at content about apples, why not hide the pears? Serve myriad versions of your product to your varied audience based on preference.\n\nAdd Predict – DADI’s machine learning technology – into the mix and you can foresee which other fruits your users may be interested in. This means a tailored editorial strategy driven by evidence rather than the (still important) editorial nose on its own."
+        },
+        {
+          "solution": "commerce",
+          "title": "Tailored commercial opportunity",
+          "overview": "Offer your products or services at just the right moment ",
+          "cta": "Contact us to discuss how we can personalise your display advertising or ecommerce business",
+          "description": "A rich user profile is a powerful tool for optimising conversion in digital product – from knowing the right time to display an advertisement to offering the products users are shopping for.\n\nDADI Track and Predict can monitor user actions to put only the most relevant items in front of users. Combined with DADI People, this user data can be used to build out a targeted customer marketing strategy based on enhanced segmentation.\n\nMake your money from display advertising? Use DADI technology to take the machine gun fire out of your strategy. Deliver targeted native campaigns that maximise conversion or data-enriched programmatic inventory."
+        }
+      ]
+    }
+  }
+}

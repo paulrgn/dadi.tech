@@ -1,19 +1,20 @@
 {
   "page": {
-  	"key": "solutions"
+    "key": "solutions"
   },
+  "datasources": [
+    "solutions"
+  ],
+  "requiredDatasources": [
+    "solutions"
+  ],
   "routes": [
     {
-    	"path": "/solutions/"
+      "path": "/solutions/"
     },
     {
-      "path": "/solutions/:section?",
-      "params": [
-        {
-          "param": "section",
-          "in": ["concepts"]
-        }
-      ]
+      "path": "/solutions/:section",
+      "in": "solutions"
     }
   ]
-}	
+} 

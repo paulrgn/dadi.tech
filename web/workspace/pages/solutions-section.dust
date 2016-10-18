@@ -1,7 +1,0 @@
-{>"partials/header" /}
-
-{#solutions.results}
-  {>"partials/solutions/service" /}
-{/solutions.results}
-
-{>"partials/footer" /}
