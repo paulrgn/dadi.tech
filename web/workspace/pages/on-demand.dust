@@ -1,0 +1,9 @@
+{>"partials/header" /}
+
+{<title}Welcome{/title}
+
+<div class="container container--divider">
+<h1 class="hdr kilo no-marg-i">On demand…</h1>
+</div>
+
+{>"partials/footer" /}
