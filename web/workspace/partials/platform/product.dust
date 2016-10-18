@@ -41,9 +41,9 @@
     {?features}
       <div class="col w-1-2">
         <ul class="list--tick normal pad__top">
-          {@iterate on=features}
-            <li>{@soberMarkdown}{value}{/soberMarkdown}</li>
-          {/iterate}
+          {@iter items=features}
+            <li>{@soberMarkdown}{.}{/soberMarkdown}</li>
+          {/iter}
         </ul>
         <a href="#" class="marg__top btn btn--green small">And much more!</a>
       </div>
