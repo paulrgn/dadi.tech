@@ -7,13 +7,7 @@
   ],
   "routes": [
     {
-      "path": "/platform/:section",
-      "params": [
-        {
-          "param": "section",
-          "fetch": "products"
-        }
-      ]
+      "path": "/platform/:section"
     }
   ]
 } 

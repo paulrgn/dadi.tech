@@ -10,61 +10,6 @@
   {>"partials/platform/product" /}
 {/products.results}
 
-
-{! {@select key=params.section}
-  {@eq value="api"}
-    {<title}API{/title}
-    {>"partials/platform/api" /}
-  {/eq}
-  {@eq value="web"}
-    {<title}Web{/title}
-    {>"partials/platform/web" /}
-  {/eq}
-  {@eq value="cdn"}
-    {<title}CDN{/title}
-    {>"partials/platform/cdn" /}
-  {/eq}
-  {@eq value="publish"}
-    {<title}Publish{/title}
-    {>"partials/platform/publish" /}
-  {/eq}
-  {@eq value="track"}
-    {<title}Track{/title}
-    {>"partials/platform/track" /}
-  {/eq}
-  {@eq value="visualize"}
-    {<title}Visualize{/title}
-    {>"partials/platform/visualize" /}
-  {/eq}
-  {@eq value="people"}
-    {<title}People{/title}
-    {>"partials/platform/people" /}
-  {/eq}
-  {@eq value="match"}
-    {<title}Match{/title}
-    {>"partials/platform/match" /}
-  {/eq}
-  {@eq value="tools"}
-    {<title}Tools &amp; Components{/title}
-    {>"partials/platform/tools" /}
-  {/eq}
-  {@eq value="roadmap"}
-    {<title}Roadmap{/title}
-    {>"partials/platform/roadmap" /}
-  {/eq}
-  {@eq value="security"}
-    {<title}Security{/title}
-    {>"partials/platform/security" /}
-  {/eq}
-  {@eq value="licensing"}
-    {<title}Licensing{/title}
-    {>"partials/platform/licensing" /}
-  {/eq}
-  {@none}
-    404
-  {/none}
-{/select} !}
-
 {>"partials/content-modules/products" /}
 
 {>"partials/footer" /}
