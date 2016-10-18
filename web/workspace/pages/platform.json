@@ -1,10 +1,20 @@
 {
   "page": {
-  	"key": "platform"
+    "key": "platform"
   },
+  "datasources": [
+    "products"
+  ],
+  "requiredDatasources": [
+    "products"
+  ],
   "routes": [
     {
-    	"path": "/platform/"
+      "path": "/platform/"
+    },
+    {
+      "path": "/platform/:section",
+      "in": "products"
     }
   ]
-}	
+} 
