@@ -1,0 +1,20 @@
+<div class="container container--pad">
+  <h1 class="no-marg-i kilo txt--red marg__bottom">Roadmap</h1>
+
+  <p class="medium hdr marg__top">DADI is produced and maintained under an iterative and incremental development cycle. We manage development through Git Issues and Projects and operate a prioritized roadmap for major releases, focusing on a few, high impact features at a time.</p>
+</div>
+
+<div class="container container--divider">
+  <div class="grid">
+    <div class="col w-1-2">
+      <p class="larger hdr txt--red marg__bottom">You can help us improve DADI (or change this roadmap)</p>
+
+      <p class="medium">Want to contribute to the work on this roadmap, or suggest new ideas? Volunteer your time, or Propose an initiative. To contribute as an organization or business, consider joining one of our supporter programs that fund this work.</p>
+    </div>
+    <div class="col w-1-2">
+      <p class="hdr larger">Your support can make a difference.</p>
+      <a href="/contact/" class="btn btn--green small">Contact us</a><br><br>
+      <a href="https://github.com/dadi" class="btn btn--blue small">Find us on Github</a>
+    </div>  
+  </div>
+</div>

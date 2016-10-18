@@ -65,7 +65,7 @@
           {! <li><a href="/platform/tools/">Tools &amp; Components</a></li> !}
           <li><a href="/platform/security/">Security</a></li>
           <li><a href="/platform/roadmap/">Roadmap</a></li>
-          <li><a href="/platform/licensing/">Licensing</a></li>
+          {! <li><a href="/platform/licensing/">Licensing</a></li> !}
         </ul>
       </div>
       <div class="col w-1-3">

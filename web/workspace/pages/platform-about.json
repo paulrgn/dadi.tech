@@ -1,0 +1,16 @@
+{
+  "page": {
+    "key": "platform"
+  },
+  "routes": [
+    {
+      "path": "/platform/:page",
+      "params": [
+        {
+          "param": "page",
+          "in": ["security", "licensing", "roadmap"]
+        }
+      ]
+    }
+  ]
+} 
