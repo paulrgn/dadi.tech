@@ -2,6 +2,9 @@
   "page": {
     "key": "Homepage"
   },
+  "datasources": [
+  	"solutions"
+  ],
   "routes": [
     {
       "path": "/"

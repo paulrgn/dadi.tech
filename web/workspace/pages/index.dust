@@ -76,7 +76,7 @@
   <p class="pad__top txt--grey hdr normal">And many more…</p>
 </div>
 
-{>"partials/content-modules/heavy-lifting" /}
+{>"partials/solutions/list" /}
 
 <div class="container pad--x2 alignc">
   <p class="alignauto kilo hdr">“Moving <a href="http://whatcar.com" class="txt--red">whatcar.com</a> to DADI reduced our infrastructure<br>costs by 62%”</p>

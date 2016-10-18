@@ -35,4 +35,4 @@
   </div>
 </div>
 
-{>"partials/content-modules/heavy-lifting" module-title="Solutions" /}
+{>"partials/solutions/list" module-title="Solutions" /}

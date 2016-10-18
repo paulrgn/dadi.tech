@@ -71,7 +71,7 @@
   </div>
 </div>
 
-{>"partials/content-modules/heavy-lifting" /}
+{>"partials/solutions/list" /}
 
 <div class="container container--pad alignc">
   <p class="alignauto hdr larger txt--red">Licensing</p>

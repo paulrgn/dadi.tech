@@ -3,7 +3,8 @@
     "key": "platform"
   },
   "datasources": [
-    "products"
+    "products",
+    "solutions"
   ],
   "requiredDatasources": [
     "products"
