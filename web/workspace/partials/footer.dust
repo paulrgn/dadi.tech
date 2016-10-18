@@ -62,7 +62,7 @@
           <li><a href="/platform/people/">People</a></li>
           <li><a href="/platform/match/">Match</a></li>
           <li><a href="/platform/data/">Data</a></li>
-          <li><a href="/platform/tools/">Tools &amp; Components</a></li>
+          {! <li><a href="/platform/tools/">Tools &amp; Components</a></li> !}
           <li><a href="/platform/security/">Security</a></li>
           <li><a href="/platform/roadmap/">Roadmap</a></li>
           <li><a href="/platform/licensing/">Licensing</a></li>

@@ -52,11 +52,11 @@
         <span class="btn small">Learn more</span>
       </a></div>
 
-      <div class="col w-1-1 alignc marg__top"><a class="block zoom" href="/platform/tools/">
+      {! <div class="col w-1-1 alignc marg__top"><a class="block zoom" href="/platform/tools/">
         <strong class="larger block hdr">Tools &amp; Components</strong>
         <p class="alignauto normal">The core <strong>DADI</strong> apps are supported by a wide range of tools &amp; components that extend and enhance the platform</p>
         <span class="btn small">Learn more</span>
-      </a></div>
+      </a></div> !}
     </div>
   </div>
 </div>
