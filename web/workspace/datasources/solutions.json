@@ -5,7 +5,7 @@
     "sort": { "solution": -1 },
     "filter": {},
     "requestParams": [{
-      "param": "section", "field": "solution"
+      "param": "section", "field": "handle"
     }],
     "source": {
       "type": "static",
