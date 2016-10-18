@@ -2,8 +2,73 @@
 
 {<title}Welcome{/title}
 
-<div class="container container--divider">
-<h1 class="hdr kilo no-marg-i">On demand…</h1>
+<div class="container pad__bottom alignc">
+  <h1 class="hdr kilo"><span class="txt--red block">Cloud computing.</span> Designed for developers.</h1>
+</div>
+
+<div class="container container--divider alignc">
+  <p class="medium hdr alignauto pad__bottom">DADI on demand will be launching soon. Let us know your email address to be the first to know.</p>
+
+  <form action="..." method="post">
+    <input type="hidden" name="formname" value="demo">
+    <input type="text" name="email" class="email text" placeholder="Your email address"><button class="btn btn--blue" type="submit">Register interest</button>
+  </form>
+
+  <p class="small txt--grey alignauto pad__top">By signing up, you agree to the <a href="/terms" class="txt--black">Terms of Service</a>.</p>
+</div>
+
+<div class="bg--light-grey bdr__top bdr__bottom bdr--bdr-grey">
+  <div class="container container--divider alignc">
+    <p class="hdr larger alignauto">Seamlessness management from development to MVP to scale</p>
+
+    <ul class="list--quotes normal cf grid pad__top--x2">
+      <li class="col w-1-2 pad__bottom--x2">
+        <div class="block"><img src="/assets/icons/cloud-upload.svg" height="70"></div>
+        <p class="hdr medium txt--blue">Deploy in seconds</p>
+        <p class="normal no-marg-i">Spin up a DADI container and get access in 20 seconds.</p>
+      </li>
+      <li class="col w-1-2 pad__bottom--x2">
+        <div class="block"><img src="/assets/icons/group.svg" height="70"></div>
+        <p class="hdr medium txt--blue">Built for teams</p>
+        <p class="normal no-marg-i">Easily manage your team’s cloud with customisable access permissions, invites and user profiles.</p>
+      </li>
+    </ul>
+    <ul class="list--quotes normal cf grid">
+      <li class="col w-1-2 pad__bottom--x2">
+        <div class="block"><img src="/assets/icons/layers.svg" height="70"></div>
+        <p class="hdr medium txt--blue">API First</p>
+        <p class="normal no-marg-i">An intuitive API and command line utilities allow you to manage large-scale production workloads with ease.</p>
+      </li>
+      <li class="col w-1-2 pad__bottom--x2">
+        <div class="block"><img src="/assets/icons/bars.svg" height="70"></div>
+        <p class="hdr medium txt--blue">Autoscale everything</p>
+        <p class="normal no-marg-i">Auto Scaling availability for every layer helps you maintain application up time.</p>
+      </li>
+    </ul>
+    <ul class="list--quotes normal cf grid">
+      <li class="col w-1-2 pad__bottom--x2">
+        <div class="block"><img src="/assets/icons/bolt.svg" height="70"></div>
+        <p class="hdr medium txt--blue">Lightning fast</p>
+        <p class="normal no-marg-i">Fault tolerance and redundant networking as standard, ensuring uptime and throughput.</p>
+      </li>
+      <li class="col w-1-2 pad__bottom--x2">
+        <div class="block"><img src="/assets/icons/swap.svg" height="70"></div>
+        <p class="hdr medium txt--blue">SSD performance</p>
+        <p class="normal no-marg-i">DADI on demand is an all-SSD cloud. Whether it’s individual containers, dedicated instances or Block Storage, everything runs on SSD.</p>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="container container--divider alignc">
+  <p class="medium hdr alignauto pad__bottom">DADI on demand will be launching soon. Let us know your email address to be the first to know.</p>
+
+  <form action="..." method="post">
+    <input type="hidden" name="formname" value="demo">
+    <input type="text" name="email" class="email text" placeholder="Your email address"><button class="btn btn--blue" type="submit">Register interest</button>
+  </form>
+
+  <p class="small txt--grey alignauto pad__top">By signing up, you agree to the <a href="/terms" class="txt--black">Terms of Service</a>.</p>
 </div>
 
 {>"partials/footer" /}
