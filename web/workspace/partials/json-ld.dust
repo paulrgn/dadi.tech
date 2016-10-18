@@ -5,15 +5,18 @@
     {
       "@context": "http://schema.org",
       "@type": "Organization",
-      "name": "Looksgreat",
-      "url": "",
-      "logo": "",
-      "sameAs" : [""],
+      "name": "DADI",
+      "url": "http://dadi.tech/",
+      "logo": "http://dadi.tech/assets/img/dadi-colour.svg",
+      "sameAs" : [
+        "https://twitter.com/dadi",
+        "https://github.com/dadi",
+      ],
       "contactPoint": [
         "@type": "ContactPoint",
-        "contactType": "",
-        "telephone": "",
-        "email": ""
+        "contactType": "General enquiries",
+        "telephone": "+44 (0) 20 7205 2902",
+        "email": "hello@dadi.tech"
       ]
     }
     </script>
