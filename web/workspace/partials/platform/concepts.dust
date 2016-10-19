@@ -1,0 +1,28 @@
+{^params.concept}
+  <h1 class="kilo alignc">Platform concepts</h1>
+  <div class="container container--divider marg__top--x2">
+    <div class="grid">
+      {#concepts.results}
+        <div class="col w-1-2 marg__bottom--x2">
+          <a href="/platform/concepts/{handle}/">
+            <p class="hdr larger txt--blue">{title}</p>
+            <p class="normal">{@soberMarkdown}{overview}{/soberMarkdown}</p>
+          </a>
+          <a href="/platform/concepts/{handle}/" class="btn btn--blue">Find out more</a>
+        </div>
+      {/concepts.results}
+    </div>
+  </div>
+{:else}
+  {#concepts.results}
+    <div class="container container--pad">
+      <div class="grid alignc">
+        <h1 class="no-marg-i kilo txt--blue  marg__bottom">{title}</h1>
+        <p class="hdr larger alignauto">{@soberMarkdown}{overview}{/soberMarkdown}</p>  
+      </div>
+    </div>
+    <div class="container container--divider normal">
+      {@markdown}{body}{/markdown}
+    </div>
+  {/concepts.results}
+{/params.concept}

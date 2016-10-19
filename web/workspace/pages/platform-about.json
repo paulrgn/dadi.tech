@@ -2,13 +2,25 @@
   "page": {
     "key": "platform"
   },
+  "datasources": [
+    "concepts"
+  ],
   "routes": [
     {
       "path": "/platform/:page",
       "params": [
         {
           "param": "page",
-          "in": ["security", "licensing", "roadmap"]
+          "in": ["security", "licensing", "roadmap", "concepts"]
+        }
+      ]
+    },
+    {
+      "path": "/platform/:page/:concept?",
+      "params": [
+        {
+          "param": "concept",
+          "fetch": "concepts"
         }
       ]
     }
