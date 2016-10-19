@@ -2,6 +2,13 @@ body {
 	background: #fff;
 	color: #21262D;
 }
+body.dark {
+	background: $background;
+	
+	main {
+		color: #fff;
+	}
+}
 
 .container {
 	margin-left: 5%;
@@ -13,7 +20,7 @@ body {
 	z-index: 1;
 
 	&--divider {
-		border-top: 7px solid $light-grey;
+		border-top: 5px solid $light-grey;
 		padding-top: 40px;
 		padding-bottom: 40px;
 
@@ -36,17 +43,30 @@ header {
 	position: relative;
 	overflow: hidden;
 
-	&--dark {
-		background: #21262D url(/assets/img/bg.png) fixed;
-		background-size: 50% auto;
+	body.light & {
+		background-color: #21262D;
+		background-size: cover;
+		background-image: url(/assets/img/bg-dark.jpg);
 		color: #fff;
 
+		&:before {
+			position: absolute;
+			bottom: -50px;
+			left: 0; right: 0;
+			transform: skewY(-3deg);
+			content: ' ';
+			background: #fff;
+			height: 100px;
+			display: block;
+		}
 		.top__promo, .top__promo:after {
 			background: rgba(#000,0.3);
 		}
 	}
-	&--light {
-		background: #fff;
+	body.dark & {
+		background-color: #fff;
+		background-size: cover;
+		background-image: url(/assets/img/bg-grey.jpg);
 		color: #21262D;
 
 		.top__promo, .top__promo:after {
@@ -55,18 +75,7 @@ header {
 		.btn--fill {
 			color: #fff;
 		}
-	}
-	
-	&:before {
-		position: absolute;
-		bottom: -50px;
-		left: 0; right: 0;
-		transform: skewY(-3deg);
-		content: ' ';
-		background: #fff;
-		height: 100px;
-		display: block;
-	}
+	}	
 	
 	.grid {
 		position: relative;
@@ -90,13 +99,38 @@ header {
 			content: ' ';
 		}
 	}
-
-	// &--api {
-	// 	background-image: url(/assets/backgrounds/api.png);
-	// 	background-size: cover;
-	// }
 }
 
+body.dark {
+	header {
+		h1 img {
+			opacity: 0;
+		}
+		h1 a {
+			background: url(/assets/img/dadi-colour.svg) no-repeat;
+		}
+	}
+	.nav li:after {
+		border-color: $bdr-grey;
+	}
+	.container--divider {
+		border-color: rgba($mid-grey,0.2);
+	}
+	main {
+		position: relative;
+
+		&:before {
+			position: absolute;
+			top: -50px;
+			left: 0; right: 0;
+			transform: skewY(-3deg);
+			content: ' ';
+			background: $background;
+			height: 100px;
+			display: block;
+		}
+	}
+}
 
 .nav {
 	font-family: $font-headers;

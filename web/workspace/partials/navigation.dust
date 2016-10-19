@@ -4,7 +4,7 @@
     <a href="/on-demand/" class="alignv btn btn--fill btn--red" style="margin:5px 0 0 20px;">On demand</a>
   </div>
 
-  <p><a href="/"><img src="/assets/img/dadi-{^light}light{:else}colour{/light}.svg" width="150" alt="DADI"></a></p>
+  <h1><a href="/" class="inline-block"><img src="/assets/img/dadi-{^light}light{:else}colour{/light}.svg" width="150" alt="DADI"></a></h1>
   
   <ul class="normal nav">
     <li><a href="/platform/" {@eq key=page.key value="platform"}class="active"{/eq}>Platform</a></li>

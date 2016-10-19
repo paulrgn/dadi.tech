@@ -18,8 +18,10 @@ strong {
 }
 p, .read {
 	max-width: 680px;
-	font-family: $font-body;
 	margin: 1.2em 0;
+}
+.read {
+	max-width: 680px;
 }
 ul, ol, li, dl, dd, dt, blockquote {
 	margin: 0;

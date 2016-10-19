@@ -1,5 +1,5 @@
-<div class="container alignc pad__bottom--x2">
-  <p class="alignauto hdr kilo">Let us help you make <span class="txt--blue">Data Driven Experiences</span> a reality</p>
+<div class="container container--pad alignc">
+  <h1 class="hdr kilo read alignauto no-marg-i">Let us help you make <span class="txt--blue">Data Driven Experiences</span> a reality</h1>
   <p class="alignauto normal">Our solutions team can help you grow your businesses by optimising your data strategies and improving the way that you engage with your customers across all channels.</p>
 </div>
 

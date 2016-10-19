@@ -1,4 +1,4 @@
-<div class="bg--dark-blue txt--white bdr__top bdr__bottom bdr--bdr-grey">
+<div style="background-size: cover; background-image: url(/assets/img/bg-solutions.jpg)" class="bg--dark-blue txt--white bdr__top bdr__bottom bdr--bdr-grey">
   <div class="container pad--x2">
     {?module-title}
       <p class="hdr larger txt--blue">{module-title}</p>

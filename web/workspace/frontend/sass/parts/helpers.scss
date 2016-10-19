@@ -120,7 +120,7 @@
 // Margin
 
 .no-marg 				{ margin: 0; }
-.no-marg-i 				{ margin: 0 !important; }
+.no-marg-i 				{ margin-top: 0 !important; margin-bottom: 0 !important; }
 
 .marg 					{ margin: $margin; }
 .marg__top 				{ margin-top: $margin; }

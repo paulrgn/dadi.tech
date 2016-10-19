@@ -9,9 +9,9 @@
   {>"partials/metatags" /}
 </head>
 
-<body>
+<body class="{+bodyClass}light{/bodyClass}">
 
-<div class="top top--dark top--{params.section}">
+<div class="top top--{params.section}">
   <div class="container"> 
     {>"partials/navigation" /}
     {+top}{/top}

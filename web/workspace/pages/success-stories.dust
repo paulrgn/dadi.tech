@@ -2,8 +2,11 @@
 
 {<title}Welcome{/title}
 
-<div class="container container--divider">
-<h1 class="hdr kilo no-marg-i">Success stories…</h1>
+{<bodyClass}dark{/bodyClass}
+
+<div class="container container--pad alignc">
+  <h1 class="hdr kilo read alignauto no-marg-i">Success stories</h1>
+  <p class="alignauto normal">Customers of all sizes succeed with DADI</p>
 </div>
 
 {>"partials/footer" /}
