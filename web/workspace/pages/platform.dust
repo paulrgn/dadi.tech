@@ -2,14 +2,18 @@
 
 {<title}Welcome{/title}
 
-{?params.section}
-  {#products.results}
-    {>"partials/platform/product" /}
-  {/products.results}
-
-  {>"partials/content-modules/products" /}
+{?params.page}
+  {>"partials/platform/{params.page}" /}
 {:else}
-  {>"partials/platform/index" /}
-{/params.section}
+  {?params.product}
+    {#products.results}
+      {>"partials/platform/product" /}
+    {/products.results}
+
+    {>"partials/content-modules/products" /}
+  {:else}
+    {>"partials/platform/index" /}
+  {/params.product}
+{/params.page}
 
 {>"partials/footer" /}

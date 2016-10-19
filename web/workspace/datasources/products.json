@@ -3,7 +3,7 @@
     "key": "products",
     "name": "Information about DADI products",
     "requestParams": [{
-      "param": "section", "field": "product"
+      "param": "product", "field": "product"
     }],
     "source": {
       "type": "static",

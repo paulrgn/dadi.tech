@@ -1,7 +1,0 @@
-{>"partials/header" /}
-
-{<title}Welcome{/title}
-
-{>"partials/platform/{params.page}" /}
-
-{>"partials/footer" /}

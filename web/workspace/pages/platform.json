@@ -4,7 +4,8 @@
   },
   "datasources": [
     "products",
-    "solutions"
+    "solutions",
+    "concepts"
   ],
   "requiredDatasources": [
     "products"
@@ -14,8 +15,26 @@
       "path": "/platform/"
     },
     {
-      "path": "/platform/:section",
-      "in": "products"
+      "path": "/platform/:product",
+      "fetch": "products"
+    },
+    {
+      "path": "/platform/:page",
+      "params": [
+        {
+          "param": "page",
+          "in": ["security", "licensing", "roadmap", "concepts"]
+        }
+      ]
+    },
+    {
+      "path": "/platform/:page/:concept",
+      "params": [
+        {
+          "param": "concept",
+          "fetch": "concepts"
+        }
+      ]
     }
   ]
 } 
