@@ -2,8 +2,6 @@
   "datasource": {
     "key": "solutions",
     "name": "List of DADI solutions offered",
-    "sort": { "solution": -1 },
-    "filter": {},
     "requestParams": [{
       "param": "section", "field": "handle"
     }],

@@ -2,8 +2,6 @@
   "datasource": {
     "key": "products",
     "name": "Information about DADI products",
-    "sort": { "product": -1 },
-    "filter": {},
     "requestParams": [{
       "param": "section", "field": "product"
     }],

@@ -2,8 +2,6 @@
   "datasource": {
     "key": "supporting",
     "name": "Supporting content for the DADI site",
-    "sort": { "title": -1 },
-    "filter": {},
     "requestParams": [{
       "param": "section", "field": "handle"
     }],
