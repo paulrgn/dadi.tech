@@ -6,6 +6,7 @@
   "scripts": {
     "start": "NODE_ENV=development node main.js",
     "test": "./node_modules/mocha/bin/_mocha test/unit && ./node_modules/cucumber/bin/cucumber.js test/browser/features",
+    "watch": "watch 'npm run build:css' workspace/frontend/sass/ -d -u && watch 'npm run build:js' workspace/frontend/js/ -d -u",
     "prebuild": "mkdir -p workspace/public/assets/css workspace/public/assets/js",
     "build": "npm run build:css && npm run build:js",
     "build:css": "node-sass workspace/frontend/sass/main.scss workspace/public/assets/css/main.css --source-map true",
@@ -37,7 +38,8 @@
     "postcss-cli": "^2.6.0",
     "postcss-import": "^8.1.2",
     "require-globify": "^1.4.1",
-    "uglify-js": "^2.7.3"
+    "uglify-js": "^2.7.3",
+    "watch": "^1.0.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
