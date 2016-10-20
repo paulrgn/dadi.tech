@@ -1,5 +1,5 @@
 <div class="container container--divider alignc">
-  <p class="hdr larger txt--red alignauto">Businesses of all sizes succeed with DADI</p>
+  <p class="hdr larger txt--green alignauto">Businesses of all sizes succeed with DADI</p>
 
   <ul class="list--quotes normal cf pad__top">
     <li class="inline-block w-1-3 alignc hdr">
@@ -19,5 +19,5 @@
     </li>
   </ul>
 
-  <div class="pad__top--x2 marg__top pad__bottom"><a href="/successes/" class="btn btn--red normal">See all customer stories</a></div>
+  <div class="pad__top--x2 marg__top pad__bottom"><a href="/successes/" class="btn btn--green normal">See all customer stories</a></div>
 </div>
