@@ -11,7 +11,7 @@ Despite huge differences in scale and offering, the physical structures of work 
 
 That's not to say that it wasn't fun. This is our office on the curtain road, in the early days of Airlock (look at the size of some of those monitors!) -
 
-![Our old office](/workspace/uploads/images/insights/how-we-work/airlock.jpg)
+![Our old office](http://52.50.38.122/workspace/uploads/images/insights/how-we-work/airlock.jpg)
 
 ...but we structured our lives around our work: pulling all nighters was common and interruptions to holiday a given.
 
@@ -47,7 +47,7 @@ And of course it is impossible to generalise about the time of day that we are a
 
 This is Jim -
 
-![Mr James Lambie](/workspace/uploads/images/insights/how-we-work/jim.jpg)
+![Mr James Lambie](http://52.50.38.122/workspace/uploads/images/insights/how-we-work/jim.jpg)
 
 He's one of our Lead Developers. Tomorrow he leaves for the first day of a 15,000 mile - ! - bike ride that will take him all the way to New Zealand. He's starting in Brighton.
 
@@ -91,7 +91,7 @@ A synchronous working style is one where some or all of the members of a team re
 
 An asynchronous working style is one where the entire team rarely, if ever, gets together for big agreements and discussions. Each individual team member more or less works on their own and at their own pace, with collaboration and agreement being handled by asynchronous mechanisms.
 
-![The future of work](/workspace/uploads/images/insights/how-we-work/working-asynchronously.png)
+![The future of work](http://52.50.38.122/workspace/uploads/images/insights/how-we-work/working-asynchronously.png)
 
 Asynchronous working centres around shared artefacts, with each member of a team gradually accreting layers and complexity onto those artefacts. The most common example is commits to a source code repository. Another good example is online document sharing, with multiple editors and commenters. Team members usually have multiple related threads of work running simultaneously, so that if one is blocked on input from someone else, another thread can be picked up in order to maintain forward momentum.
 
@@ -113,7 +113,7 @@ Slack is probably most important tool in use at DADI+. It's a chat platform orga
 
 Slack is asynchronous. Asynchronous communication means that I can step out for lunch and catch up on transcripts when I get back. It means that I can ask a colleague a question and not worry about bothering her, as she'll get back to me when she's available. Asynchronous communication means I can go to rural Somerset and work a normal day.
 
-![Slack](/workspace/uploads/images/insights/how-we-work/slack.png)
+![Slack](http://52.50.38.122/workspace/uploads/images/insights/how-we-work/slack.png)
 
 Find out more: [slack.com](https://slack.com/)
 
@@ -123,7 +123,7 @@ Speek is a conference call service that does things a little differently. It's a
 
 It's what Skype could have been.
 
-![Speek](/workspace/uploads/images/insights/how-we-work/speek.png)
+![Speek](http://52.50.38.122/workspace/uploads/images/insights/how-we-work/speek.png)
 
 Find out more: [speek.com](https://www.speek.com/)
 
@@ -133,7 +133,7 @@ Github allows you to collaborate on anything. It's a version control system, but
 
 We predominantly use it for source code control, but are increasingly using it for everything else as well.
 
-![Github](/workspace/uploads/images/insights/how-we-work/github.png)
+![Github](http://52.50.38.122/workspace/uploads/images/insights/how-we-work/github.png)
 
 Find out more: [github.com](https://github.com/)
 
@@ -143,7 +143,7 @@ Droplr is a better version of Drop Box. It ditches the concept of the folder to 
 
 It is an integral part of our daily workflow, used for secure sharing internally, with our clients and with our suppliers.
 
-![Droplr](/workspace/uploads/images/insights/how-we-work/droplr.png)
+![Droplr](http://52.50.38.122/workspace/uploads/images/insights/how-we-work/droplr.png)
 
 Find out more: [droplr.com](https://droplr.com/hello)
 
@@ -157,7 +157,7 @@ Trello offers several benefits over traditional "todo list" software -
 *   The ability to limit the amount of work you have in progress at any one time
 *   The ability to easily collaborate with others, where each person has their own cards but they are all posted to the same board
 
-![Trello](/workspace/uploads/images/insights/how-we-work/trello.png)
+![Trello](http://52.50.38.122/workspace/uploads/images/insights/how-we-work/trello.png)
 
 Find out more: [trello.com](https://trello.com/)
 

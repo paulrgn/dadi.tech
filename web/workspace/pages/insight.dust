@@ -27,14 +27,41 @@
         <p class="txt--grey hdr normal alignauto">{@formatDate data=attributes.date parseFormat="YYYY-DD-MMMTh:mm:ss.ZZ" format="Do MMMM" /}</p>
         <h1 class="hdr kilo"><span class="txt--green block">{attributes.title}</span></h1>
         <p class="medium alignauto">{@soberMarkdown}{attributes.preface}{/soberMarkdown}</p>
-        <p class="small alignauto">By <strong>{attributes.author}</strong></p>
+        <p class="normal alignauto">By <strong>{attributes.author}</strong></p>
       </div>
 
-      <div class="normal container container--divider marg__top">
+      <div class="normal read container container--divider marg__top">
         {@markdown}{body}{/markdown}
       </div>
     {/eq}
   {/insights}
 {/params.article}
+
+<style type="text/css">
+.read p {
+  margin-left: auto;
+  margin-right: auto;
+}
+.read h1,h2,h3,h4 {
+  margin: 2em auto;
+  max-width: 680px;
+}
+.read img {
+  max-width: 100%;
+  height: auto;
+}
+.read ul {
+  margin: 1.5em auto;
+  max-width: 680px;
+}
+.read a {
+  border-bottom: 1px solid #2C85E5;
+  font-weight: bold;
+  color: #2C85E5;
+}
+.read ul li {
+  margin: 0.5em 0;
+}
+</style>
 
 {>"partials/footer" /}
