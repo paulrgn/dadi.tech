@@ -15,4 +15,4 @@ People in the team usually have several work threads running at a time. So if th
 
 Asynchronous working means people can work the hours that suit them and put their lives first.
 
-You can read more about it in this article on [how we work](/insights/how-we-work).
+You can read more about it in this article on [how we work](/insight/how-we-work).
