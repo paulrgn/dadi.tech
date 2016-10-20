@@ -13,7 +13,7 @@
       <div class="col w-1-3 {@eq key="{$idx}" value="1"}col--pull{/eq}">
         <p class="txt--grey hdr">{@formatDate data=attributes.date parseFormat="YYYY-DD-MMMTh:mm:ss.ZZ" format="Do MMMM" /}</p>
         <p class="hdr large txt--green">{attributes.title}</p>
-        <p class="small">{@soberMarkdown}{attributes.preface}{/soberMarkdown}</p>
+        <p class="small">{@soberMarkdown}{@Truncate data="{attributes.preface}" length="110" ellipsis="true"/}{/soberMarkdown}</p>
         <p class="small"><a href="/insight/{handle}/" class="btn btn--green">Read more</a></p>
       </div>
     {/iter}
@@ -21,12 +21,12 @@
 {/top}
 
 <div class="container container--pad">
-  <div class="grid">
-    <div class="col w-1-2">
-    Placeholder: 1-many vs 1-1
+  <div class="grid pad__bottom">
+    <div class="col w-1-2 alignc">
+    <img src="/assets/img/illo-dde.jpg" width="340">
     </div>
     <div class="col w-1-2">
-      <p class="larger hdr txt--green">Data Driven Experiences</p>
+      <p class="larger hdr txt--red">Data Driven Experiences</p>
       <p class="normal">The ability to process and understand user and environmental data in real time in order to provide a customised experience for the individual across multiple touch-points.</p>
     </div>
   </div>

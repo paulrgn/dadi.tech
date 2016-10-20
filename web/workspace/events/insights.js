@@ -10,9 +10,15 @@ var Event = function (req, res, data, callback) {
   var insights = []
 
   fs.readdir(insightsPath, (err, files) => {
+    // Error filtering    
     if (err) {
       console.log("Could not list the directory.", err)
     }
+
+    // Ignore hidden
+    files = files.filter(item => !(/(^|\/)\.[^\/\.]/g).test(item));
+
+    // Loop through each and put into our data array
     files.forEach((file, index) => {
       if (path.extname(files[index]) === ".md") {
         fs.readFile(insightsPath+'/'+file, 'utf8', (err, result) => {
