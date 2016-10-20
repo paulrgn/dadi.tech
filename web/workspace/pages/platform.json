@@ -7,6 +7,9 @@
     "solutions",
     "concepts"
   ],
+  "events": [
+    "insights"
+  ],
   "requiredDatasources": [
     "products"
   ],

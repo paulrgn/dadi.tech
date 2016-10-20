@@ -2,6 +2,9 @@
   "page": {
   	"key": "successes"
   },
+  "events": [
+    "insights"
+  ],
   "routes": [
     {
     	"path": "/successes/"

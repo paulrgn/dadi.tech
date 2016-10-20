@@ -8,6 +8,9 @@
   "requiredDatasources": [
     "supporting"
   ],
+  "events": [
+    "insights"
+  ],
   "routes": [
     {
       "path": "/:section/",

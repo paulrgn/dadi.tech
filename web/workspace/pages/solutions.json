@@ -8,6 +8,9 @@
   "requiredDatasources": [
     "solutions"
   ],
+  "events": [
+    "insights"
+  ],
   "routes": [
     {
       "path": "/solutions/"

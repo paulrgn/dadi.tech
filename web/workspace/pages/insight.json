@@ -2,18 +2,12 @@
   "page": {
   	"key": "insight"
   },
+  "events": [
+    "insights"
+  ],
   "routes": [
     {
-    	"path": "/insight/"
-    },
-    {
-      "path": "/insight/:section?",
-      "params": [
-        {
-          "param": "section",
-          "in": ["concepts"]
-        }
-      ]
+      "path": "/insight/:article?"
     }
   ]
 }	

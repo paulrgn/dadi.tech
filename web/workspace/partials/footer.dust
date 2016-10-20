@@ -15,24 +15,15 @@
         </div>
       </div>
       <div class="grid marg__top marg__bottom">
-        <div class="col w-1-3">
-          <p class="txt--grey hdr normal">27<sup>th</sup> September</p>
-          <p class="hdr large">This is the latest news article headline</p>
-          <p class="small">The European languages are members of the same family. Their separate existence is a myth…</p>
-          <p class="small"><a href="/insights/" class="btn">Read more</a></p>
-        </div>
-        <div class="col w-1-3">
-          <p class="txt--grey hdr normal">27<sup>th</sup> September</p>
-          <p class="hdr large">This is the latest news article headline</p>
-          <p class="small">The European languages are members of the same family. Their separate existence is a myth…</p>
-          <p class="small"><a href="/insights/" class="btn">Read more</a></p>
-        </div>
-        <div class="col w-1-3">
-          <p class="txt--grey hdr normal">27<sup>th</sup> September</p>
-          <p class="hdr large">This is the latest news article headline</p>
-          <p class="small">The European languages are members of the same family. Their separate existence is a myth…</p>
-          <p class="small"><a href="/insights/" class="btn">Read more</a></p>
-        </div>
+        {@iter items=insights from=0 to=3}
+          <div class="col w-1-3">
+            <p class="txt--grey hdr">{@formatDate data=attributes.date parseFormat="YYYY-DD-MMMTh:mm:ss.ZZ" format="Do MMMM" /}</p>
+            <p class="hdr large txt--blue">{attributes.title}</p>
+            <p class="fwb small">By {attributes.author}</p>
+            <p class="small">{@soberMarkdown}{attributes.preface}{/soberMarkdown}</p>
+            <p class="small"><a href="/insight/{handle}/" class="btn btn--blue">Read more</a></p>
+          </div>
+        {/iter}
       </div>
     </div>
     <div class="grid">
@@ -147,6 +138,6 @@ ga('create', 'UA-42395806-1', 'auto');
 ga('send', 'pageview');
 </script> !}
 
-<script src="/assets/js/main.min.js"></script>
+<script src="/assets/js/main.js"></script>
 </body>
 </html>

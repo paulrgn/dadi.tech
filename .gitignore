@@ -6,3 +6,4 @@ web/workspace/public/assets/js/*
 web/workspace/public/assets/css/*
 web/workspace/frontend/src/*
 /web/npm-debug.log
+/npm-debug.log

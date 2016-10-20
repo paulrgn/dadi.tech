@@ -3,7 +3,10 @@
     "key": "Homepage"
   },
   "datasources": [
-  	"solutions"
+    "solutions"
+  ],
+  "events": [
+    "insights"
   ],
   "routes": [
     {

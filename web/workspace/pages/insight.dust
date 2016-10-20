@@ -2,8 +2,39 @@
 
 {<title}Welcome{/title}
 
-<div class="container container--divider">
-<h1 class="hdr kilo no-marg-i">Insights…</h1>
-</div>
+{^params.article}
+  <div class="container pad__bottom alignc">
+    <h1 class="hdr kilo"><span class="txt--green block">Insight</span></h1>
+    <p class="hdr larger alignauto">Platform, innovation and industry insight from your friends at DADI</p>
+  </div>
+
+  <div class="container container--divider marg__top--x2">
+    <div class="grid normalise">
+      {#insights}
+        <div class="col w-1-2 normalise--item pad__bottom--x2">
+          <p class="txt--grey hdr normal">{@formatDate data=attributes.date parseFormat="YYYY-DD-MMMTh:mm:ss.ZZ" format="Do MMMM" /}</p>
+          <p class="hdr larger txt--green"><a href="/insight/{handle}/">{attributes.title}</a></p>
+          <p class="normal">{@soberMarkdown}{attributes.preface}{/soberMarkdown}</p>
+          <p class="small"><a href="/insight/{handle}/" class="btn btn--green">Read more</a></p>
+        </div>
+      {/insights}
+    </div>
+  </div>
+{:else}
+  {#insights}
+    {@eq key=handle value=params.article}
+      <div class="container pad__bottom alignc">
+        <p class="txt--grey hdr normal alignauto">{@formatDate data=attributes.date parseFormat="YYYY-DD-MMMTh:mm:ss.ZZ" format="Do MMMM" /}</p>
+        <h1 class="hdr kilo"><span class="txt--green block">{attributes.title}</span></h1>
+        <p class="medium alignauto">{@soberMarkdown}{attributes.preface}{/soberMarkdown}</p>
+        <p class="small alignauto">By <strong>{attributes.author}</strong></p>
+      </div>
+
+      <div class="normal container container--divider marg__top">
+        {@markdown}{body}{/markdown}
+      </div>
+    {/eq}
+  {/insights}
+{/params.article}
 
 {>"partials/footer" /}
