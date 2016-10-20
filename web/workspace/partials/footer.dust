@@ -20,7 +20,7 @@
             <p class="txt--grey hdr">{@formatDate data=attributes.date parseFormat="YYYY-DD-MMMTh:mm:ss.ZZ" format="Do MMMM" /}</p>
             <p class="hdr large txt--blue">{attributes.title}</p>
             <p class="fwb small">By {attributes.author}</p>
-            <p class="small">{@soberMarkdown}{attributes.preface}{/soberMarkdown}</p>
+            <p class="small">{@soberMarkdown}{@Truncate data="{attributes.preface}" length="110" ellipsis="true"/}{/soberMarkdown}</p>
             <p class="small"><a href="/insight/{handle}/" class="btn btn--blue">Read more</a></p>
           </div>
         {/iter}
