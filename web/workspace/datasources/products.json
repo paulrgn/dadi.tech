@@ -12,20 +12,23 @@
           "product": "api",
           "color": "#0BA6DD",
           "overview": "High performance RESTful API layer designed in support of API-first development and the principle of COPE",
-          "description": "You can consider **DADI API** as the data layer within a platform (including the data model). It is designed to be plugged into a templating layer, a mobile application or to be used with any other data consumer.\n\nCalls to a **DADI API** can contain your business/domain logic (the part of a platform that encodes the real-world business rules that determine how data is created, displayed, stored and changed). It has full support for searching, filtering, limiting, sorting, offsetting, input validation and data aggregation (Map-reduce).\n\n**DADI API** provides a starting point that's further advanced than a framework. It allows you to get a complete data layer up and running in minutes.",
+          "description": "You can consider **DADI API** as the data layer within a platform (including the data model). It is designed to be plugged into a templating layer, a mobile application or to be used with any other data consumer.\n\nCalls to a **DADI API** can contain your business/domain logic (the part of a platform that encodes the real-world business rules that determine how data is created, displayed, stored and changed). It has full support for searching, filtering, limiting, sorting, offsetting, input validation and data aggregation (Map-reduce).\n\n**DADI API** provides a starting point that's further advanced than a framework. It allows you to get a complete data layer up and running in seconds.
+.",
           "features": [
-            "Built in support for oAuth2",
-            "Provides native document versioning at collection level",
-            "Supports static endpoints",
-            "Includes automatic indexing",
-            "Local and networked caching layer",
-            "Can be run in a clustered configuration",
-            "Search, filter and sort your data with ease",
-            "Collection-level access control",
-            "Automatic input validation",
-            "Support multiple databases connectivity",
-            "Automatic database indexing",
-            "Cache data responses using a shared   Redis layer or the filesystem"
+            "Simple, consistent interface in JSON"
+            "Built in support for oAuth2"
+            "Native document versioning at collection level"
+            "Support for static endpoints"
+            "Automatic indexing"
+            "Local and networked caching"
+            "Clustered configuration support"
+            "Search, filter and sort functionality"
+            "Collection-level access control"
+            "Automatic input validation"
+            "Supports multiple database connectivity"
+            "Automatic database indexing"
+            "Cache data responses using a shared Redis layer or the filesystem"
+
           ]
         },
         {
